@@ -24,66 +24,6 @@
 			android:clipToPadding="false"
 			android:orientation="vertical">
 			<LinearLayout
-				android:id="@+id/ryajm8elbdjq"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:gravity="center_vertical"
-				android:layout_marginBottom="10dp"
-				android:layout_marginHorizontal="18dp"
-				android:orientation="horizontal">
-				<TextView
-					android:id="@+id/rvj2mylblajq"
-					android:textColor="#ffffff"
-					android:textSize="14sp"
-					android:textStyle="bold"
-					android:layout_marginEnd="4dp"
-					android:layout_height="wrap_content"
-					android:layout_width="match_parent"
-					android:layout_weight="1"
-					android:text="9:41"
-				/>
-				<ImageView
-					android:id="@+id/r32gk6ju5mqq"
-					android:layout_width="17dp"
-					android:layout_height="10dp"
-					android:layout_marginEnd="5dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="fitXY"
-				/>
-				<ImageView
-					android:id="@+id/r00yilxxzxy73"
-					android:layout_width="15dp"
-					android:layout_height="10dp"
-					android:layout_marginEnd="6dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="fitXY"
-				/>
-				<LinearLayout
-					android:id="@+id/rjd4pgaxu5bl"
-					android:layout_width="22dp"
-					android:layout_height="wrap_content"
-					android:background="@drawable/sffffffffsw1cr2_6666667461395264bffffffff"
-					android:paddingHorizontal="2dp"
-					android:layout_marginEnd="1dp"
-					android:orientation="vertical">
-					<LinearLayout
-						android:id="@+id/rjv2dqh55f2m"
-						android:layout_width="match_parent"
-						android:layout_height="7dp"
-						android:background="@drawable/cr1_3333333730697632bffffffff"
-						android:layout_marginTop="2dp"
-						android:orientation="vertical">
-					</LinearLayout>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/rj0ypm85jo0i"
-					android:layout_width="1dp"
-					android:layout_height="4dp"
-					android:background="#FFffffff"
-					android:orientation="vertical">
-				</LinearLayout>
-			</LinearLayout>
-			<LinearLayout
 				android:id="@+id/rx47hcbrvaf"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -96,7 +36,7 @@
 					android:layout_width="37dp"
 					android:layout_height="33dp"
 					android:layout_marginEnd="15dp"
-					android:src="@mipmap/ic_launcher"
+					android:src="@drawable/arrow_back"
 					android:scaleType="fitXY"
 				/>
 				<TextView
@@ -121,16 +61,7 @@
 				android:orientation="vertical"
 				android:paddingTop="606dp">
 
-				<TextView
-					android:id="@+id/r0orpsjfyg6z"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_marginStart="163dp"
-					android:layout_marginBottom="49dp"
-					android:text="Send"
-					android:textColor="#ffffff"
-					android:textSize="16sp"
-					android:textStyle="bold" />
+
 
 				<LinearLayout
 					android:id="@+id/rhd8362etmg"
@@ -186,7 +117,7 @@
 								android:layout_width="match_parent"
 								android:layout_height="30dp"
 								android:scaleType="fitXY"
-								android:src="@mipmap/ic_launcher" />
+								android:src="@drawable/microphone" />
 						</LinearLayout>
 
 						<ImageView
@@ -197,7 +128,7 @@
 							android:layout_marginStart="-27dp"
 							android:layout_marginBottom="0dp"
 							android:scaleType="fitXY"
-							android:src="@mipmap/ic_launcher" />
+							android:src="@drawable/attachment" />
 					</RelativeLayout>
 				</LinearLayout>
 			</LinearLayout>
