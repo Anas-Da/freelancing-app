@@ -31,33 +31,7 @@
 				android:layout_marginBottom="22dp"
 				android:layout_marginHorizontal="18dp"
 				android:orientation="horizontal">
-				<TextView
-					android:id="@+id/rh5ao47hr5i8"
-					android:textColor="#ffffff"
-					android:textSize="14sp"
-					android:textStyle="bold"
-					android:layout_marginEnd="4dp"
-					android:layout_height="wrap_content"
-					android:layout_width="match_parent"
-					android:layout_weight="1"
-					android:text="9:41"
-				/>
-				<ImageView
-					android:id="@+id/rduzu65ljmwi"
-					android:layout_width="17dp"
-					android:layout_height="10dp"
-					android:layout_marginEnd="5dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="fitXY"
-				/>
-				<ImageView
-					android:id="@+id/rwhlstjhjko"
-					android:layout_width="15dp"
-					android:layout_height="10dp"
-					android:layout_marginEnd="5dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="fitXY"
-				/>
+
 				<LinearLayout
 					android:id="@+id/r405upp3ar7i"
 					android:layout_width="22dp"
@@ -65,16 +39,7 @@
 					android:background="@drawable/sffffffffsw1cr2_6666667461395264bffffffff"
 					android:paddingHorizontal="2dp"
 					android:layout_marginEnd="1dp"
-					android:orientation="vertical">
-					<LinearLayout
-						android:id="@+id/re9zdqchny66"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:background="@drawable/cr1_3333333730697632bffffffff"
-						android:layout_marginTop="2dp"
-						android:orientation="vertical">
-					</LinearLayout>
-				</LinearLayout>
+					android:orientation="vertical"/>
 				<LinearLayout
 					android:id="@+id/rd4xtnx0bvr4"
 					android:layout_width="1dp"
@@ -130,18 +95,18 @@
 								android:layout_marginBottom="312dp"
 								android:layout_marginHorizontal="113dp"
 								android:orientation="vertical">
+
 								<TextView
 									android:id="@+id/rs8kvkh953ut"
-									android:textColor="#000000"
-									android:textSize="13sp"
-									android:layout_marginBottom="22dp"
-									android:layout_marginHorizontal="8dp"
-									android:layout_height="wrap_content"
 									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:layout_marginHorizontal="8dp"
+									android:layout_marginBottom="15dp"
 									android:layout_weight="1"
 									android:gravity="center"
 									android:text="Do you want to start \nthe service with \nZaher Kolko?"
-								/>
+									android:textColor="#000000"
+									android:textSize="13sp" />
 								<LinearLayout
 									android:id="@+id/rql1xkkkoqwh"
 									android:layout_width="match_parent"
@@ -228,7 +193,7 @@
 									android:layout_width="30dp"
 									android:layout_height="30dp"
 									android:layout_marginEnd="8dp"
-									android:src="@mipmap/ic_launcher"
+									android:src="@drawable/smile"
 									android:scaleType="fitXY"
 								/>
 								<TextView
@@ -250,22 +215,22 @@
 									android:id="@+id/r6hhj5y2pbjc"
 									android:layout_width="25dp"
 									android:layout_height="25dp"
-									android:src="@mipmap/ic_launcher"
+									android:src="@drawable/message"
 									android:scaleType="fitXY"
 								/>
 							</LinearLayout>
 						</LinearLayout>
 					</LinearLayout>
+
 					<ImageView
 						android:id="@+id/rfc79788kc3"
 						android:layout_width="25dp"
 						android:layout_height="21dp"
-						android:layout_marginTop="-17dp"
-						android:layout_marginEnd="15dp"
 						android:layout_alignParentRight="true"
-						android:src="@mipmap/ic_launcher"
+						android:layout_marginTop="-26dp"
+						android:layout_marginEnd="15dp"
 						android:scaleType="fitXY"
-					/>
+						android:src="@drawable/list" />
 				</RelativeLayout>
 			</LinearLayout>
 		</LinearLayout>
