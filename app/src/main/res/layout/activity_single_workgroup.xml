@@ -1,88 +1,29 @@
-<LinearLayout 
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:background="#FFFFFFFF"
 	android:clipChildren="false"
-	android:clipToPadding="false"
-	android:orientation="vertical"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
-	<ScrollView 
-		android:fillViewport="true"
+	android:clipToPadding="false">
+
+	<ScrollView
 		android:id="@+id/r2uyww817yzj"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:layout_weight="1"
 		android:background="#FF18104a"
-		android:paddingTop="17dp"
 		android:clipChildren="false"
-		android:clipToPadding="false">
+		android:clipToPadding="false"
+		android:fillViewport="true"
+		android:paddingTop="17dp">
+
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:clipChildren="false"
 			android:clipToPadding="false"
 			android:orientation="vertical">
-			<LinearLayout
-				android:id="@+id/rzlxawz8yq6s"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:gravity="center_vertical"
-				android:layout_marginBottom="17dp"
-				android:layout_marginHorizontal="18dp"
-				android:orientation="horizontal">
-				<TextView
-					android:id="@+id/rmczsk95386"
-					android:textColor="#ffffff"
-					android:textSize="14sp"
-					android:textStyle="bold"
-					android:layout_marginEnd="4dp"
-					android:layout_height="wrap_content"
-					android:layout_width="match_parent"
-					android:layout_weight="1"
-					android:text="9:41"
-				/>
-				<ImageView
-					android:id="@+id/rkjyeretg5ek"
-					android:layout_width="17dp"
-					android:layout_height="10dp"
-					android:layout_marginEnd="5dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="fitXY"
-				/>
-				<ImageView
-					android:id="@+id/reqsf0nzzwq"
-					android:layout_width="15dp"
-					android:layout_height="10dp"
-					android:layout_marginEnd="5dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="fitXY"
-				/>
-				<LinearLayout
-					android:id="@+id/r16owyk9arpe"
-					android:layout_width="22dp"
-					android:layout_height="wrap_content"
-					android:background="@drawable/sffffffffsw1cr2_6666667461395264bffffffff"
-					android:paddingHorizontal="2dp"
-					android:layout_marginEnd="1dp"
-					android:orientation="vertical">
-					<LinearLayout
-						android:id="@+id/r9yi47hvaa6u"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:background="@drawable/cr1_3333333730697632bffffffff"
-						android:layout_marginTop="2dp"
-						android:orientation="vertical">
-					</LinearLayout>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/rka3gnkj8es"
-					android:layout_width="1dp"
-					android:layout_height="wrap_content"
-					android:background="#FFffffff"
-					android:orientation="vertical">
-				</LinearLayout>
-			</LinearLayout>
+
 			<LinearLayout
 				android:id="@+id/rnz3093sx2aj"
 				android:layout_width="match_parent"
@@ -90,116 +31,123 @@
 				android:clipChildren="false"
 				android:clipToPadding="false"
 				android:orientation="vertical">
+
 				<TextView
 					android:id="@+id/ruu725cy56lm"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="250dp"
+					android:layout_marginBottom="5dp"
+					android:text="freelancer"
 					android:textColor="#ffffff"
 					android:textSize="24sp"
-					android:textStyle="bold"
-					android:layout_marginBottom="5dp"
-					android:layout_marginStart="17dp"
-					android:layout_height="wrap_content"
-					android:layout_width="wrap_content"
-					android:text="freelancer"
-				/>
+					android:textStyle="bold" />
+
 				<RelativeLayout
 					android:id="@+id/r7j4vacrghf6"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:clipChildren="false"
-					android:clipToPadding="false"
-					>
+					android:clipToPadding="false">
+
 					<LinearLayout
 						android:layout_width="match_parent"
 						android:layout_height="match_parent"
 						android:clipChildren="false"
 						android:clipToPadding="false"
 						android:orientation="vertical">
+
 						<LinearLayout
 							android:id="@+id/rz6cmur0cvm"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
 							android:background="@drawable/tl90tr90bffffffff"
-							android:paddingTop="51dp"
 							android:clipChildren="false"
 							android:clipToPadding="false"
-							android:orientation="vertical">
+							android:orientation="vertical"
+							android:paddingTop="51dp">
+
 							<RelativeLayout
 								android:id="@+id/rkjezq5crwts"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:layout_marginBottom="24dp"
 								android:layout_marginHorizontal="36dp"
+								android:layout_marginBottom="24dp"
 								android:clipChildren="false"
-								android:clipToPadding="false"
-								>
+								android:clipToPadding="false">
+
 								<LinearLayout
 									android:layout_width="match_parent"
 									android:layout_height="match_parent"
 									android:clipChildren="false"
 									android:clipToPadding="false"
 									android:orientation="vertical">
+
 									<LinearLayout
 										android:id="@+id/rdd1j2trve94"
 										android:layout_width="match_parent"
 										android:layout_height="wrap_content"
 										android:background="@drawable/cr76bfffdf7f6"
-										android:paddingVertical="7dp"
+										android:orientation="vertical"
 										android:paddingHorizontal="34dp"
-										android:orientation="vertical">
+										android:paddingVertical="7dp">
+
 										<TextView
 											android:id="@+id/ryv02gzegaxi"
-											android:textColor="#000000"
-											android:textSize="12sp"
-											android:layout_height="wrap_content"
 											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
 											android:text="Search"
-										/>
+											android:textColor="#000000"
+											android:textSize="12sp" />
 									</LinearLayout>
 								</LinearLayout>
+
 								<ImageView
 									android:id="@+id/rc98yb30x2wn"
 									android:layout_width="25dp"
 									android:layout_height="25dp"
-									android:layout_marginTop="-1dp"
 									android:layout_marginStart="3dp"
-									android:src="@mipmap/ic_launcher"
+									android:layout_marginTop="-1dp"
 									android:scaleType="fitXY"
-								/>
+									android:src="@drawable/search" />
 							</RelativeLayout>
+
 							<RelativeLayout
 								android:id="@+id/rytpq0c0k2df"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:layout_marginBottom="19dp"
 								android:layout_marginHorizontal="9dp"
+								android:layout_marginBottom="19dp"
 								android:clipChildren="false"
-								android:clipToPadding="false"
-								>
+								android:clipToPadding="false">
+
 								<LinearLayout
 									android:layout_width="match_parent"
 									android:layout_height="match_parent"
 									android:clipChildren="false"
 									android:clipToPadding="false"
 									android:orientation="vertical">
+
 									<LinearLayout
 										android:id="@+id/ragdilg5rkta"
 										android:layout_width="match_parent"
 										android:layout_height="wrap_content"
-										android:gravity="center_vertical"
 										android:background="@drawable/cr13bfffffaf9"
-										android:paddingVertical="8dp"
-										android:paddingHorizontal="9dp"
 										android:clipChildren="false"
 										android:clipToPadding="false"
-										android:orientation="horizontal">
+										android:gravity="center_vertical"
+										android:orientation="horizontal"
+										android:paddingHorizontal="9dp"
+										android:paddingVertical="8dp">
+
 										<ImageView
 											android:id="@+id/rf3m2owibqus"
 											android:layout_width="48dp"
 											android:layout_height="48dp"
 											android:layout_marginEnd="9dp"
-											android:src="@mipmap/ic_launcher"
 											android:scaleType="fitXY"
-										/>
+											android:src="@mipmap/ic_launcher" />
+
 										<LinearLayout
 											android:id="@+id/rkaf4bmz9k5d"
 											android:layout_width="match_parent"
@@ -208,86 +156,89 @@
 											android:clipChildren="false"
 											android:clipToPadding="false"
 											android:orientation="vertical">
+
 											<TextView
 												android:id="@+id/rwnom6qtxg2d"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:layout_marginBottom="10dp"
+												android:text="Samer Saka"
 												android:textColor="#000000"
 												android:textSize="12sp"
-												android:textStyle="bold"
-												android:layout_marginBottom="10dp"
-												android:layout_height="wrap_content"
-												android:layout_width="wrap_content"
-												android:text="Samer Saka"
-											/>
+												android:textStyle="bold" />
+
 											<TextView
 												android:id="@+id/r29cbigagixs"
-												android:textColor="#000000"
-												android:textSize="10sp"
-												android:layout_marginStart="2dp"
-												android:layout_height="wrap_content"
 												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:layout_marginStart="2dp"
 												android:text="I’m It engineer"
-											/>
+												android:textColor="#000000"
+												android:textSize="10sp" />
 										</LinearLayout>
 									</LinearLayout>
 								</LinearLayout>
+
 								<ImageView
 									android:id="@+id/rkvjn8tdrozp"
 									android:layout_width="12dp"
 									android:layout_height="12dp"
-									android:layout_marginBottom="-3dp"
-									android:layout_marginStart="27dp"
 									android:layout_alignParentBottom="true"
-									android:src="@mipmap/ic_launcher"
+									android:layout_marginStart="27dp"
+									android:layout_marginBottom="-3dp"
 									android:scaleType="fitXY"
-								/>
+									android:src="@mipmap/ic_launcher" />
 							</RelativeLayout>
+
 							<LinearLayout
 								android:id="@+id/r3bhtovnegek"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:gravity="center_vertical"
-								android:background="@drawable/cr13bfffffaf9"
-								android:paddingVertical="2dp"
-								android:paddingHorizontal="12dp"
-								android:layout_marginBottom="14dp"
 								android:layout_marginHorizontal="9dp"
+								android:layout_marginBottom="14dp"
+								android:background="@drawable/cr13bfffffaf9"
 								android:clipChildren="false"
 								android:clipToPadding="false"
-								android:orientation="horizontal">
+								android:gravity="center_vertical"
+								android:orientation="horizontal"
+								android:paddingHorizontal="12dp"
+								android:paddingVertical="2dp">
+
 								<RelativeLayout
 									android:id="@+id/rojfs8df8lds"
 									android:layout_width="48dp"
 									android:layout_height="wrap_content"
 									android:layout_marginEnd="3dp"
 									android:clipChildren="false"
-									android:clipToPadding="false"
-									>
+									android:clipToPadding="false">
+
 									<LinearLayout
 										android:layout_width="match_parent"
 										android:layout_height="match_parent"
 										android:clipChildren="false"
 										android:clipToPadding="false"
 										android:orientation="vertical">
+
 										<ImageView
 											android:id="@+id/r85klqcrl5dr"
 											android:layout_width="match_parent"
 											android:layout_height="48dp"
-											android:src="@mipmap/ic_launcher"
 											android:scaleType="fitXY"
-										/>
+											android:src="@mipmap/ic_launcher" />
 									</LinearLayout>
+
 									<ImageView
 										android:id="@+id/rx9s7melfx0a"
 										android:layout_width="12dp"
 										android:layout_height="12dp"
-										android:layout_marginBottom="-6dp"
-										android:layout_marginEnd="18dp"
-										android:layout_alignParentBottom="true"
 										android:layout_alignParentRight="true"
-										android:src="@mipmap/ic_launcher"
+										android:layout_alignParentBottom="true"
+										android:layout_marginEnd="18dp"
+										android:layout_marginBottom="-6dp"
 										android:scaleType="fitXY"
-									/>
+										android:src="@mipmap/ic_launcher" />
 								</RelativeLayout>
+
 								<LinearLayout
 									android:id="@+id/ry9w2wojk32"
 									android:layout_width="match_parent"
@@ -296,162 +247,169 @@
 									android:clipChildren="false"
 									android:clipToPadding="false"
 									android:orientation="vertical">
+
 									<TextView
 										android:id="@+id/r0odkl4mm9jgf"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_marginBottom="7dp"
+										android:text="Zaher Kolko"
 										android:textColor="#000000"
 										android:textSize="12sp"
-										android:textStyle="bold"
-										android:layout_marginBottom="7dp"
-										android:layout_height="wrap_content"
-										android:layout_width="wrap_content"
-										android:text="Zaher Kolko"
-									/>
+										android:textStyle="bold" />
+
 									<RelativeLayout
 										android:id="@+id/rrlii1hoihk9"
 										android:layout_width="match_parent"
 										android:layout_height="wrap_content"
 										android:clipChildren="false"
-										android:clipToPadding="false"
-										>
+										android:clipToPadding="false">
+
 										<LinearLayout
 											android:layout_width="match_parent"
 											android:layout_height="match_parent"
 											android:clipChildren="false"
 											android:clipToPadding="false"
 											android:orientation="vertical">
+
 											<TextView
 												android:id="@+id/ruudugbamyjr"
-												android:textColor="#000000"
-												android:textSize="10sp"
-												android:layout_height="wrap_content"
 												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
 												android:text="I’m It engineer"
-											/>
+												android:textColor="#000000"
+												android:textSize="10sp" />
 										</LinearLayout>
+
 										<TextView
 											android:id="@+id/ro54x5zig9rl"
-											android:textColor="#000000"
-											android:textSize="10sp"
-											android:layout_marginBottom="-2dp"
-											android:layout_marginStart="16dp"
-											android:layout_alignParentBottom="true"
-											android:layout_height="wrap_content"
 											android:layout_width="wrap_content"
+											android:layout_height="wrap_content"
+											android:layout_alignParentBottom="true"
+											android:layout_marginStart="16dp"
+											android:layout_marginBottom="-2dp"
 											android:text="I"
-										/>
+											android:textColor="#000000"
+											android:textSize="10sp" />
 									</RelativeLayout>
 								</LinearLayout>
 							</LinearLayout>
+
 							<LinearLayout
 								android:id="@+id/rk4atubswc9k"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:background="@drawable/cr13bfffffaf9"
-								android:paddingBottom="11dp"
-								android:paddingHorizontal="8dp"
-								android:layout_marginBottom="16dp"
 								android:layout_marginHorizontal="8dp"
+								android:layout_marginBottom="16dp"
+								android:background="@drawable/cr13bfffffaf9"
 								android:clipChildren="false"
 								android:clipToPadding="false"
-								android:orientation="horizontal">
+								android:orientation="horizontal"
+								android:paddingHorizontal="8dp"
+								android:paddingBottom="11dp">
+
 								<RelativeLayout
 									android:id="@+id/r0hqq7rlkaiyq"
 									android:layout_width="48dp"
 									android:layout_height="wrap_content"
 									android:layout_marginEnd="9dp"
 									android:clipChildren="false"
-									android:clipToPadding="false"
-									>
+									android:clipToPadding="false">
+
 									<LinearLayout
 										android:layout_width="match_parent"
 										android:layout_height="match_parent"
 										android:clipChildren="false"
 										android:clipToPadding="false"
 										android:orientation="vertical">
+
 										<ImageView
 											android:id="@+id/rxy45yo94yp8"
 											android:layout_width="match_parent"
 											android:layout_height="48dp"
-											android:src="@mipmap/ic_launcher"
 											android:scaleType="fitXY"
-										/>
+											android:src="@mipmap/ic_launcher" />
 									</LinearLayout>
+
 									<ImageView
 										android:id="@+id/r6rq6hopk59u"
 										android:layout_width="12dp"
 										android:layout_height="12dp"
-										android:layout_marginBottom="-6dp"
-										android:layout_marginEnd="18dp"
-										android:layout_alignParentBottom="true"
 										android:layout_alignParentRight="true"
-										android:src="@mipmap/ic_launcher"
+										android:layout_alignParentBottom="true"
+										android:layout_marginEnd="18dp"
+										android:layout_marginBottom="-6dp"
 										android:scaleType="fitXY"
-									/>
+										android:src="@mipmap/ic_launcher" />
 								</RelativeLayout>
+
 								<LinearLayout
 									android:id="@+id/rmiw5dovep7"
 									android:layout_width="match_parent"
 									android:layout_height="wrap_content"
-									android:layout_weight="1"
 									android:layout_marginTop="15dp"
+									android:layout_weight="1"
 									android:clipChildren="false"
 									android:clipToPadding="false"
 									android:orientation="vertical">
+
 									<TextView
 										android:id="@+id/rorh44asisrg"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_marginStart="2dp"
+										android:layout_marginBottom="7dp"
+										android:text="Roy Pena"
 										android:textColor="#060000"
 										android:textSize="12sp"
-										android:textStyle="bold"
-										android:layout_marginBottom="7dp"
-										android:layout_marginStart="2dp"
-										android:layout_height="wrap_content"
-										android:layout_width="wrap_content"
-										android:text="Roy Pena"
-									/>
+										android:textStyle="bold" />
+
 									<TextView
 										android:id="@+id/rw7pq089mb0s"
-										android:textColor="#000000"
-										android:textSize="10sp"
-										android:layout_height="wrap_content"
 										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
 										android:text="I’m It engineer"
-									/>
+										android:textColor="#000000"
+										android:textSize="10sp" />
 								</LinearLayout>
 							</LinearLayout>
+
 							<RelativeLayout
 								android:id="@+id/r5n1uoi4udyw"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:layout_marginBottom="15dp"
 								android:layout_marginHorizontal="9dp"
+								android:layout_marginBottom="15dp"
 								android:clipChildren="false"
-								android:clipToPadding="false"
-								>
+								android:clipToPadding="false">
+
 								<LinearLayout
 									android:layout_width="match_parent"
 									android:layout_height="match_parent"
 									android:clipChildren="false"
 									android:clipToPadding="false"
 									android:orientation="vertical">
+
 									<LinearLayout
 										android:id="@+id/rig5ygrv94zf"
 										android:layout_width="match_parent"
 										android:layout_height="wrap_content"
-										android:gravity="center_vertical"
 										android:background="@drawable/cr13bfffffaf9"
-										android:paddingVertical="6dp"
-										android:paddingHorizontal="8dp"
 										android:clipChildren="false"
 										android:clipToPadding="false"
-										android:orientation="horizontal">
+										android:gravity="center_vertical"
+										android:orientation="horizontal"
+										android:paddingHorizontal="8dp"
+										android:paddingVertical="6dp">
+
 										<ImageView
 											android:id="@+id/ril1bevl2guj"
 											android:layout_width="48dp"
 											android:layout_height="48dp"
 											android:layout_marginEnd="9dp"
-											android:src="@mipmap/ic_launcher"
 											android:scaleType="fitXY"
-										/>
+											android:src="@mipmap/ic_launcher" />
+
 										<LinearLayout
 											android:id="@+id/ri9haav77wla"
 											android:layout_width="match_parent"
@@ -460,194 +418,207 @@
 											android:clipChildren="false"
 											android:clipToPadding="false"
 											android:orientation="vertical">
+
 											<TextView
 												android:id="@+id/rwgi5u13hhg"
+												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:layout_marginBottom="5dp"
+												android:text="Waleed Saka"
 												android:textColor="#000000"
 												android:textSize="12sp"
-												android:textStyle="bold"
-												android:layout_marginBottom="5dp"
-												android:layout_height="wrap_content"
-												android:layout_width="wrap_content"
-												android:text="Waleed Saka"
-											/>
+												android:textStyle="bold" />
+
 											<TextView
 												android:id="@+id/rw9lrbkjgaz"
-												android:textColor="#000000"
-												android:textSize="10sp"
-												android:layout_marginStart="1dp"
-												android:layout_height="wrap_content"
 												android:layout_width="wrap_content"
+												android:layout_height="wrap_content"
+												android:layout_marginStart="1dp"
 												android:text="I’m It engineer"
-											/>
+												android:textColor="#000000"
+												android:textSize="10sp" />
 										</LinearLayout>
 									</LinearLayout>
 								</LinearLayout>
+
 								<ImageView
 									android:id="@+id/rjutfg51jpt"
 									android:layout_width="12dp"
 									android:layout_height="12dp"
-									android:layout_marginBottom="-1dp"
-									android:layout_marginStart="26dp"
 									android:layout_alignParentBottom="true"
-									android:src="@mipmap/ic_launcher"
+									android:layout_marginStart="26dp"
+									android:layout_marginBottom="-1dp"
 									android:scaleType="fitXY"
-								/>
+									android:src="@mipmap/ic_launcher" />
 							</RelativeLayout>
+
 							<LinearLayout
 								android:id="@+id/r5cacf4703ac"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:background="@drawable/cr13bfffffaf9"
-								android:layout_marginBottom="17dp"
 								android:layout_marginHorizontal="9dp"
+								android:layout_marginBottom="17dp"
+								android:background="@drawable/cr13bfffffaf9"
 								android:clipChildren="false"
 								android:clipToPadding="false"
-								android:orientation="vertical">
-							</LinearLayout>
+								android:orientation="vertical"></LinearLayout>
+
 							<LinearLayout
 								android:id="@+id/rvx2mgbm6oc"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:background="@drawable/cr13bfffffaf9"
-								android:layout_marginBottom="23dp"
 								android:layout_marginHorizontal="8dp"
+								android:layout_marginBottom="23dp"
+								android:background="@drawable/cr13bfffffaf9"
 								android:clipChildren="false"
 								android:clipToPadding="false"
-								android:orientation="vertical">
-							</LinearLayout>
+								android:orientation="vertical"></LinearLayout>
+
 							<LinearLayout
 								android:id="@+id/r6mg7h29p95w"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
-								android:background="@drawable/cr13bfffffaf9"
-								android:layout_marginBottom="16dp"
 								android:layout_marginHorizontal="9dp"
+								android:layout_marginBottom="16dp"
+								android:background="@drawable/cr13bfffffaf9"
 								android:clipChildren="false"
 								android:clipToPadding="false"
-								android:orientation="vertical">
-							</LinearLayout>
+								android:orientation="vertical"></LinearLayout>
+
 							<RelativeLayout
 								android:id="@+id/r834w1bkfw3j"
 								android:layout_width="match_parent"
 								android:layout_height="wrap_content"
 								android:clipChildren="false"
-								android:clipToPadding="false"
-								>
-								<LinearLayout
+								android:clipToPadding="false">
+
+								<RelativeLayout
 									android:layout_width="match_parent"
 									android:layout_height="match_parent"
 									android:clipChildren="false"
 									android:clipToPadding="false"
 									android:orientation="vertical">
-									<LinearLayout
+
+
+									<RelativeLayout
 										android:id="@+id/ridm6vulh0e"
 										android:layout_width="match_parent"
 										android:layout_height="wrap_content"
-										android:background="@drawable/cr13bfffffaf9"
 										android:layout_marginHorizontal="9dp"
+										android:background="@drawable/cr13bfffffaf9"
 										android:clipChildren="false"
 										android:clipToPadding="false"
 										android:orientation="vertical">
-									</LinearLayout>
-								</LinearLayout>
-								<LinearLayout
+
+									</RelativeLayout>
+
+								</RelativeLayout>
+
+								<RelativeLayout
+
 									android:id="@+id/r7jyklyd3vi3"
-									android:layout_marginBottom="0dp"
-									android:layout_marginEnd="0dp"
-									android:layout_alignParentBottom="true"
-									android:layout_alignParentRight="true"
 									android:layout_width="375dp"
 									android:layout_height="40dp"
+									android:layout_alignParentRight="true"
+									android:layout_alignParentBottom="true"
+									android:layout_marginEnd="0dp"
+									android:layout_marginBottom="0dp"
 									android:background="#FFff4c14"
-									android:paddingHorizontal="73dp"
 									android:clipChildren="false"
 									android:clipToPadding="false"
-									android:orientation="vertical">
+									android:orientation="vertical"
+									android:paddingHorizontal="73dp">
+
+
 									<LinearLayout
 										android:id="@+id/rlrhdnlwc41j"
 										android:layout_width="match_parent"
 										android:layout_height="wrap_content"
-										android:gravity="center_vertical"
 										android:layout_marginTop="7dp"
 										android:clipChildren="false"
 										android:clipToPadding="false"
+										android:gravity="center_vertical"
 										android:orientation="horizontal">
+
 										<ImageView
 											android:id="@+id/rk69g9x6ev2b"
 											android:layout_width="27dp"
 											android:layout_height="26dp"
 											android:layout_marginEnd="84dp"
-											android:src="@mipmap/ic_launcher"
 											android:scaleType="fitXY"
-										/>
+											android:src="@drawable/account_page_icon" />
+
 										<ImageView
 											android:id="@+id/r5qe63mwl5l2"
 											android:layout_width="28dp"
 											android:layout_height="27dp"
-											android:src="@mipmap/ic_launcher"
 											android:scaleType="fitXY"
-										/>
+											android:src="@drawable/home_page_icon" />
 									</LinearLayout>
-								</LinearLayout>
-								<LinearLayout
+								</RelativeLayout>
+
+								<RelativeLayout
 									android:id="@+id/rxt0iddjkc4"
-									android:layout_marginBottom="10dp"
-									android:layout_marginEnd="33dp"
-									android:layout_alignParentBottom="true"
-									android:layout_alignParentRight="true"
 									android:layout_width="76dp"
 									android:layout_height="60dp"
-									android:background="@drawable/sff5e27fdsw1bffffffff"
-									android:paddingHorizontal="17dp"
+									android:layout_alignParentRight="true"
+									android:layout_alignParentBottom="true"
+									android:layout_marginEnd="33dp"
+									android:layout_marginBottom="10dp"
+									android:background="@color/white"
 									android:clipChildren="false"
 									android:clipToPadding="false"
-									android:orientation="vertical">
+									android:orientation="vertical"
+									android:paddingHorizontal="17dp">
+
+
 									<RelativeLayout
-										android:clipChildren="false"
-										android:clipToPadding="false"
 										android:id="@+id/r9uv30lx0xb4_rl"
 										android:layout_width="match_parent"
 										android:layout_height="wrap_content"
 										android:layout_marginTop="12dp"
-										>
+										android:clipChildren="false"
+										android:clipToPadding="false">
+
+
 										<ImageView
 											android:id="@+id/r9uv30lx0xb4"
 											android:layout_width="match_parent"
 											android:layout_height="wrap_content"
-											android:src="@mipmap/ic_launcher"
 											android:scaleType="fitXY"
-										/>
-										<LinearLayout
-											android:paddingHorizontal="8dp"
-											android:orientation="vertical"
+											android:src="@drawable/ellipse" />
+
+										<RelativeLayout
 											android:layout_width="match_parent"
 											android:layout_height="match_parent"
 											android:clipChildren="false"
 											android:clipToPadding="false"
-											>
+											android:orientation="vertical"
+											android:paddingHorizontal="8dp">
+
+
 											<ImageView
 												android:id="@+id/ro66ezjmmvbl"
 												android:layout_width="match_parent"
 												android:layout_height="26dp"
 												android:layout_marginTop="5dp"
-												android:src="@mipmap/ic_launcher"
 												android:scaleType="fitXY"
-											/>
-										</LinearLayout>
+												android:src="@drawable/chats_page_icon" />
+										</RelativeLayout>
 									</RelativeLayout>
-								</LinearLayout>
+								</RelativeLayout>
 							</RelativeLayout>
 						</LinearLayout>
 					</LinearLayout>
+
 					<ImageView
 						android:id="@+id/rbm5g7r197b"
 						android:layout_width="37dp"
 						android:layout_height="33dp"
-						android:layout_marginTop="-31dp"
 						android:layout_marginStart="13dp"
-						android:src="@mipmap/ic_launcher"
+						android:layout_marginTop="-31dp"
 						android:scaleType="fitXY"
-					/>
+						android:src="@drawable/arrow_back" />
 				</RelativeLayout>
 			</LinearLayout>
 		</LinearLayout>

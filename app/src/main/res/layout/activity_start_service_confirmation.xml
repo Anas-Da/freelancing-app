@@ -148,7 +148,7 @@
 									android:id="@+id/r6ht0fzo99jc"
 									android:layout_width="102dp"
 									android:layout_height="24dp"
-									android:src="@mipmap/ic_launcher"
+									android:src="@drawable/message_box_left"
 									android:scaleType="fitXY"
 								/>
 								<LinearLayout

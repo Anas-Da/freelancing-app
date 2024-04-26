@@ -31,33 +31,7 @@
 				android:layout_marginBottom="10dp"
 				android:layout_marginHorizontal="18dp"
 				android:orientation="horizontal">
-				<TextView
-					android:id="@+id/rnqm3qxfkkqa"
-					android:textColor="#ffffff"
-					android:textSize="14sp"
-					android:textStyle="bold"
-					android:layout_marginEnd="4dp"
-					android:layout_height="wrap_content"
-					android:layout_width="match_parent"
-					android:layout_weight="1"
-					android:text="9:41"
-				/>
-				<ImageView
-					android:id="@+id/rkvqaz0fsr5"
-					android:layout_width="17dp"
-					android:layout_height="10dp"
-					android:layout_marginEnd="5dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="fitXY"
-				/>
-				<ImageView
-					android:id="@+id/rkchkjecwaf"
-					android:layout_width="15dp"
-					android:layout_height="10dp"
-					android:layout_marginEnd="5dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="fitXY"
-				/>
+
 				<LinearLayout
 					android:id="@+id/rbe7ucbkdvf"
 					android:layout_width="22dp"
@@ -65,16 +39,7 @@
 					android:background="@drawable/sffffffffsw1cr2_6666667461395264bffffffff"
 					android:paddingHorizontal="2dp"
 					android:layout_marginEnd="1dp"
-					android:orientation="vertical">
-					<LinearLayout
-						android:id="@+id/rqykfhtxcxx9"
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
-						android:background="@drawable/cr1_3333333730697632bffffffff"
-						android:layout_marginTop="2dp"
-						android:orientation="vertical">
-					</LinearLayout>
-				</LinearLayout>
+					android:orientation="vertical"/>
 				<LinearLayout
 					android:id="@+id/r40d17bsjfgk"
 					android:layout_width="1dp"
