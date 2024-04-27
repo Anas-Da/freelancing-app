@@ -53,7 +53,7 @@
                 android:id="@+id/re7c8b5ltt7l"
                 android:layout_width="37dp"
                 android:layout_height="33dp"
-                android:layout_marginBottom="3dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginHorizontal="21dp"
                 android:src="@drawable/arrow_back"
                 android:scaleType="fitXY"
