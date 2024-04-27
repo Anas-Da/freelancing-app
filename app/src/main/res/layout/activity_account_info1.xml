@@ -1,6 +1,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#FFFFFFFF"
     android:clipChildren="false"
     android:clipToPadding="false"
@@ -126,6 +127,7 @@
                         android:layout_toEndOf="@+id/rn6rktg051u"
                         android:ems="18"
                         android:hint="username@gmail.com"
+                        android:minHeight="48dp"
                         android:textColor="#060000"
                         android:textSize="12sp"
                         android:translationX="10dp" />
@@ -175,6 +177,7 @@
                         android:ems="18"
                         android:hint="password"
                         android:inputType="textWebEmailAddress"
+                        android:minHeight="48dp"
                         android:textSize="12sp" />
 
                     <ImageView
@@ -231,8 +234,10 @@
                         android:ems="18"
                         android:hint="+963985232145"
                         android:inputType="textPhonetic"
+                        android:minHeight="48dp"
                         android:textColor="#060000"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        tools:ignore="TextSizeCheck" />
 
                 </RelativeLayout>
 
@@ -280,6 +285,7 @@
                         android:ems="18"
                         android:hint="21 Sep 1997"
                         android:inputType="date"
+                        android:minHeight="48dp"
                         android:textColor="#060000"
                         android:textSize="12sp" />
                 </RelativeLayout>
@@ -333,27 +339,34 @@
                         android:layout_weight="1"
                         android:ems="18"
                         android:hint="Homs,Syria"
+                        android:minHeight="48dp"
                         android:textColor="#b9b9bd"
                         android:textSize="12sp" />
                 </RelativeLayout>
 
-                <Button
+                <RelativeLayout
                     android:id="@+id/rpjd4e16kxep"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/r5wn0b8ao6r2"
                     android:layout_marginHorizontal="111dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/cr52bffff4c14"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-                    android:paddingVertical="18dp"
-                    android:text="Save Changes"
-                    android:color="#FFff4c14"
-
-                    />
-
-
+                    android:paddingVertical="18dp">
+                    <TextView
+                        android:id="@+id/rx31l144hi7"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Save Changes"
+                        />
+                </RelativeLayout>
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
