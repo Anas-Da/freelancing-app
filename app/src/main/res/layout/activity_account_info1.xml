@@ -89,6 +89,7 @@
                     android:layout_below="@+id/rmmhq5zz6np"
                     android:layout_marginTop="5dp"
                     android:text="Email"
+                    android:textColor="#2d2d3a"
                     android:textSize="14sp"
                     android:translationX="25dp"
                     android:translationY="-5dp" />
@@ -194,8 +195,8 @@
                     android:layout_below="@+id/rzqzp5n0yuf"
                     android:layout_marginStart="28dp"
                     android:layout_marginBottom="15dp"
-                    android:text="Phone Nmber"
-                    android:textColor="#000000"
+                    android:text="Phone Number"
+                    android:textColor="#2d2d3a"
                     android:textSize="14sp" />
 
                 <RelativeLayout
@@ -243,7 +244,7 @@
                     android:layout_marginStart="28dp"
                     android:layout_marginBottom="15dp"
                     android:text="Birthday"
-                    android:textColor="#000000"
+                    android:textColor="#2d2d3a"
                     android:textSize="14sp" />
 
                 <RelativeLayout
