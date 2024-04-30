@@ -33,7 +33,8 @@
                 android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:translationY="-5dp" />
+                android:translationX="-3dp"
+                android:translationY="-3dp" />
             <RelativeLayout
                 android:id="@+id/rdyndsji2gv7"
                 android:layout_width="match_parent"
