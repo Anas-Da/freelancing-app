@@ -2,24 +2,29 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:background="#FFFFFFFF"
+	android:clipChildren="false"
+	android:clipToPadding="false"
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 	<ScrollView 
 		android:fillViewport="true"
-		android:id="@+id/r9nunkzvkcg"
+		android:id="@+id/rr4na3exdx9"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:layout_weight="1"
 		android:background="#FF18104a"
 		android:paddingTop="17dp"
-		>
+		android:clipChildren="false"
+		android:clipToPadding="false">
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
+			android:clipChildren="false"
+			android:clipToPadding="false"
 			android:orientation="vertical">
 			<LinearLayout
-				android:id="@+id/r477cx0gdwer"
+				android:id="@+id/rvfocq1fjvxo"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:gravity="center_vertical"
@@ -27,7 +32,7 @@
 				android:layout_marginHorizontal="18dp"
 				android:orientation="horizontal">
 				<TextView
-					android:id="@+id/rg8x0hnc167"
+					android:id="@+id/r1b8zk3n06pp"
 					android:textColor="#ffffff"
 					android:textSize="14sp"
 					android:textStyle="bold"
@@ -38,7 +43,7 @@
 					android:text="9:41"
 				/>
 				<ImageView
-					android:id="@+id/r9cn7m9i5u7m"
+					android:id="@+id/r2o5z0f39vgs"
 					android:layout_width="17dp"
 					android:layout_height="10dp"
 					android:layout_marginEnd="5dp"
@@ -46,7 +51,7 @@
 					android:scaleType="fitXY"
 				/>
 				<ImageView
-					android:id="@+id/roywbojm5ehr"
+					android:id="@+id/rff67ui00tk"
 					android:layout_width="15dp"
 					android:layout_height="10dp"
 					android:layout_marginEnd="5dp"
@@ -54,7 +59,7 @@
 					android:scaleType="fitXY"
 				/>
 				<LinearLayout
-					android:id="@+id/r5w6log42tno"
+					android:id="@+id/rur5iy8ihv8"
 					android:layout_width="22dp"
 					android:layout_height="wrap_content"
 					android:background="@drawable/sffffffffsw1cr2_6666667461395264bffffffff"
@@ -62,7 +67,7 @@
 					android:layout_marginEnd="1dp"
 					android:orientation="vertical">
 					<LinearLayout
-						android:id="@+id/rdcgc4wymwmn"
+						android:id="@+id/ra4zgq9tntaj"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:background="@drawable/cr1_3333333730697632bffffffff"
@@ -71,7 +76,7 @@
 					</LinearLayout>
 				</LinearLayout>
 				<LinearLayout
-					android:id="@+id/r940h6qvi0b5"
+					android:id="@+id/rj8v6xjze96l"
 					android:layout_width="1dp"
 					android:layout_height="wrap_content"
 					android:background="#FFffffff"
@@ -79,7 +84,7 @@
 				</LinearLayout>
 			</LinearLayout>
 			<LinearLayout
-				android:id="@+id/r77r56i3i406"
+				android:id="@+id/rwom5xizrnyr"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:gravity="center_vertical"
@@ -87,7 +92,7 @@
 				android:layout_marginHorizontal="17dp"
 				android:orientation="horizontal">
 				<TextView
-					android:id="@+id/riel7p72e93"
+					android:id="@+id/rtif6nzhmkxf"
 					android:textColor="#ffffff"
 					android:textSize="20sp"
 					android:textStyle="bold"
@@ -101,7 +106,7 @@
 					android:layout_weight="1"
 				 />
 				<TextView
-					android:id="@+id/ry1rqa8qlrz"
+					android:id="@+id/rxcrji723b1"
 					android:textColor="#ffffff"
 					android:textSize="24sp"
 					android:textStyle="bold"
@@ -110,322 +115,310 @@
 					android:text="freelancer"
 				/>
 			</LinearLayout>
-			<LinearLayout
-				android:id="@+id/r016fd0m9ugz8"
+			<RelativeLayout
+				android:id="@+id/r0vn7no7xpgul"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:background="@drawable/tl90tr90bffffffff"
-				android:paddingTop="64dp"
-				android:paddingBottom="6dp"
-				android:orientation="vertical">
-				<TextView
-					android:id="@+id/rl3v9vrvhnz"
-					android:textColor="#2d2d3a"
-					android:textSize="20sp"
-					android:textStyle="bold"
-					android:layout_marginBottom="11dp"
-					android:layout_marginStart="30dp"
-					android:layout_height="wrap_content"
-					android:layout_width="wrap_content"
-					android:text="Choose your workgroup"
-				/>
+				android:clipChildren="false"
+				android:clipToPadding="false"
+				>
 				<LinearLayout
-					android:id="@+id/rhpdelmdwntn"
 					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginBottom="7dp"
-					android:layout_marginHorizontal="28dp"
-					android:orientation="horizontal">
-					<com.google.android.material.imageview.ShapeableImageView
-						android:id="@+id/rixi8hpg1fo"
-						app:shapeAppearanceOverlay="@style/cr200"
-						android:layout_width="120dp"
-						android:layout_height="114dp"
-						android:src="@mipmap/ic_launcher"
-						android:scaleType="fitXY"
-					/>
+					android:layout_height="match_parent"
+					android:clipChildren="false"
+					android:clipToPadding="false"
+					android:orientation="vertical">
 					<LinearLayout
-						android:id="@+id/rwconpshxovg"
+						android:id="@+id/rs1mldgglcic"
 						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:layout_weight="1"
-						android:orientation="vertical">
-					</LinearLayout>
-					<com.google.android.material.imageview.ShapeableImageView
-						android:id="@+id/rjiako9oml1"
-						app:shapeAppearanceOverlay="@style/cr200"
-						android:layout_width="120dp"
-						android:layout_height="114dp"
-						android:src="@mipmap/ic_launcher"
-						android:scaleType="fitXY"
-					/>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/rnsrrhihz7ga"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginBottom="8dp"
-					android:layout_marginHorizontal="39dp"
-					android:orientation="horizontal">
-					<TextView
-						android:id="@+id/rb8pjqa1krnc"
-						android:textColor="#000000"
-						android:textSize="16sp"
-						android:textStyle="bold"
 						android:layout_height="wrap_content"
-						android:layout_width="wrap_content"
-						android:text="Doctor"
-					/>
-					<View
-						android:layout_width="0dp"
-						android:layout_height="0dp"
-						android:layout_weight="1"
-					 />
-					<TextView
-						android:id="@+id/r1jds3i0pzkm"
-						android:textColor="#000000"
-						android:textSize="16sp"
-						android:layout_height="wrap_content"
-						android:layout_width="wrap_content"
-						android:text="interior  designer"
-					/>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/rl0u8wwf45r"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginBottom="6dp"
-					android:layout_marginHorizontal="28dp"
-					android:orientation="horizontal">
-					<com.google.android.material.imageview.ShapeableImageView
-						android:id="@+id/r6s1recsgvhb"
-						app:shapeAppearanceOverlay="@style/cr200"
-						android:layout_width="120dp"
-						android:layout_height="113dp"
-						android:src="@mipmap/ic_launcher"
-						android:scaleType="fitXY"
-					/>
-					<LinearLayout
-						android:id="@+id/r88xb45rz553"
-						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:layout_weight="1"
-						android:orientation="vertical">
-					</LinearLayout>
-					<com.google.android.material.imageview.ShapeableImageView
-						android:id="@+id/retzvgojmd9p"
-						app:shapeAppearanceOverlay="@style/cr200"
-						android:layout_width="120dp"
-						android:layout_height="115dp"
-						android:src="@mipmap/ic_launcher"
-						android:scaleType="fitXY"
-					/>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/rr1w7ginlw4"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginBottom="5dp"
-					android:layout_marginHorizontal="24dp"
-					android:orientation="horizontal">
-					<TextView
-						android:id="@+id/rusoiwonzi7"
-						android:textColor="#000000"
-						android:textSize="16sp"
-						android:textStyle="bold"
-						android:layout_height="wrap_content"
-						android:layout_width="wrap_content"
-						android:text="Translator"
-					/>
-					<View
-						android:layout_width="0dp"
-						android:layout_height="0dp"
-						android:layout_weight="1"
-					 />
-					<TextView
-						android:id="@+id/ru07xsdax15"
-						android:textColor="#000000"
-						android:textSize="16sp"
-						android:layout_height="wrap_content"
-						android:layout_width="wrap_content"
-						android:text="architecture engineer"
-					/>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/rk2a4qnin8o"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginBottom="6dp"
-					android:layout_marginHorizontal="28dp"
-					android:orientation="horizontal">
-					<com.google.android.material.imageview.ShapeableImageView
-						android:id="@+id/r04d4a2xrkl8j"
-						app:shapeAppearanceOverlay="@style/cr200"
-						android:layout_width="120dp"
-						android:layout_height="114dp"
-						android:src="@mipmap/ic_launcher"
-						android:scaleType="fitXY"
-					/>
-					<LinearLayout
-						android:id="@+id/r7qrkgpduuls"
-						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:layout_weight="1"
-						android:orientation="vertical">
-					</LinearLayout>
-					<com.google.android.material.imageview.ShapeableImageView
-						android:id="@+id/rp3rf73haw2d"
-						app:shapeAppearanceOverlay="@style/cr200"
-						android:layout_width="120dp"
-						android:layout_height="114dp"
-						android:src="@mipmap/ic_launcher"
-						android:scaleType="fitXY"
-					/>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/r5qqghbswp8q"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginBottom="8dp"
-					android:layout_marginHorizontal="54dp"
-					android:orientation="horizontal">
-					<TextView
-						android:id="@+id/r0d84nfn5d94c"
-						android:textColor="#000000"
-						android:textSize="16sp"
-						android:textStyle="bold"
-						android:layout_marginEnd="4dp"
-						android:layout_height="wrap_content"
-						android:layout_width="match_parent"
-						android:layout_weight="1"
-						android:text="Teacher"
-					/>
-					<TextView
-						android:id="@+id/rso398l39ye"
-						android:textColor="#000000"
-						android:textSize="16sp"
-						android:layout_height="wrap_content"
-						android:layout_width="wrap_content"
-						android:text="it engineer"
-					/>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/r1xhrbtlodjz"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginBottom="8dp"
-					android:layout_marginHorizontal="28dp"
-					android:orientation="horizontal">
-					<com.google.android.material.imageview.ShapeableImageView
-						android:id="@+id/r1hhl1zd78eaj"
-						app:shapeAppearanceOverlay="@style/cr200"
-						android:layout_width="120dp"
-						android:layout_height="115dp"
-						android:src="@mipmap/ic_launcher"
-						android:scaleType="fitXY"
-					/>
-					<LinearLayout
-						android:id="@+id/rn07xdaakf6k"
-						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:layout_weight="1"
-						android:orientation="vertical">
-					</LinearLayout>
-					<com.google.android.material.imageview.ShapeableImageView
-						android:id="@+id/r23c2rktqkm8"
-						app:shapeAppearanceOverlay="@style/cr200"
-						android:layout_width="120dp"
-						android:layout_height="114dp"
-						android:src="@mipmap/ic_launcher"
-						android:scaleType="fitXY"
-					/>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/r52idcj5ixnj"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginBottom="1dp"
-					android:layout_marginHorizontal="61dp"
-					android:orientation="horizontal">
-					<TextView
-						android:id="@+id/r5spxa3rp8uv"
-						android:textColor="#000000"
-						android:textSize="16sp"
-						android:textStyle="bold"
-						android:layout_marginEnd="4dp"
-						android:layout_height="wrap_content"
-						android:layout_width="match_parent"
-						android:layout_weight="1"
-						android:text="Lawyer"
-					/>
-					<TextView
-						android:id="@+id/r8aybcdz0l84"
-						android:textColor="#000000"
-						android:textSize="16sp"
-						android:textStyle="bold"
-						android:layout_height="wrap_content"
-						android:layout_width="wrap_content"
-						android:text="Designer"
-					/>
-				</LinearLayout>
-				<LinearLayout
-					android:id="@+id/rd52yhihtn6i"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:gravity="center_vertical"
-					android:layout_marginHorizontal="21dp"
-					android:orientation="horizontal">
-					<LinearLayout
-						android:id="@+id/rcguad8wth"
-						android:layout_width="146dp"
-						android:layout_height="wrap_content"
-						android:gravity="center_horizontal"
-						android:background="@drawable/cr52bffff4c14"
-						android:paddingVertical="18dp"
+						android:background="@drawable/tl90tr90bffffffff"
+						android:paddingVertical="64dp"
 						android:orientation="vertical">
 						<TextView
-							android:id="@+id/rk9z3h0c29ob"
-							android:textColor="#ffffff"
-							android:textSize="16sp"
+							android:id="@+id/rcx85nqz4fxm"
+							android:textColor="#2d2d3a"
+							android:textSize="20sp"
 							android:textStyle="bold"
+							android:layout_marginBottom="11dp"
+							android:layout_marginStart="30dp"
 							android:layout_height="wrap_content"
 							android:layout_width="wrap_content"
-							android:text="Back"
+							android:text="Choose your workgroup"
 						/>
-					</LinearLayout>
-					<View
-						android:layout_width="0dp"
-						android:layout_height="0dp"
-						android:layout_weight="1"
-					 />
-					<LinearLayout
-						android:id="@+id/rs3kgkuih8tm"
-						android:layout_width="146dp"
-						android:layout_height="wrap_content"
-						android:gravity="center_horizontal"
-						android:background="@drawable/cr52bffff4c14"
-						android:paddingVertical="17dp"
-						android:orientation="vertical">
-						<TextView
-							android:id="@+id/rybwkspy53cj"
-							android:textColor="#ffffff"
-							android:textSize="16sp"
-							android:textStyle="bold"
+						<LinearLayout
+							android:id="@+id/rs1h44f6p68k"
+							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:layout_width="wrap_content"
-							android:text="Sign up"
-						/>
+							android:gravity="center_vertical"
+							android:layout_marginBottom="7dp"
+							android:layout_marginHorizontal="28dp"
+							android:orientation="horizontal">
+							<com.google.android.material.imageview.ShapeableImageView
+								android:id="@+id/r2podc1j6txw"
+								app:shapeAppearanceOverlay="@style/cr200"
+								android:layout_width="120dp"
+								android:layout_height="114dp"
+								android:src="@mipmap/ic_launcher"
+								android:scaleType="fitXY"
+							/>
+							<LinearLayout
+								android:id="@+id/rntmdjlghvho"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:orientation="vertical">
+							</LinearLayout>
+							<com.google.android.material.imageview.ShapeableImageView
+								android:id="@+id/rb0ddprnrxnf"
+								app:shapeAppearanceOverlay="@style/cr200"
+								android:layout_width="120dp"
+								android:layout_height="114dp"
+								android:src="@mipmap/ic_launcher"
+								android:scaleType="fitXY"
+							/>
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/ruw5r9ytl09"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:layout_marginBottom="8dp"
+							android:layout_marginHorizontal="39dp"
+							android:orientation="horizontal">
+							<TextView
+								android:id="@+id/rje3rw3gl05d"
+								android:textColor="#000000"
+								android:textSize="16sp"
+								android:textStyle="bold"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:text="Doctor"
+							/>
+							<View
+								android:layout_width="0dp"
+								android:layout_height="0dp"
+								android:layout_weight="1"
+							 />
+							<TextView
+								android:id="@+id/r3pgxere2zkq"
+								android:textColor="#000000"
+								android:textSize="16sp"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:text="interior  designer"
+							/>
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/rtzzamgc4s9p"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:layout_marginBottom="6dp"
+							android:layout_marginHorizontal="28dp"
+							android:orientation="horizontal">
+							<com.google.android.material.imageview.ShapeableImageView
+								android:id="@+id/r4l8nv51s8wv"
+								app:shapeAppearanceOverlay="@style/cr200"
+								android:layout_width="120dp"
+								android:layout_height="113dp"
+								android:src="@mipmap/ic_launcher"
+								android:scaleType="fitXY"
+							/>
+							<LinearLayout
+								android:id="@+id/rn9lajjom1vj"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:orientation="vertical">
+							</LinearLayout>
+							<com.google.android.material.imageview.ShapeableImageView
+								android:id="@+id/r2gpclcvierx"
+								app:shapeAppearanceOverlay="@style/cr200"
+								android:layout_width="120dp"
+								android:layout_height="115dp"
+								android:src="@mipmap/ic_launcher"
+								android:scaleType="fitXY"
+							/>
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/rgujq7y1gw3s"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:layout_marginBottom="5dp"
+							android:layout_marginHorizontal="24dp"
+							android:orientation="horizontal">
+							<TextView
+								android:id="@+id/ryw25i32scc"
+								android:textColor="#000000"
+								android:textSize="16sp"
+								android:textStyle="bold"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:text="Translator"
+							/>
+							<View
+								android:layout_width="0dp"
+								android:layout_height="0dp"
+								android:layout_weight="1"
+							 />
+							<TextView
+								android:id="@+id/rsaz2ypr6xgs"
+								android:textColor="#000000"
+								android:textSize="16sp"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:text="architecture engineer"
+							/>
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/rk2n0heygvy"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:layout_marginBottom="6dp"
+							android:layout_marginHorizontal="28dp"
+							android:orientation="horizontal">
+							<com.google.android.material.imageview.ShapeableImageView
+								android:id="@+id/ryqhziv8udl"
+								app:shapeAppearanceOverlay="@style/cr200"
+								android:layout_width="120dp"
+								android:layout_height="114dp"
+								android:src="@mipmap/ic_launcher"
+								android:scaleType="fitXY"
+							/>
+							<LinearLayout
+								android:id="@+id/rue9lvxacbhm"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:orientation="vertical">
+							</LinearLayout>
+							<com.google.android.material.imageview.ShapeableImageView
+								android:id="@+id/rhra7cvcizcb"
+								app:shapeAppearanceOverlay="@style/cr200"
+								android:layout_width="120dp"
+								android:layout_height="114dp"
+								android:src="@mipmap/ic_launcher"
+								android:scaleType="fitXY"
+							/>
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/rr48jbsnzm7s"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:layout_marginBottom="8dp"
+							android:layout_marginHorizontal="54dp"
+							android:orientation="horizontal">
+							<TextView
+								android:id="@+id/ryu3m9bxom4"
+								android:textColor="#000000"
+								android:textSize="16sp"
+								android:textStyle="bold"
+								android:layout_marginEnd="4dp"
+								android:layout_height="wrap_content"
+								android:layout_width="match_parent"
+								android:layout_weight="1"
+								android:text="Teacher"
+							/>
+							<TextView
+								android:id="@+id/ry4s3kebplgd"
+								android:textColor="#000000"
+								android:textSize="16sp"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:text="it engineer"
+							/>
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/r6udbnvcd0i"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:layout_marginBottom="8dp"
+							android:layout_marginHorizontal="28dp"
+							android:orientation="horizontal">
+							<com.google.android.material.imageview.ShapeableImageView
+								android:id="@+id/rknczhd3onfk"
+								app:shapeAppearanceOverlay="@style/cr200"
+								android:layout_width="120dp"
+								android:layout_height="115dp"
+								android:src="@mipmap/ic_launcher"
+								android:scaleType="fitXY"
+							/>
+							<LinearLayout
+								android:id="@+id/rdt1yzety3x6"
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:layout_weight="1"
+								android:orientation="vertical">
+							</LinearLayout>
+							<com.google.android.material.imageview.ShapeableImageView
+								android:id="@+id/rksd4ayu8a3m"
+								app:shapeAppearanceOverlay="@style/cr200"
+								android:layout_width="120dp"
+								android:layout_height="114dp"
+								android:src="@mipmap/ic_launcher"
+								android:scaleType="fitXY"
+							/>
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/rsgvhgku8tek"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:layout_marginHorizontal="61dp"
+							android:orientation="horizontal">
+							<TextView
+								android:id="@+id/rqsoo8vcxnjb"
+								android:textColor="#000000"
+								android:textSize="16sp"
+								android:textStyle="bold"
+								android:layout_marginEnd="4dp"
+								android:layout_height="wrap_content"
+								android:layout_width="match_parent"
+								android:layout_weight="1"
+								android:text="Lawyer"
+							/>
+							<TextView
+								android:id="@+id/r2q8zw5qbd9t"
+								android:textColor="#000000"
+								android:textSize="16sp"
+								android:textStyle="bold"
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:text="Designer"
+							/>
+						</LinearLayout>
 					</LinearLayout>
 				</LinearLayout>
-			</LinearLayout>
+				<LinearLayout
+					android:id="@+id/rgp5xvtv2vvw"
+					android:layout_marginBottom="-1dp"
+					android:layout_marginEnd="114dp"
+					android:layout_alignParentBottom="true"
+					android:layout_alignParentRight="true"
+					android:layout_width="146dp"
+					android:layout_height="48dp"
+					android:background="@drawable/cr52bffff4c14"
+					android:paddingHorizontal="56dp"
+					android:clipChildren="false"
+					android:clipToPadding="false"
+					android:orientation="vertical">
+					<TextView
+						android:id="@+id/rlw89lzjg17d"
+						android:textColor="#ffffff"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						android:layout_marginTop="18dp"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text="Back"
+					/>
+				</LinearLayout>
+			</RelativeLayout>
 		</LinearLayout>
 	</ScrollView>
 </LinearLayout>

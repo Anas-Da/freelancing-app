@@ -31,14 +31,14 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="285dp"
-                android:layout_marginTop="-5dp"
+                android:layout_marginTop="-3dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginBottom="16dp"
                 android:text="freelancer"
                 android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:translationX="-3dp"
+                android:translationX="-10dp"
                 android:translationY="-3dp" />
             <RelativeLayout
                 android:id="@+id/rdyndsji2gv7"
@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rb2rwzjsvrjk"
-                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
                     android:layout_marginHorizontal="12dp"
                     android:layout_marginTop="0dp"
                     android:layout_marginBottom="11dp"
@@ -125,6 +125,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rv1xakfm0g58"
                     android:layout_marginHorizontal="12dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="1dp"
                     android:orientation="horizontal">
@@ -175,6 +176,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rfz82ikvv6j5"
                     android:layout_marginHorizontal="12dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="14dp"
                     android:layout_marginBottom="37dp"
                     android:orientation="horizontal">
