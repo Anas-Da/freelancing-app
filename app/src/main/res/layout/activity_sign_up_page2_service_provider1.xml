@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="#FFFFFFFF"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/r0h5yg2kjsuak"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF18104a"
+            android:fillViewport="true"
+            android:paddingTop="17dp"
+            android:paddingBottom="-3dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/rtif6nzhmkxf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="2dp"
+                    android:text="Sign up"
+                    android:textColor="#ffffff"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:translationX="-3dp"
+                    android:translationY="-3dp"/>
+                <TextView
+                    android:id="@+id/r9vqib29tvru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="285dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="2dp"
+                    android:text="freelancer"
+                    android:textColor="#ffffff"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:translationX="-10dp"
+                    android:translationY="-3dp" />
+                <RelativeLayout
+                    android:id="@+id/rdyndsji2gv7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/tl90tr90bffffffff"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingVertical="30dp">
+                    <TextView
+                        android:id="@+id/rmmhq5zz6np"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Create a service provider account"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/rgeio7dyf03"
+                        android:textColor="#96969c"
+                        android:textSize="14sp"
+                        android:layout_marginStart="30dp"
+                        android:layout_below="@+id/rmmhq5zz6np"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Sign up your account to continue "
+                        />
+                    <TextView
+                        android:id="@+id/rhnpbfnkllv"
+                        android:textColor="#2d2d3a"
+                        android:textSize="14sp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/rgeio7dyf03"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Date of Birth"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/rx35kc18k1d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rhnpbfnkllv"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/sfff0f0f0sw1cr50"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="17dp"
+                        android:paddingVertical="21dp">
+                        <ImageView
+                            android:id="@+id/rtsw53rew2d"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="9dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/date"
+                            android:translationY="14dp" />
+
+                        <EditText
+                            android:id="@+id/r08batjez6kz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/rtsw53rew2d"
+                            android:layout_weight="1"
+                            android:ems="18"
+                            android:hint="21 Sep 1997"
+                            android:inputType="date"
+                            android:minHeight="48dp"
+                            android:textColor="#060000"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/rhnpbfnkllv9"
+                        android:textColor="#2d2d3a"
+                        android:textSize="14sp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/rx35kc18k1d"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Country"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/rx35kc18k1dg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rhnpbfnkllv9"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginTop="5dp"
+
+                        android:background="@drawable/sfff0f0f0sw1cr50"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="17dp"
+                        android:paddingVertical="21dp">
+
+                        <ImageView
+                            android:id="@+id/rgit6sahcuwv"
+                            android:layout_width="14dp"
+                            android:layout_height="16dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="1dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/location"
+                            android:translationY="15dp" />
+
+                        <EditText
+                            android:id="@+id/rt6dirwcupce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_toEndOf="@+id/rgit6sahcuwv"
+                            android:layout_weight="1"
+                            android:ems="18"
+                            android:hint="Country"
+                            android:minHeight="48dp"
+                            android:textColor="#b9b9bd"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/ry7kql5e3cnq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rx35kc18k1dg"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="28dp"
+                        android:text="Phone number"
+                        android:textColor="#2d2d3a"
+                        android:textSize="14sp" />
+                    <RelativeLayout
+                        android:id="@+id/rzqzp5n0yuf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ry7kql5e3cnq"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginHorizontal="22dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/sfff0f0f0sw1cr50"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="18dp"
+                        android:paddingVertical="19dp">
+
+                        <ImageView
+                            android:id="@+id/rfmqwd1580ct"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="10dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/phone"
+                            android:translationY="14dp" />
+
+                        <EditText
+                            android:id="@+id/r04f96d53o9uv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/rfmqwd1580ct"
+                            android:ems="18"
+                            android:hint="+963985232145"
+                            android:inputType="textPhonetic"
+                            android:minHeight="48dp"
+                            android:textColor="#060000"
+                            android:textSize="14dp"
+                            tools:ignore="TextSizeCheck" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rgp5xvtv2vvw"
+                        android:layout_width="146dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/rzqzp5n0yuf"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginHorizontal="28dp"
+                        android:background="@drawable/cr52bffff4c14">
+
+                        <TextView
+                            android:id="@+id/rlw89lzjg17d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="18dp"
+                            android:text="Back"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rs3kgkuih8tm"
+                        android:layout_width="146dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/rzqzp5n0yuf"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginHorizontal="28dp"
+                        android:background="@drawable/cr52bffff4c14">
+                        <TextView
+                            android:id="@+id/rybwkspy53cj"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Sign up"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
