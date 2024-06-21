@@ -159,14 +159,15 @@
                 android:textColor="#000000"
                 android:textSize="16sp" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/rn9lajjom1v"
-            android:layout_width="wrap_content"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rs1h44f6p68k"
+            android:layout_alignParentRight="true"
             android:layout_marginHorizontal="28dp"
             android:layout_marginBottom="7dp"
-            android:layout_alignParentRight="true"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -184,8 +185,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/r4l8nv51s8w"
                 android:layout_alignStart="@+id/r4l8nv51s8w"
-                android:layout_marginStart="10dp"
                 android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
                 android:text="Architecture engineer"
                 android:textColor="#000000"
                 android:textSize="16sp" />
