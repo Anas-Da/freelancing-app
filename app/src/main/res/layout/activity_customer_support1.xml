@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
@@ -47,15 +48,59 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="25dp"
-        android:layout_marginBottom="0dp"
         android:background="@drawable/tl90tr90bffffffff"
         android:clipChildren="false"
         android:clipToPadding="false"
-        android:orientation="vertical"
         android:paddingVertical="30dp">
 
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bar"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-30dp">
 
+
+            <ImageView
+                android:id="@+id/kmklasds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/smile"
+                ></ImageView>
+
+<ImageView
+    android:id="@+id/r0h5ygsfhc2kjsuak"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="7dp"
+    android:src="@drawable/microphone"
+    ></ImageView>
+            <ImageView
+                android:id="@+id/aaduiahduihad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/r0h5ygsfhc2kjsuak"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/attachment"></ImageView>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck"
+                android:layout_toEndOf="@+id/kmklasds"
+                android:layout_marginStart="5dp"
+                android:hint="Message">
+
+            </EditText>
+        </RelativeLayout>
     </RelativeLayout>
     </RelativeLayout>
     </ScrollView>
