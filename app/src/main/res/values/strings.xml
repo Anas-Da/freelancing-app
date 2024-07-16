@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">freelancing_app</string>
+    <string name="profiles">Profiles</string>
+    <string name="about">About</string>
+    <string name="zaher_kolko">Zaher Kolko</string>
+    <string name="my_account">My account</string>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AboutButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/l_orange</item>
+    </style>
+    <style name="ProfilesButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint" >@color/orange</item>
+    </style>
+</resources>
