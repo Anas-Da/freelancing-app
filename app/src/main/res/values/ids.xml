@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  <item name="" type="" />    -->
-    <!-- _b :button / _et : editText -->
+    <!-- _b :button / _et : editText _tv : TextView / _rb : RadioButton-->
     <item name="email_et" type="id" />
     <item name="password_et" type="id" />
     <item name="SignIn_b" type="id" />
+    <item name="SignUp_tv" type="id" />
+    <item name="ServiceProvider_rb" type="id" />
+    <item name="Customer_rb" type="id" />
+    <item name="eye_b" type="id" />
 
 </resources>
