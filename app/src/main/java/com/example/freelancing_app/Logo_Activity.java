@@ -1,27 +1,10 @@
 package com.example.freelancing_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+import android.os.Handler;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 
 
@@ -31,12 +14,27 @@ public class Logo_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logo);
+        setContentView(R.layout.activity_logo1);
 
-        // Start TokenRefreshService
-        tokenRefreshServiceIntent = new Intent(this, TokenRefreshService.class);
+        // Delay for 5 seconds
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Start the SignInActivity
+                Intent intent = new Intent(Logo_Activity.this, SignInActivity.class);
+                startActivity(intent);
+                finish(); // Close the splash activity
+            }
+        }, 1000); // 1000 milliseconds = 4 seconds
+       /*
+          // Start TokenRefreshService
+          TODO MAke sure everything is ok
+         tokenRefreshServiceIntent = new Intent(this, TokenRefreshService.class);
         startService(tokenRefreshServiceIntent);
+        */
+
     }
+    /*
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -61,4 +59,6 @@ public class Logo_Activity extends AppCompatActivity {
             }
         });
     }
+
+     */
 }
