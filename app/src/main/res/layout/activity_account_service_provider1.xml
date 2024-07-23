@@ -231,7 +231,7 @@
                     >
 
                     <RelativeLayout
-                        android:layout_width="35dp"
+                        android:layout_width="42dp"
                         android:layout_height="35dp"
                         android:layout_centerInParent="true"
                         android:background="@drawable/bar_circle">
@@ -245,8 +245,6 @@
                             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></ImageButton>
                     </RelativeLayout>
                 </RelativeLayout>
-
-
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>

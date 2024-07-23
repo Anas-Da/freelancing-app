@@ -9,5 +9,6 @@
     <item name="ServiceProvider_rb" type="id" />
     <item name="Customer_rb" type="id" />
     <item name="eye_b" type="id" />
+    <item name="search_et" type="id"/>
 
 </resources>
