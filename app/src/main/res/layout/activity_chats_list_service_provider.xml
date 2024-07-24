@@ -108,7 +108,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginHorizontal="12dp"
 							android:layout_marginBottom="14dp"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:gravity="center_vertical"
 							android:orientation="horizontal"
 							android:paddingHorizontal="13dp"
@@ -195,7 +195,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginHorizontal="9dp"
 							android:layout_marginBottom="14dp"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:gravity="center_vertical"
 							android:orientation="horizontal"
 							android:paddingHorizontal="12dp"
@@ -260,7 +260,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginHorizontal="8dp"
 							android:layout_marginBottom="16dp"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:orientation="horizontal"
 							android:paddingHorizontal="8dp"
 							android:paddingBottom="11dp">
@@ -333,7 +333,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginHorizontal="9dp"
 							android:layout_marginBottom="15dp"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:orientation="vertical"></LinearLayout>
 
 						<LinearLayout
@@ -342,7 +342,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginHorizontal="9dp"
 							android:layout_marginBottom="17dp"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:orientation="vertical"></LinearLayout>
 
 						<LinearLayout
@@ -351,7 +351,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginHorizontal="8dp"
 							android:layout_marginBottom="23dp"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:orientation="vertical"></LinearLayout>
 
 						<LinearLayout
@@ -360,7 +360,7 @@
 							android:layout_height="wrap_content"
 							android:layout_marginHorizontal="9dp"
 							android:layout_marginBottom="16dp"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:orientation="vertical"></LinearLayout>
 
 						<RelativeLayout
@@ -378,7 +378,7 @@
 									android:layout_width="match_parent"
 									android:layout_height="wrap_content"
 									android:layout_marginHorizontal="9dp"
-									android:background="@drawable/cr13bfffffaf9"
+									android:background="@drawable/item_list_background"
 									android:orientation="vertical"></LinearLayout>
 							</LinearLayout>
 

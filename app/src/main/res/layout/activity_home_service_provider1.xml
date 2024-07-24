@@ -213,6 +213,8 @@
                             android:layout_centerInParent="true"
                             android:src="@drawable/teach_img" />
                     </RelativeLayout>
+                   
+
                     <RelativeLayout
                         android:id="@+id/it_rel"
                         android:layout_width="82dp"

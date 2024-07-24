@@ -248,7 +248,7 @@
 							android:id="@+id/r6t8icnhkt0o"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:padding="11dp"
 							android:layout_marginBottom="28dp"
 							android:layout_marginHorizontal="31dp"
@@ -317,7 +317,8 @@
 								android:layout_height="wrap_content"
 								android:layout_width="match_parent"
 								android:layout_weight="1"
-								android:text="Engineer Zaheer designed a time management application\n for me."
+								android:text="Engineer Zaheer designed a time management application
+\n for me."
 							/>
 							<TextView
 								android:id="@+id/rujo2ynqsd58"
@@ -381,7 +382,7 @@
 							android:id="@+id/rj6aaaf8oai"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:background="@drawable/cr13bfffffaf9"
+							android:background="@drawable/item_list_background"
 							android:padding="11dp"
 							android:layout_marginHorizontal="31dp"
 							android:clipChildren="false"
@@ -449,7 +450,8 @@
 								android:layout_height="wrap_content"
 								android:layout_width="match_parent"
 								android:layout_weight="1"
-								android:text="Engineer Zaheer designed a time management application\n for me."
+								android:text="Engineer Zaheer designed a time management application
+\n for me."
 							/>
 							<TextView
 								android:id="@+id/r2kwqrm2xsdd"

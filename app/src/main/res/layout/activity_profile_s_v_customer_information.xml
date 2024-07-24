@@ -153,7 +153,7 @@
 					android:id="@+id/rgklb8zcmnc"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:background="@drawable/cr13bfffffaf9"
+					android:background="@drawable/item_list_background"
 					android:paddingVertical="13dp"
 					android:paddingHorizontal="7dp"
 					android:layout_marginBottom="324dp"

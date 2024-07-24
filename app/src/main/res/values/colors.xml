@@ -5,5 +5,5 @@
     <color name="orange">#FFff4c14</color>
     <color name="d_blue">#FF19114a</color>
     <color name="l_orange">#FFf8b29c</color>
-
+    <color name="item_background">#FFFAF9</color>
 </resources>
