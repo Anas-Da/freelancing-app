@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="8dp"
+    android:padding="4dp"
     android:background="@drawable/item_list_background"
-    android:layout_marginBottom="10dp">
+    android:layout_marginBottom="5dp">
 
     <RelativeLayout
         android:id="@+id/profile_img_rel"
