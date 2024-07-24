@@ -68,7 +68,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_marginEnd="5dp"
                             android:background="@null"
-                            android:src="@drawable/search"></ImageView>
+                            android:src="@drawable/search"/>
 
                         <EditText
                             android:id="@+id/search_et"
@@ -90,185 +90,40 @@
                         android:layout_below="@+id/akldnakldla"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
                         android:textColor="#000000"
                         android:textSize="12sp"
                         android:textStyle="bold"/>
-                   <RelativeLayout
-                       android:id="@+id/doc_rel"
-                       android:layout_width="82dp"
-                       android:layout_height="82dp"
-                       android:layout_marginStart="20dp"
-                       android:layout_marginTop="10dp"
-                       android:layout_below="@+id/sdhauihduiah"
-                       android:background="@drawable/workgroup_border"
-                       >
-
-                       <ImageView
-                           android:layout_width="80dp"
-                           android:layout_height="80dp"
-                           android:layout_centerInParent="true"
-                           android:src="@drawable/doctor_img" />
-                   </RelativeLayout>
-
-                    <TextView
-                        android:id="@id/doc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/doc_rel"
-                        android:layout_marginStart="40dp"
-                        android:text="Doctor"
-                        android:textSize="12sp" />
-
-                    <RelativeLayout
-                        android:id="@+id/int_rel"
-                        android:layout_width="82dp"
-                        android:layout_height="82dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="15dp"
+                    <ListView
+                        android:id="@+id/workgroup_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
                         android:layout_below="@+id/sdhauihduiah"
-                        android:background="@drawable/workgroup_border"
-                        android:layout_toEndOf="@+id/doc_rel"
-                        >
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/interior_img" />
-                    </RelativeLayout>
+                        tools:listitem="@layout/groups_view"/>
                     <TextView
-                        android:id="@+id/interior"
+                        android:id="@+id/all_sellers"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/int_rel"
-                        android:layout_marginStart="135dp"
-                        android:text="Interior\nDesigner"
-                        android:textSize="12sp" />
-                    <RelativeLayout
-                        android:id="@+id/trans_rel"
-                        android:layout_width="82dp"
-                        android:layout_height="82dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="15dp"
+                        android:text="All Sellers"
+                        android:layout_below="@+id/workgroup_list"
                         android:layout_marginStart="15dp"
-                        android:layout_below="@+id/sdhauihduiah"
-                        android:background="@drawable/workgroup_border"
-                        android:layout_toStartOf="@id/arc_rel"
-                        >
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/translator_img" />
-                    </RelativeLayout>
-                    <TextView
-                        android:id="@+id/translator"
-                        android:layout_width="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/trans_rel"
-                        android:layout_marginStart="225dp"
-                        android:text="Translator"
-                        android:textSize="12sp" />
-                    <RelativeLayout
-                        android:id="@+id/arc_rel"
-                        android:layout_width="82dp"
-                        android:layout_height="82dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_below="@+id/sdhauihduiah"
-                        android:background="@drawable/workgroup_border"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="20dp"
+                        android:layout_below="@+id/all_sellers"
+                        android:padding="16dp"
+                        android:clipToPadding="false"
+                        tools:listitem="@layout/item_view"></androidx.recyclerview.widget.RecyclerView>
 
-                        >
 
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/arc_img" />
-                    </RelativeLayout>
-                    <TextView
-                        android:id="@+id/arc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/arc_rel"
-                        android:layout_marginStart="320dp"
-                        android:text="Architecture\nengineer"
-                        android:textSize="12sp" />
-                    <RelativeLayout
-                        android:id="@+id/teach_rel"
-                        android:layout_width="82dp"
-                        android:layout_height="82dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_below="@+id/doc"
-                        android:background="@drawable/workgroup_border"
-                        >
 
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/teach_img" />
-                    </RelativeLayout>
-                   
 
-                    <RelativeLayout
-                        android:id="@+id/it_rel"
-                        android:layout_width="82dp"
-                        android:layout_height="82dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_below="@+id/interior"
-                        android:background="@drawable/workgroup_border"
-                        android:layout_toEndOf="@+id/teach_rel"
-                        >
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/it_engineer_img" />
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:id="@+id/law_rel"
-                        android:layout_width="82dp"
-                        android:layout_height="82dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_below="@+id/translator"
-                        android:background="@drawable/workgroup_border"
-                        android:layout_toStartOf="@id/design_rel"
-                        >
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/law_img" />
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:id="@+id/design_rel"
-                        android:layout_width="82dp"
-                        android:layout_height="82dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_below="@+id/arc"
-                        android:background="@drawable/workgroup_border"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="20dp"
-
-                        >
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/design_img" />
-                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
                     android:id="@+id/ahjbfhad"
@@ -286,7 +141,7 @@
                         android:layout_marginStart="50dp"
                         android:background="@null"
                         android:src="@drawable/account_page_icon"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageButton>
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -295,7 +150,7 @@
                         android:background="@null"
                         android:layout_centerVertical="true"
                         android:src="@drawable/chats_page_icon"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></ImageButton>
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -303,9 +158,10 @@
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/ahjbfhad"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginStart="50dp"
                     android:layout_marginBottom="10dp"
+                    android:translationY="-10dp"
                     android:background="@drawable/ellipse_bar_white">
 
                     <RelativeLayout
