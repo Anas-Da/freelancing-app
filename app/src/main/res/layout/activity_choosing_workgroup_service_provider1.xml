@@ -84,6 +84,7 @@
             tools:listitem="@layout/groups_view_big"
             />
         <Button
+            android:id="@+id/next_b"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"

@@ -19,6 +19,7 @@
     <item name="search_et" type="id" />
     <item name="seller_name" type="id" />
     <item name="type" type="id" />
+    <item name="next_b" type="id"/>
 
     <!--    <item name="doc_rl" type="id" />    -->
     <!--    <item name="trans_rl" type="id" />  -->
