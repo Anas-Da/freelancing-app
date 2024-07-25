@@ -45,14 +45,14 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
 
         professionList = new ArrayList<>();
-        professionList.add(new Profession("Doctor", R.drawable.doctor));
-        professionList.add(new Profession("Teacher", R.drawable.teacher));
-        professionList.add(new Profession("Teacher", R.drawable.teacher));
-        professionList.add(new Profession("Teacher", R.drawable.teacher));
-        professionList.add(new Profession("Teacher", R.drawable.teacher));
-        professionList.add(new Profession("Teacher", R.drawable.teacher));
-        professionList.add(new Profession("Teacher", R.drawable.teacher));
-        professionList.add(new Profession("Teacher", R.drawable.teacher));
+        professionList.add(new Profession("Doctor", R.drawable.doctor_img));
+        professionList.add(new Profession("Interior Designer", R.drawable.interior_img));
+        professionList.add(new Profession("Translator", R.drawable.translator_img));
+        professionList.add(new Profession("Architecture engineer", R.drawable.arc_img));
+        professionList.add(new Profession("Teacher", R.drawable.teach_img));
+        professionList.add(new Profession("IT engineer", R.drawable.it_engineer_img));
+        professionList.add(new Profession("Lawyer", R.drawable.law_img));
+        professionList.add(new Profession("Designer", R.drawable.design_img));
         professionAdapter = new ProfessionAdapter(this, professionList);
         workgroup_list.setAdapter(professionAdapter);
 

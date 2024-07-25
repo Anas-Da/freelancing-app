@@ -97,7 +97,7 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/workgroup_list"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="100dp"
                         android:layout_below="@+id/sdhauihduiah"
                         tools:listitem="@layout/groups_view"/>
                     <TextView
@@ -158,12 +158,11 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="50dp"
                     android:layout_marginBottom="10dp"
-                    android:translationY="-10dp"
                     android:background="@drawable/ellipse_bar_white">
 
                     <RelativeLayout
-                        android:layout_width="42dp"
-                        android:layout_height="35dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_centerInParent="true"
                         android:background="@drawable/bar_circle">
 
@@ -173,7 +172,7 @@
                             android:layout_centerInParent="true"
                             android:background="@null"
                             android:src="@drawable/home_page_icon"
-                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></ImageButton>
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
                     </RelativeLayout>
                 </RelativeLayout>
             </RelativeLayout>
