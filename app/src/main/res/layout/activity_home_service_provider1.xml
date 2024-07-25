@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:background="#FFFFFFFF"
+        android:background="@color/white"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -113,10 +113,9 @@
                         android:textSize="12sp"
                         android:textStyle="bold"/>
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerView"
+                        android:id="@+id/sellers_li"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/all_sellers"
+                        android:layout_height="228dp"                        android:layout_below="@+id/all_sellers"
                         android:padding="16dp"
                         android:clipToPadding="false"
                         tools:listitem="@layout/item_view"/>
@@ -125,13 +124,13 @@
                 <RelativeLayout
                     android:id="@+id/ahjbfhad"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"                    android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
                     android:background="@drawable/bar">
 
                     <ImageButton
+                        android:id="@+id/account_ib"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -140,6 +139,7 @@
                         android:src="@drawable/account_page_icon"
                         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
                     <ImageButton
+                        android:id="@+id/chat_ib"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"

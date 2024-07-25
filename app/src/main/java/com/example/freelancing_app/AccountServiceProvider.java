@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Activity_Account_Service_provider extends AppCompatActivity {
+public class AccountServiceProvider extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
