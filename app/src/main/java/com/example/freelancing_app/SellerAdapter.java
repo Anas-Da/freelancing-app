@@ -17,10 +17,12 @@ public class SellerAdapter extends RecyclerView.Adapter<SellerAdapter.SellerView
 
     private Context context;
     private List<Seller> sellerList;
+    private OnItemClickListener onItemClickListener;
 
-    public SellerAdapter(Context context, List<Seller> sellerList) {
+    public SellerAdapter(Context context, List<Seller> sellerList,OnItemClickListener onItemClickListener) {
         this.context = context;
         this.sellerList = sellerList;
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -35,6 +37,11 @@ public class SellerAdapter extends RecyclerView.Adapter<SellerAdapter.SellerView
         Seller seller = sellerList.get(position);
         holder.name.setText(seller.getName());
         holder.image.setImageResource(seller.getImageResource());
+        holder.itemView.setOnClickListener(v -> {
+            if (onItemClickListener != null) {
+                onItemClickListener.onSellerClick(position);
+            }
+        });
     }
 
     @Override
@@ -54,5 +61,8 @@ public class SellerAdapter extends RecyclerView.Adapter<SellerAdapter.SellerView
             name = itemView.findViewById(R.id.seller_name);
             type = itemView.findViewById(R.id.type);
         }
+    }
+    public interface OnItemClickListener {
+        void onSellerClick(int position);
     }
 }

@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="8dp"
+    android:clickable="true"
     android:background="@drawable/item_list_background"
     android:layout_marginBottom="5dp">
 

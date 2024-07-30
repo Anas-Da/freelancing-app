@@ -16,10 +16,11 @@ public class ProfessionAdapter extends RecyclerView.Adapter<ProfessionAdapter.Pr
 
     private Context context;
     private List<Profession> professionList;
-
-    public ProfessionAdapter(Context context, List<Profession> professionList) {
+    private OnItemClickListener onItemClickListener;
+    public ProfessionAdapter(Context context, List<Profession> professionList,OnItemClickListener onItemClickListener) {
         this.context = context;
         this.professionList = professionList;
+        this.onItemClickListener=onItemClickListener;
     }
 
     @NonNull
@@ -34,6 +35,11 @@ public class ProfessionAdapter extends RecyclerView.Adapter<ProfessionAdapter.Pr
         Profession profession = professionList.get(position);
         holder.textView.setText(profession.getName());
         holder.imageView.setImageResource(profession.getImageResource());
+        holder.itemView.setOnClickListener(v -> {
+            if (onItemClickListener != null) {
+                onItemClickListener.onProfessionClick(position);
+            }
+        });
     }
 
     @Override
@@ -51,5 +57,8 @@ public class ProfessionAdapter extends RecyclerView.Adapter<ProfessionAdapter.Pr
             imageView = itemView.findViewById(R.id.imageView);
             textView = itemView.findViewById(R.id.textView);
         }
+    }
+    public interface OnItemClickListener {
+        void onProfessionClick(int position);
     }
 }

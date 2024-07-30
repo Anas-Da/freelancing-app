@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-   <RelativeLayout
-       android:id="@+id/workgroup_circ"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginStart="5dp"
-       android:background="@drawable/workgroup_border">
-       <ImageView
-           android:id="@+id/imageView"
-           android:layout_width="80dp"
-           android:layout_height="80dp"
-           android:src="@drawable/ic_launcher_foreground"/>
-</RelativeLayout>
-    <TextView
-        android:id="@+id/textView"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/workgroup_circ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="7dp"
-        android:layout_below="@+id/workgroup_circ"
-        android:text="service_name"
-        android:textColor="@color/black"
-        android:textSize="12dp"
-        tools:ignore="TextSizeCheck" />
+        android:layout_marginStart="5dp"
+        android:background="@drawable/workgroup_border">
 
+        <ImageView
+            android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_foreground"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="7dp"
+    android:layout_below="@id/workgroup_circ"
+    android:text="service_name"
+    android:textColor="@android:color/black"
+    android:textSize="12sp"/>
 </RelativeLayout>

@@ -105,12 +105,12 @@
                         android:textSize="12sp"
                         android:textStyle="bold"/>
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerView"
+                        android:id="@+id/sellers_li"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="700dp"
                         android:layout_below="@+id/sdhauihduiah"
                         android:padding="16dp"
-                        android:clipToPadding="false"
+                        android:clipToPadding="true"
                         tools:listitem="@layout/item_view" />
                 </RelativeLayout>
             </RelativeLayout>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -14,7 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home extends AppCompatActivity implements View.OnClickListener {
+public class Home extends AppCompatActivity implements View.OnClickListener,
+        SellerAdapter.OnItemClickListener,ProfessionAdapter.OnItemClickListener  {
 
     private EditText search_et;
     private ImageButton account_ib;
@@ -43,30 +45,24 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         workgroup_list = findViewById(R.id.workgroup_list);
         workgroup_list.setLayoutManager(new GridLayoutManager(this, 4));
 
-
         professionList = new ArrayList<>();
-        professionList.add(new Profession("Doctor", R.drawable.doctor_img));
-        professionList.add(new Profession("Interior Designer", R.drawable.interior_img));
-        professionList.add(new Profession("Translator", R.drawable.translator_img));
-        professionList.add(new Profession("Architecture engineer", R.drawable.arc_img));
-        professionList.add(new Profession("Teacher", R.drawable.teach_img));
-        professionList.add(new Profession("IT engineer", R.drawable.it_engineer_img));
-        professionList.add(new Profession("Lawyer", R.drawable.law_img));
-        professionList.add(new Profession("Designer", R.drawable.design_img));
-        professionAdapter = new ProfessionAdapter(this, professionList);
+        //todo get them from the backEnd and display them
+        for(int i=0;i<100;i++){
+            professionList.add(new Profession("JOB "+ i, R.drawable.doctor));
+        }
+        professionAdapter = new ProfessionAdapter(this, professionList,this);
         workgroup_list.setAdapter(professionAdapter);
 
 
         sellers_list = findViewById(R.id.sellers_li);
         sellers_list.setLayoutManager(new LinearLayoutManager(this));
+
         sellerList = new ArrayList<>();
-        sellerList.add(new Seller("seller",R.drawable.account_img_small,"doctor"));
-        sellerList.add(new Seller("seller",R.drawable.account_img_small,"doctor"));
-        sellerList.add(new Seller("seller",R.drawable.account_img_small,"doctor"));
-        sellerList.add(new Seller("seller",R.drawable.account_img_small,"doctor"));
-        sellerList.add(new Seller("seller",R.drawable.account_img_small,"doctor"));
-        sellerList.add(new Seller("seller",R.drawable.account_img_small,"doctor"));
-        sellerAdapter = new SellerAdapter(this,sellerList);
+        //todo get them from the backEnd and display them
+        for(int i=0;i<100;i++){
+            sellerList.add(new Seller("seller",R.drawable.account_img_small,"doctor"));
+        }
+        sellerAdapter = new SellerAdapter(this,sellerList,this);
         sellers_list.setAdapter(sellerAdapter);
 
     }
@@ -91,5 +87,26 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
             globalVariables.setJob(v.getId());
         }
 
+    }
+    @Override
+    public void onSellerClick(int position) {
+        // todo get from back the id and handle
+
+        globalVariables.setSellerid(1);
+        globalVariables.setSellerhandle("Anas_Da");
+        //todo to profile
+        Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
+        Intent i=new Intent(Home.this,AccountServiceProvider.class);
+        startActivity(i);
+    }
+    @Override
+    public void onProfessionClick(int position) {
+        // todo get from back the id and handle
+
+        globalVariables.setWorkGroup(0);
+        //todo to profile
+        Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
+        Intent i=new Intent(Home.this, SellerList_SingleWorkGroup.class);
+        startActivity(i);
     }
 }

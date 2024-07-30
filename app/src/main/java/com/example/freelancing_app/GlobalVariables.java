@@ -6,7 +6,9 @@ import android.content.Intent;
 public class GlobalVariables extends Application {
     private boolean IsCustomer;
     private int Job;
-
+    private int sellerid;
+    private String sellerhandle;
+    private int WorkGroup;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -38,5 +40,29 @@ public class GlobalVariables extends Application {
 
     public void setJob(int job) {
         Job = job;
+    }
+
+    public int getSellerid() {
+        return sellerid;
+    }
+
+    public void setSellerid(int sellerid) {
+        this.sellerid = sellerid;
+    }
+
+    public String getSellerhandle() {
+        return sellerhandle;
+    }
+
+    public void setSellerhandle(String sellerhandle) {
+        this.sellerhandle = sellerhandle;
+    }
+
+    public int getWorkGroup() {
+        return WorkGroup;
+    }
+
+    public void setWorkGroup(int workGroup) {
+        WorkGroup = workGroup;
     }
 }

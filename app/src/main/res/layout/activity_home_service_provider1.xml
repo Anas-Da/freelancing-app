@@ -97,7 +97,9 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/workgroup_list"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="200dp"
+                        android:padding="1dp"
+                        android:clipToPadding="true"
                         android:layout_below="@+id/sdhauihduiah"
                         tools:listitem="@layout/groups_view"/>
                     <TextView
@@ -115,9 +117,9 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/sellers_li"
                         android:layout_width="match_parent"
-                        android:layout_height="228dp"                        android:layout_below="@+id/all_sellers"
+                        android:layout_height="380dp"                        android:layout_below="@+id/all_sellers"
                         android:padding="16dp"
-                        android:clipToPadding="false"
+                        android:clipToPadding="true"
                         tools:listitem="@layout/item_view"/>
 
                 </RelativeLayout>
