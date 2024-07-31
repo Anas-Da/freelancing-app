@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/rmmhq5zz6np"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/edit_your_email_please"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/rhnpbfnkllv9"
+        android:textColor="#2d2d3a"
+        android:textSize="14sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/rmmhq5zz6np"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Email"
+        />
+    <RelativeLayout
+        android:id="@+id/rx35kc18k1dg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rhnpbfnkllv9"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sfff0f0f0sw1cr50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="17dp"
+        android:paddingVertical="21dp">
+
+        <ImageView
+            android:id="@+id/rn6rktg051u"
+            android:layout_width="14dp"
+            android:layout_height="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/email"
+            android:translationY="15dp"
+            />
+
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/rn6rktg051u"
+            android:ems="18"
+            android:hint="username@gmail.com"
+            android:inputType="textWebEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="#060000"
+            android:textSize="12sp"
+            android:translationX="10dp"
+            android:background="@android:color/transparent"/>
+    </RelativeLayout>
+</RelativeLayout>

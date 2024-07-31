@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/rmmhq5zz6np"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/edit_your_country_please"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/rc3w4hvb2ac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rmmhq5zz6np"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:text="Country"
+        android:textColor="#2d2d3a"
+        android:textSize="14sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/r5wn0b8ao6r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rc3w4hvb2ac"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sfff0f0f0sw1cr50"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="22dp">
+
+        <ImageView
+            android:id="@+id/rgit6sahcuwv"
+            android:layout_width="14dp"
+            android:layout_height="16dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/location"
+            android:translationY="15dp" />
+
+        <EditText
+            android:id="@+id/country_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/rgit6sahcuwv"
+            android:layout_weight="1"
+            android:ems="18"
+            android:hint="Country name, City name"
+            android:minHeight="48dp"
+            android:textColor="#b9b9bd"
+            android:textSize="12sp"
+            android:background="@android:color/transparent"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

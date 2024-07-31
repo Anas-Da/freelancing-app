@@ -4,11 +4,16 @@
     <!-- _b :button / _et : editText _tv : TextView / _rb : RadioButton / _ib : ImageButton -->
     <item name="email_et" type="id" />
     <item name="password_et" type="id" />
+    <item name="confirm_password_et" type="id"/>
+    <item name="country_et" type="id"/>
+    <item name="date_of_birth_et" type="id"/>
+    <item name="phone_number" type="id"/>
     <item name="signin_b" type="id" />
     <item name="signup_tv" type="id" />
     <item name="serviceprovider_rb" type="id" />
     <item name="customer_rb" type="id" />
     <item name="eye_b" type="id" />
+    <item name="eyeConfirm_b" type="id"/>
     <item name="fullname_et" type="id" />
     <item name="signup_b" type="id" />
     <item name="rememberme_cb" type="id" />
@@ -20,6 +25,7 @@
     <item name="seller_name" type="id" />
     <item name="type" type="id" />
     <item name="next_b" type="id"/>
+    <item name="save_changes_b" type="id"/>
 
     <!--    <item name="doc_rl" type="id" />    -->
     <!--    <item name="trans_rl" type="id" />  -->

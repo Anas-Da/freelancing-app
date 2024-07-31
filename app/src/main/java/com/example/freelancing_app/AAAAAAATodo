@@ -1,0 +1,89 @@
+//TODO : this is all you need for fragments
+
+
+You can make a new java package for all fragments stuff if you want O_0
+
+
+
+we have :
+Main activity for activity that has a fragment container :  its name is --> activity_editing_account_preferences.xml
+
+To reach to this activity and switch the fragment depending on which button it came from --> you should first write java code for (account_settings.xml)
+where you can claim that each button will coded to switch the fragment correctly
+
+
+Now for each fragment we wrote --> xml code  and java code ( because fragments are also activities 0~0)
+
+Then for the Main activity that we switch fragment in it --> wrote a java code
+
+_____________________________________________________________________________________
+****To make button change the content of a fragment container  [all in account_settings.Java ] edit the following to meet our code needs
+
+buttonFragment1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFragmentActivity("FRAGMENT_1");
+            }
+        });
+
+--->> define the above openFragmentActivity() method in order to passing the intent
+
+ private void openFragmentActivity(String fragmentTag) {
+        Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
+        intent.putExtra("FRAGMENT_TAG", fragmentTag);
+        startActivity(intent);
+    }
+}
+_________________________________________________________________________________________
+***** Now Java code for the Container Activity [editing_account_preferences.java] edit the following to meet our code needs
+
+
+package com.example.yourapp;
+
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+public class FragmentActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fragment);
+
+        String fragmentTag = getIntent().getStringExtra("FRAGMENT_TAG");
+
+        if (fragmentTag != null) {
+            Fragment fragment = null;
+            switch (fragmentTag) {
+                case "FRAGMENT_1":
+                    fragment = new Fragment1();
+                    break;
+                case "FRAGMENT_2":
+                    fragment = new Fragment2();
+                    break;
+                // add more fragments as you want
+            }
+
+            if (fragment != null) {
+                loadFragment(fragment);
+            }
+        }
+    }
+
+    private void loadFragment(Fragment fragment) {
+        // Create Transaction for Fragment
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //  switch the content of `fragment_container` with this fragment
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
+        fragmentTransaction.addToBackStack(null);
+
+        // Commit Transaction
+        fragmentTransaction.commit();
+    }
+}
+__________________________________________________________

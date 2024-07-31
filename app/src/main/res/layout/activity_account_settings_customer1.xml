@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:background="#FFFFFFFF"
+        android:background="@color/white"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF18104a"
+            android:background="@color/d_blue"
             android:fillViewport="true"
             android:paddingTop="17dp"
             android:paddingBottom="-3dp">
@@ -22,15 +23,16 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/re7c8b5ltt7l"
+                <ImageButton
+                    android:id="@+id/back_b"
                     android:layout_width="37dp"
                     android:layout_height="33dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginHorizontal="21dp"
-                    android:src="@drawable/arrow_back"
+                    android:layout_marginBottom="5dp"
+                    android:background="@null"
                     android:scaleType="fitXY"
-                    />
+                    android:src="@drawable/arrow_back"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                 <RelativeLayout
                     android:id="@+id/rdyndsji2gv7"
                     android:layout_width="match_parent"
@@ -45,70 +47,48 @@
                     android:orientation="vertical"
                     android:paddingVertical="30dp">
 
+                    <RelativeLayout
+                        android:id="@+id/sdlskcfjscs"
+                        android:layout_width="87dp"
+                        android:layout_height="89dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/cr20bfffdf3f1"
+                        android:layout_marginStart="50dp">
+
+                        <ImageView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:src="@drawable/account_img"/>
+
+                    </RelativeLayout>
                     <TextView
-                        android:id="@+id/rmmhq5zz6np"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginBottom="25dp"
-                        android:text="My Account"
+                        android:layout_toEndOf="@+id/sdlskcfjscs"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="25dp"
                         android:textColor="#000000"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:text="@string/person_name"
 
-                    <RelativeLayout
-                        android:id="@+id/rv1xakfm0g58"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/rmmhq5zz6np"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginBottom="25dp"
-                        android:layout_marginHorizontal="12dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        />
 
-                        <ImageView
-                            android:id="@+id/rlreq9t2xql8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="13dp"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/edit" />
 
-                        <TextView
-                            android:id="@+id/rdmx2p712xr"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_toEndOf="@+id/rlreq9t2xql8"
-                            android:text="Edit"
-                            android:textColor="#2d2d3a"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
 
-                    <ImageView
-                        android:id="@+id/rcrctlntdc8"
-                        android:layout_width="30dp"
-                        android:layout_height="29dp"
-                        android:layout_below="@+id/rmmhq5zz6np"
-                        android:layout_alignParentRight="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/arrow_go_to"
-                        android:translationX="-12dp" />
                     <TextView
                         android:id="@+id/rrrtawyz1yma"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/rcrctlntdc8"
+                        android:layout_below="@+id/sdlskcfjscs"
                         android:layout_alignParentStart="true"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="120dp"
                         android:layout_marginStart="30dp"
-                        android:layout_marginBottom="20dp"
-                        android:text="Account preferences"
+                        android:layout_marginBottom="15dp"
+                        android:text="@string/account_preferences"
                         android:textColor="#000000"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -125,55 +105,38 @@
 
                         <ImageView
                             android:id="@+id/rjdou6xq45x"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_alignParentStart="true"
-                            android:layout_marginTop="7dp"
                             android:layout_marginEnd="8dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/chats_page_icon" />
-                        <RelativeLayout
-                            android:id="@+id/rwlaiz0yx7wr"
+                            android:src="@drawable/password_lock" />
+
+                        <TextView
+                            android:id="@+id/rwxeqi46wei"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginTop="6dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_toEndOf="@id/rjdou6xq45x"
-                            android:orientation="vertical">
-                            <TextView
-                                android:id="@+id/rwxeqi46wei"
-                                android:textColor="#000000"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="3dp"
-                                android:layout_marginStart="1dp"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:text="Display"
-                                />
-                            <TextView
-                                android:id="@+id/rr0artofavhe"
-                                android:textColor="#000000"
-                                android:textSize="14sp"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:layout_below="@id/rwxeqi46wei"
-                                android:text="Adaptive"
-                                />
-                        </RelativeLayout>
+                            android:layout_marginTop="7dp"
+                            android:layout_toEndOf="@+id/rjdou6xq45x"
+                            android:text="@string/password"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
                     </RelativeLayout>
 
-                    <ImageView
-                        android:id="@+id/r7u6sgbvkehr"
+                    <ImageButton
+                        android:id="@+id/password_b"
                         android:layout_width="30dp"
                         android:layout_height="29dp"
                         android:layout_below="@+id/rrrtawyz1yma"
                         android:layout_alignParentRight="true"
+                        android:background="@null"
                         android:scaleType="fitXY"
                         android:src="@drawable/arrow_go_to"
                         android:translationX="-12dp"
-                        android:translationY="5dp"/>
+                        android:translationY="5dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                     <RelativeLayout
                         android:id="@+id/r65g1xf0lgyj"
@@ -189,7 +152,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_marginEnd="8dp"
-                            android:src="@drawable/language"
+                            android:src="@drawable/email_img"
                             android:scaleType="fitXY"
                             />
                         <TextView
@@ -201,20 +164,22 @@
                             android:layout_width="wrap_content"
                             android:layout_toEndOf="@+id/rcrwwhgl8m6i"
                             android:layout_marginTop="7dp"
-                            android:text=" Language"
+                            android:text="@string/email"
                             />
                     </RelativeLayout>
 
-                    <ImageView
-                        android:id="@+id/rwmcd4bsyfw"
+                    <ImageButton
+                        android:id="@+id/email_b"
                         android:layout_width="30dp"
                         android:layout_height="29dp"
-                        android:layout_below="@+id/r7u6sgbvkehr"
+                        android:layout_below="@+id/password_b"
                         android:layout_alignParentRight="true"
                         android:layout_marginTop="25dp"
+                        android:background="@null"
                         android:scaleType="fitXY"
                         android:src="@drawable/arrow_go_to"
-                        android:translationX="-12dp" />
+                        android:translationX="-12dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                     <RelativeLayout
                         android:id="@+id/rn45zh29vc4"
@@ -230,7 +195,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_marginEnd="8dp"
-                            android:src="@drawable/sound"
+                            android:src="@drawable/phone_img"
                             android:scaleType="fitXY"
                             />
                         <TextView
@@ -242,20 +207,22 @@
                             android:layout_width="wrap_content"
                             android:layout_toEndOf="@+id/r038ch8p7ra38"
                             android:layout_marginTop="7dp"
-                            android:text=" Notifications and Sounds"
+                            android:text="@string/phone_number"
                             />
                     </RelativeLayout>
-                    <ImageView
-                        android:id="@+id/rfjhc72kiqkv"
+
+                    <ImageButton
+                        android:id="@+id/phone_b"
                         android:layout_width="30dp"
                         android:layout_height="29dp"
-                        android:layout_below="@+id/rwmcd4bsyfw"
+                        android:layout_below="@+id/email_b"
                         android:layout_alignParentRight="true"
                         android:layout_marginTop="25dp"
+                        android:background="@null"
                         android:scaleType="fitXY"
                         android:src="@drawable/arrow_go_to"
                         android:translationX="-12dp"
-                        />
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     <RelativeLayout
                         android:id="@+id/rpj6mnpojvz"
                         android:layout_width="wrap_content"
@@ -263,6 +230,7 @@
                         android:layout_below="@+id/rn45zh29vc4"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="30dp"
+                        android:layout_marginTop="7dp"
                         android:layout_marginBottom="11dp"
                         android:orientation="horizontal">
                         <ImageView
@@ -270,7 +238,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_marginEnd="8dp"
-                            android:src="@drawable/support"
+                            android:src="@drawable/country_img"
                             android:scaleType="fitXY"
                             />
                         <TextView
@@ -282,25 +250,112 @@
                             android:layout_width="wrap_content"
                             android:layout_toEndOf="@+id/rqsibw6gp43"
                             android:layout_marginTop="7dp"
-                            android:text="Contact support"
+                            android:text="@string/country"
                             />
                     </RelativeLayout>
-                    <ImageView
-                        android:id="@+id/rta19em652k"
+
+                    <ImageButton
+                        android:id="@+id/country_b"
                         android:layout_width="30dp"
                         android:layout_height="29dp"
-                        android:layout_below="@+id/rfjhc72kiqkv"
+                        android:layout_below="@+id/phone_b"
                         android:layout_alignParentRight="true"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@null"
                         android:scaleType="fitXY"
                         android:src="@drawable/arrow_go_to"
                         android:translationX="-12dp"
-                        />
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    <RelativeLayout
+                        android:id="@+id/rpj6mnfpojvz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rpj6mnpojvz"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="11dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/rqsibwf6gp43"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/birthdate_img"
+                            android:scaleType="fitXY"
+                            />
+                        <TextView
+                            android:id="@+id/rcja843dq1rgo"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@+id/rqsibwf6gp43"
+                            android:layout_marginTop="7dp"
+                            android:text="@string/date_of_birth"
+                            />
+                    </RelativeLayout>
+                    <ImageButton
+                        android:id="@+id/birthdate_b"
+                        android:layout_width="30dp"
+                        android:layout_height="29dp"
+                        android:layout_below="@+id/country_b"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="18dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/arrow_go_to"
+                        android:translationX="-12dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <RelativeLayout
+                        android:id="@+id/rpj6mnfgpojvz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rpj6mnfpojvz"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="11dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/rqsibwf6sgp43"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/support"
+                            android:scaleType="fitXY"
+                            />
+                        <TextView
+                            android:id="@+id/rcja843dsq1rgo"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@+id/rqsibwf6sgp43"
+                            android:layout_marginTop="7dp"
+                            android:text="@string/contact_support"
+                            />
+                    </RelativeLayout>
+                    <ImageButton
+                        android:id="@+id/contact_support_b"
+                        android:layout_width="30dp"
+                        android:layout_height="29dp"
+                        android:layout_below="@+id/birthdate_b"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="18dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/arrow_go_to"
+                        android:translationX="-12dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     <RelativeLayout
                         android:id="@+id/r5ulg5dkdh0a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/rpj6mnpojvz"
+                        android:layout_below="@+id/rpj6mnfgpojvz"
                         android:layout_alignParentStart="true"
                         android:layout_marginStart="30dp"
                         android:layout_marginBottom="11dp"
@@ -325,6 +380,18 @@
                             android:text="Log Out"
                             />
                     </RelativeLayout>
+                    <ImageButton
+                        android:id="@+id/logout_b"
+                        android:layout_width="30dp"
+                        android:layout_height="29dp"
+                        android:layout_below="@+id/contact_support_b"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="18dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/arrow_go_to"
+                        android:translationX="-12dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                 </RelativeLayout>
             </RelativeLayout>
         </ScrollView>
