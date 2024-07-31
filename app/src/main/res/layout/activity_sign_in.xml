@@ -246,7 +246,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:textColor="#18104a"
+                            android:textColor="@color/d_blue"
                             android:textSize="16sp"
                             android:text="Customer" />
 
@@ -254,9 +254,9 @@
                             android:id="@+id/ServiceProvider_rb"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="80dp"
+                            android:layout_marginStart="100dp"
                             android:text="Service Provider"
-                            android:textColor="#18104a"
+                            android:textColor="@color/d_blue"
                             android:textSize="16sp" />
                     </RadioGroup>
 
