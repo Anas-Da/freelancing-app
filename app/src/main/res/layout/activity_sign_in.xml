@@ -218,20 +218,6 @@
                         android:textColor="#2d2d3a"
                         android:textSize="14sp" />
 
-                    <TextView
-                        android:id="@+id/rt1eognxfvdo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/rzqzp5n0yuf"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="30dp"
-                        android:clickable="true"
-                        android:text="Forgot Password?"
-                        android:textColor="#2d2d3a"
-                        android:textSize="14sp"
-                        tools:ignore="TouchTargetSizeCheck" />
-
                     <RadioGroup
                         android:id="@+id/radio_group"
                         android:layout_width="wrap_content"

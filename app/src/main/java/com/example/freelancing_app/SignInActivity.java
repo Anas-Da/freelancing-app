@@ -66,13 +66,14 @@ public class SignInActivity extends AppCompatActivity {
                         password_et.getText().clear();
                     }else{
                         if(Customer_rb.isChecked()){
-                            Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
-                            i.putExtra("isCustomer",true);
-                            startActivity(i);
+                         //TODO edit here .. we have only one signin page
+                            // Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
+                           // i.putExtra("isCustomer",true);
+                           // startActivity(i);
                         }else if(ServiceProvider_rb.isChecked()){
-                            Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
-                            i.putExtra("isCustomer",false);
-                            startActivity(i);
+                           // Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
+                           // i.putExtra("isCustomer",false);
+                           // startActivity(i);
                         }else{
                             Toast.makeText(SignInActivity.this,
                                     "Select ServiceProvider or customer", Toast.LENGTH_SHORT).show();
@@ -84,9 +85,9 @@ public class SignInActivity extends AppCompatActivity {
         SignUp_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO go to signup page
-                Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
-                startActivity(i);
+                // TODO go to first signup page
+           //     Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
+             //   startActivity(i);
             }
         });
     }
