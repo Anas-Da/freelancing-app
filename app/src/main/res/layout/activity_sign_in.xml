@@ -57,14 +57,10 @@
                 <RelativeLayout
                     android:id="@+id/rdyndsji2gv7"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
+                    android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
                     android:layout_marginTop="25dp"
                     android:background="@drawable/tl90tr90bffffffff"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    android:orientation="vertical"
                     android:paddingVertical="30dp">
 
                     <TextView
@@ -116,27 +112,27 @@
 
                         <ImageView
                             android:id="@+id/rn6rktg051u"
-                            android:layout_width="14dp"
-                            android:layout_height="10dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerInParent="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:scaleType="fitXY"
                             android:src="@drawable/email"
-                            android:translationY="15dp" />
+                             />
 
                         <EditText
                             android:id="@+id/email_et"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
                             android:layout_toEndOf="@+id/rn6rktg051u"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
                             android:ems="18"
                             android:inputType="textEmailAddress"
                             android:hint="username@example.com"
                             android:minHeight="48dp"
                             android:textColor="#060000"
                             android:textSize="12sp"
-                            android:translationX="10dp" />
+                            android:background="@android:color/transparent"/>
                     </RelativeLayout>
 
                     <TextView
@@ -166,12 +162,11 @@
 
                         <ImageView
                             android:id="@+id/rjh1fch95zx"
-                            android:layout_width="12dp"
-                            android:layout_height="14dp"
-                            android:layout_marginEnd="13dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:scaleType="fitXY"
                             android:src="@drawable/lock"
-                            android:translationY="15dp" />
+                            android:layout_centerVertical="true" />
 
                         <EditText
                             android:id="@+id/password_et"
@@ -179,22 +174,24 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_toEndOf="@+id/rjh1fch95zx"
+                            android:layout_marginStart="15dp"
                             android:ems="18"
                             android:hint="password"
                             android:inputType="textPassword"
                             android:minHeight="48dp"
-                            android:textSize="12sp" />
+                            android:textSize="12sp"
+                            android:background="@android:color/transparent"/>
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/eye_b"
-                            android:layout_width="19dp"
-                            android:layout_height="13dp"
-                            android:layout_alignParentTop="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
                             android:clickable="true"
                             android:scaleType="fitXY"
                             android:src="@drawable/eye"
-                            android:translationY="15dp"
+                            android:background="@null"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     </RelativeLayout>
 
@@ -265,9 +262,10 @@
                         android:id="@+id/rzstuld6jjj"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
                         android:layout_below="@+id/SignIn_b"
-                        android:layout_centerInParent="true"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
                         android:clickable="true"
                         android:text="Don’t have an account?"
                         android:textColor="#000000"
@@ -280,8 +278,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/rzstuld6jjj"
                         android:layout_marginHorizontal="24dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
                         android:text="Sign up"
                         android:textSize="16dp"
                         android:textColor="@color/l_blue"

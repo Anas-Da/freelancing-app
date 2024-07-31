@@ -19,4 +19,5 @@
     <string name="edit_your_phone_number_please">Edit your phone number please</string>
     <string name="edit_your_country_please">Edit your country please</string>
     <string name="edit_your_date_of_birth">Edit your date of birth</string>
+    <string name="back">Back</string>
 </resources>

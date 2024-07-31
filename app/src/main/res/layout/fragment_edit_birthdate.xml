@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/revw2o8xs2a8"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/sfff0f0f0sw1cr50"
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -40,21 +40,20 @@
 
         <ImageView
             android:id="@+id/rtsw53rew2d"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:scaleType="fitXY"
             android:src="@drawable/date"
-            android:translationY="14dp" />
+            />
 
         <EditText
             android:id="@+id/date_of_birth_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/rtsw53rew2d"
-            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
             android:ems="18"
             android:hint="@string/date_of_birth"
             android:inputType="date"
