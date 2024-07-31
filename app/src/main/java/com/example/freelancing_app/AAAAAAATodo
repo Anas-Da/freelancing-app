@@ -12,9 +12,9 @@ To reach to this activity and switch the fragment depending on which button it c
 where you can claim that each button is coded to switch the fragment correctly
 
 
-Now for each fragment we wrote --> xml code  and java code ( because fragments are also activities 0~0)
+Now for each fragment we wrote --> xml code && we will write --> java code ( because fragments are also activities 0~0)
 
-Then for the Main activity that we switch fragment in it --> wrote a java code
+Then for the Main activity that we switch fragment in it --> write a java code
 
 _____________________________________________________________________________________
 ****To make buttons change the content of a fragment container  [all in account_settings.Java ] edit the following to meet our code needs
