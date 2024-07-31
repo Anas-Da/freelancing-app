@@ -9,7 +9,7 @@ we have :
 Main activity for activity that has a fragment container :  its name is --> activity_editing_account_preferences.xml
 
 To reach to this activity and switch the fragment depending on which button it came from --> you should first write java code for (account_settings.xml)
-where you can claim that each button will coded to switch the fragment correctly
+where you can claim that each button is coded to switch the fragment correctly
 
 
 Now for each fragment we wrote --> xml code  and java code ( because fragments are also activities 0~0)
@@ -17,8 +17,8 @@ Now for each fragment we wrote --> xml code  and java code ( because fragments a
 Then for the Main activity that we switch fragment in it --> wrote a java code
 
 _____________________________________________________________________________________
-****To make button change the content of a fragment container  [all in account_settings.Java ] edit the following to meet our code needs
-
+****To make buttons change the content of a fragment container  [all in account_settings.Java ] edit the following to meet our code needs
+ !!  The following buttonFrament1 : (in our code ) name the button object in a way refers to thr fragment the button leads to , such as --> buttonFragmentEmail   !!
 buttonFragment1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
