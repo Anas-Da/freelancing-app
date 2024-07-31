@@ -20,7 +20,7 @@ public class SignInActivity extends AppCompatActivity {
     private EditText password_et;
     private Button SignIn_b;
     private ImageView eye_b;
-    private TextView SignUp_tv;
+    private TextView SignUp_b;
     private RadioButton ServiceProvider_rb;
     private RadioButton Customer_rb;
     private  boolean isPasswordVisible;
@@ -32,7 +32,7 @@ public class SignInActivity extends AppCompatActivity {
         email_et = findViewById(R.id.email_et);
         password_et = findViewById(R.id.password_et);
         SignIn_b =  findViewById(R.id.SignIn_b);
-        SignUp_tv = findViewById(R.id.SignUp_tv);
+        SignUp_b =  findViewById(R.id.SignUp_b);
         Customer_rb = findViewById(R.id.Customer_rb);
         ServiceProvider_rb = findViewById(R.id.ServiceProvider_rb);
         eye_b = findViewById(R.id.eye_b);
@@ -81,7 +81,7 @@ public class SignInActivity extends AppCompatActivity {
                 }
             }
         });
-        SignUp_tv.setOnClickListener(new View.OnClickListener() {
+        SignUp_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO go to signup page

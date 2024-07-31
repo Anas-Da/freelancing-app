@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -21,7 +22,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
@@ -29,7 +30,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="-3dp"
                     android:layout_marginEnd="2dp"
@@ -45,7 +45,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
                     android:layout_marginStart="285dp"
                     android:layout_marginTop="-3dp"
                     android:layout_marginEnd="2dp"
@@ -53,7 +52,6 @@
                     android:textColor="#ffffff"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:translationX="-10dp"
                     android:translationY="-3dp" />
 
                 <RelativeLayout
@@ -196,7 +194,8 @@
                             android:clickable="true"
                             android:scaleType="fitXY"
                             android:src="@drawable/eye"
-                            android:translationY="15dp" />
+                            android:translationY="15dp"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     </RelativeLayout>
 
                     <CheckBox
@@ -215,7 +214,6 @@
                         android:layout_below="@+id/rzqzp5n0yuf"
                         android:layout_toEndOf="@+id/kajcnslankasl"
                         android:layout_marginTop="15dp"
-                        android:layout_marginBottom="30dp"
                         android:text="Remember me"
                         android:textColor="#2d2d3a"
                         android:textSize="14sp" />
@@ -224,16 +222,18 @@
                         android:id="@+id/rt1eognxfvdo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
                         android:layout_below="@+id/rzqzp5n0yuf"
+                        android:layout_alignParentRight="true"
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="30dp"
                         android:clickable="true"
                         android:text="Forgot Password?"
                         android:textColor="#2d2d3a"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <RadioGroup
+                        android:id="@+id/radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/kajcnslankasl"
@@ -245,7 +245,7 @@
                             android:id="@+id/Customer_rb"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="10dp"
                             android:textColor="#18104a"
                             android:textSize="16sp"
                             android:text="Customer" />
@@ -254,6 +254,7 @@
                             android:id="@+id/ServiceProvider_rb"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="80dp"
                             android:text="Service Provider"
                             android:textColor="#18104a"
                             android:textSize="16sp" />
@@ -263,15 +264,16 @@
                         android:id="@+id/SignIn_b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/rzqzp5n0yuf"
+                        android:layout_below="@+id/radio_group"
                         android:layout_marginHorizontal="24dp"
-                        android:layout_marginTop="150dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginBottom="5dp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/orange"
-                        android:gravity="center_horizontal"
-                        android:text="Sign In"
-                        android:textColor="@color/black" />
+                        android:text="Sign in"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/cr76bffff4c14"
+                        style="@style/orangeButton"
+                        android:textAllCaps="false"/>
 
                     <TextView
                         android:id="@+id/rzstuld6jjj"
@@ -279,30 +281,29 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/SignIn_b"
                         android:layout_centerInParent="true"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
                         android:clickable="true"
                         android:text="Don’t have an account?"
                         android:textColor="#000000"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        tools:ignore="TouchTargetSizeCheck" />
 
-                    <TextView
-                        android:id="@+id/SignUp_tv"
-                        android:layout_width="wrap_content"
+                    <Button
+                        android:id="@+id/SignUp_b"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/rzstuld6jjj"
-                        android:layout_centerInParent="true"
-                        android:layout_margin="16dp"
-                        android:layout_marginTop="10dp"
                         android:layout_marginHorizontal="24dp"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="16dp"
-                        android:paddingVertical="17dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
                         android:text="Sign up"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
+                        android:textSize="16dp"
+                        android:textColor="@color/l_blue"
+                        android:background="@drawable/button_border"
+                        style="@style/L_blueButton"
+                        android:backgroundTint="@null"
+                        android:textAllCaps="false"/>
+
                 </RelativeLayout>
             </RelativeLayout>
         </ScrollView>

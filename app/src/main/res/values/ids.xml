@@ -8,14 +8,13 @@
     <item name="country_et" type="id"/>
     <item name="date_of_birth_et" type="id"/>
     <item name="phone_number" type="id"/>
-    <item name="signin_b" type="id" />
-    <item name="signup_tv" type="id" />
     <item name="serviceprovider_rb" type="id" />
     <item name="customer_rb" type="id" />
+    <item name="SignIn_b" type="id"/>
+    <item name="SignUp_b" type="id"/>
     <item name="eye_b" type="id" />
     <item name="eyeConfirm_b" type="id"/>
     <item name="fullname_et" type="id" />
-    <item name="signup_b" type="id" />
     <item name="rememberme_cb" type="id" />
     <item name="back_b" type="id" />
     <item name="home_ib" type="id" />

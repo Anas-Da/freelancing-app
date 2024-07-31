@@ -6,4 +6,8 @@
     <style name="orangeButton" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint" >@color/orange</item>
     </style>
+    <style name="L_blueButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/l_blue</item>
+    </style>
+
 </resources>
