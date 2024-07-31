@@ -18,7 +18,7 @@ Then for the Main activity that we switch fragment in it --> write a java code
 
 _____________________________________________________________________________________
 ****To make buttons change the content of a fragment container  [all in account_settings.Java ] edit the following to meet our code needs
- !!  The following buttonFrament1 : (in our code ) name the button object in a way refers to thr fragment the button leads to , such as --> buttonFragmentEmail   !!
+ !!  The following buttonFragment1 : (in our code ) name the button object in a way refers to thr fragment the button leads to , such as --> buttonFragmentEmail   !!
 buttonFragment1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
