@@ -76,7 +76,7 @@
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/microphone"
+                android:id="@+id/microphone_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -88,10 +88,10 @@
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <ImageButton
-                android:id="@+id/attachment"
+                android:id="@+id/attachment_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/microphone"
+                android:layout_alignEnd="@+id/microphone_b"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="35dp"
