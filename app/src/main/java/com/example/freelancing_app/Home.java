@@ -31,7 +31,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_service_provider1);
+        setContentView(R.layout.activity_home);
 
         search_et = findViewById(R.id.search_et);
         account_ib = findViewById(R.id.account_ib);

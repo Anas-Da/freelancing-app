@@ -99,6 +99,7 @@
                 android:src="@drawable/attachment"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
             <EditText
+                android:id="@+id/send_message_et"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:ignore="TouchTargetSizeCheck"
