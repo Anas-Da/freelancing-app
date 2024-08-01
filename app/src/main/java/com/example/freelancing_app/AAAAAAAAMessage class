@@ -1,3 +1,4 @@
+// TODO: this is for message content
 public class Message {
 
     private String text;
