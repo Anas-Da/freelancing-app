@@ -7,4 +7,6 @@
     <color name="l_orange">#FFf8b29c</color>
     <color name="item_background">#FFFAF9</color>
     <color name="l_blue">#FF5644a0</color>
+    <color name="sent_message_color">#EFC7</color>
+    <color name="received_message_color">#FFdd12</color>
 </resources>
