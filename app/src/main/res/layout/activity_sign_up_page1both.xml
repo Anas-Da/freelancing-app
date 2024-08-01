@@ -77,7 +77,7 @@
             android:textColor="#96969c"
             android:textSize="14sp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_below="@+id/create_account_tv"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
             android:textColor="#2d2d3a"
             android:textSize="14sp"
             android:layout_marginStart="26dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:layout_below="@+id/rgeio7dyf03"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -487,7 +487,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rvv6ad6pqiui"
-            android:layout_marginTop="40dp">
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+           >
             <Button
                 android:id="@+id/back_b"
                 android:layout_width="188dp"

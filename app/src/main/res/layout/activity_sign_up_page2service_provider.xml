@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:background="#FFFFFFFF"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/r0h5yg2kjsuak"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF18104a"
+        android:fillViewport="true"
+        android:paddingTop="17dp"
+        android:paddingBottom="-3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rtif6nzhmkxf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="-3dp"
+            android:text="Sign up"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationX="-3dp"
+            android:translationY="-3dp" />
+    <TextView
+        android:id="@+id/r9vqib29tvru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="285dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="2dp"
+        android:text="freelancer"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationX="-10dp"
+        android:translationY="-3dp" />
+    <RelativeLayout
+        android:id="@+id/rdyndsji2gv7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/tl90tr90bffffffff"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingVertical="30dp">
+        <TextView
+            android:id="@+id/payment_methods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Choose payment methods"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:id="@+id/ribc2ehuhiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/payment_methods"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/rlreq9t2xql"
+                android:layout_width="54dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="13dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/al_haram" />
+
+            <TextView
+                android:id="@+id/rdmx2p712x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/rlreq9t2xql"
+                android:text="Al_haram"
+                android:textColor="#2d2d3a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/payment_methods"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:button="@drawable/checkbox_selector"
+            android:checked="false"
+            android:clickable="true"
+            android:duplicateParentState="false"
+            android:textSize="14sp"
+            android:translationX="-8dp"
+            android:translationY="-6dp" />
+
+        <RelativeLayout
+            android:id="@+id/rfz82ikvv6j5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ribc2ehuhiv"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/r5i2e4y818i"
+                android:layout_width="50dp"
+                android:layout_height="23dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/syriatel_cash" />
+
+            <TextView
+                android:id="@+id/ruia12uyiqum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/r5i2e4y818i"
+                android:text="Syriatel cash"
+                android:textColor="#2d2d3a"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:translationX="10dp" />
+        </RelativeLayout>
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/checkBox1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-4dp"
+            android:button="@drawable/checkbox_selector"
+            android:checked="false"
+            android:clickable="true"
+            android:duplicateParentState="false"
+            android:textSize="14sp"
+            android:translationX="-8dp"
+            android:translationY="-6dp" />
+
+        <RelativeLayout
+            android:id="@+id/r8mdneptrdv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rfz82ikvv6j5"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ryop2gqlgpu"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="18dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/usdt" />
+
+            <TextView
+                android:id="@+id/rzge8qvr1vx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/ryop2gqlgpu"
+                android:text="USDT"
+                android:textColor="#2d2d3a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/checkBox2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-4dp"
+            android:button="@drawable/checkbox_selector"
+            android:checked="false"
+            android:clickable="true"
+            android:duplicateParentState="false"
+            android:textSize="14sp"
+            android:translationX="-8dp"
+            android:translationY="-6dp" />
+
+        <TextView
+            android:id="@+id/rrrtawyz1yma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/r8mdneptrdv4"
+            android:text="Add ID photo"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/frontface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rrrtawyz1yma"
+            android:text="ID photo / front face"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#2D2D3A"
+            android:textSize="14sp"/>
+
+        <RelativeLayout
+            android:id="@+id/frontface_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frontface"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sfff0f0f0sw1cr50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="21dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a file"
+                android:textColor="#96969c"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/backside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frontface_file"
+            android:text="ID photo / back side "
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#2D2D3A"
+            android:textSize="14sp"/>
+
+        <RelativeLayout
+            android:id="@+id/backside_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/backside"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sfff0f0f0sw1cr50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="17dp"
+            android:paddingVertical="21dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a file"
+                android:textColor="#96969c"
+                android:textSize="12sp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/r2r61f10oe76"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            >
+
+            <Button
+                android:id="@+id/back_b"
+                style="@style/orangeButton"
+                android:layout_width="188dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/cr76bffff4c14"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/next_b"
+                style="@style/orangeButton"
+                android:layout_width="188dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/cr76bffff4c14"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
