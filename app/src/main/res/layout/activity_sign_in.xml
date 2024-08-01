@@ -93,7 +93,7 @@
                         android:layout_below="@+id/rgeio7dyf03"
                         android:layout_marginStart="26dp"
                         android:layout_marginTop="10dp"
-                        android:text="Email"
+                        android:text="Username"
                         android:textColor="#2d2d3a"
                         android:textSize="14sp" />
 
@@ -116,19 +116,18 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:scaleType="fitXY"
-                            android:src="@drawable/email"
+                            android:src="@drawable/person"
                              />
 
                         <EditText
-                            android:id="@+id/email_et"
+                            android:id="@+id/fullname_et"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@+id/rn6rktg051u"
-                            android:layout_centerVertical="true"
                             android:layout_marginStart="15dp"
                             android:ems="18"
-                            android:inputType="textEmailAddress"
-                            android:hint="username@example.com"
+                            android:hint="Username"
+                            android:inputType="textWebEmailAddress"
                             android:minHeight="48dp"
                             android:textColor="#060000"
                             android:textSize="12sp"
