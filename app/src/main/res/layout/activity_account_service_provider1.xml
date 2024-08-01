@@ -190,8 +190,10 @@
                             android:layout_centerInParent="true"
                             android:layout_marginEnd="30dp"
                             android:background="@null"
-                            android:src="@drawable/timer"
-                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+                            android:checked="true"
+                            android:clickable="true"
+                            android:src="@drawable/profile_on_off_imgs"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
                     </RelativeLayout>
 
                 </RelativeLayout>
