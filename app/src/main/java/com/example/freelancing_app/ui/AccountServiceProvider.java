@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.freelancing_app.R;
 
-
 public class AccountServiceProvider extends AppCompatActivity {
 
     @Override

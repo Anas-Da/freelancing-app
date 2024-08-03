@@ -40,11 +40,11 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
     private ImageButton account_ib;
     private ImageButton chat_ib;
     GlobalVariables globalVariables;
-    private RecyclerView workgroup_list;
-    private RecyclerView sellers_list;
     private ProfessionAdapter professionAdapter;
-    private SellerAdapter sellerAdapter;
+    private RecyclerView profession_list;
     private List<Profession> professionList;
+    private SellerAdapter sellerAdapter;
+    private RecyclerView sellers_list;
     private List<Seller> sellerList;
     private List<Profile> profiles;
     @Override
@@ -61,8 +61,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
 
         globalVariables= (GlobalVariables) getApplicationContext();
 
-        workgroup_list = findViewById(R.id.workgroup_list);
-        workgroup_list.setLayoutManager(new GridLayoutManager(this, 4));
+        profession_list = findViewById(R.id.workgroup_list);
+        profession_list.setLayoutManager(new GridLayoutManager(this, 4));
 
         professionList = new ArrayList<>();
         String[] professionNames = {
@@ -90,7 +90,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
             professionList.add(new Profession( professionNames[i], professionImages[i]));
         }
         professionAdapter = new ProfessionAdapter(this, professionList,this);
-        workgroup_list.setAdapter(professionAdapter);
+        profession_list.setAdapter(professionAdapter);
+
 
 
         sellers_list = findViewById(R.id.sellers_li);
@@ -100,27 +101,17 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
 
         sellerList = new ArrayList<>();
 
-        profiles=new ArrayList<Profile>();
+        profiles=new ArrayList<>();
+
+        //getting from back
 
         apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
-/*
-         fetchProfiles();
 
-        //todo get them from the backEnd and display them
-        for (int i = 0; i < profiles.size(); i++){
-            Profile x= profiles.get(i);
-            String base64Image = x.getImg();
-            Bitmap bitmap = ImageUtils.decodeBase64ToBitmap(base64Image);
-            sellerList.add(new Seller(x.getFirstName() + " " + x.getSecondName(),bitmap,x.getWorkGroup()));
-        }
-        sellerAdapter = new SellerAdapter(this,sellerList,this);
-        sellers_list.setAdapter(sellerAdapter);
-            */
         sellers_list.setLayoutManager(new LinearLayoutManager(this));
         sellerAdapter = new SellerAdapter(this, sellerList, this);
         sellers_list.setAdapter(sellerAdapter);
 
-// Call fetchProfiles to populate data
+        // Call fetchProfiles to populate data
         fetchProfiles();
 
     }
@@ -167,10 +158,10 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
             Intent i=new Intent(Home.this, AccountServiceProvider.class);
             startActivity(i);
         }else if (v.getId()==R.id.chat_ib){
-            /*
-            Intent i=new Intent(Home.this,AccountServiceProvider.class);
+
+            Intent i=new Intent(Home.this,ChatList.class);
             startActivity(i);
-             */
+
         }else if(v.getId()==R.id.search_et){
             /*
             Intent i=new Intent(Home.this,AccountServiceProvider.class);
@@ -194,9 +185,9 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
     }
     @Override
     public void onProfessionClick(int position) {
-        // todo get from back the id and handle
+        // todo get from back the id and handle bla bla bla
 
-        globalVariables.setWorkGroup(0);
+        globalVariables.setWorkGroup(position);
         //todo to profile
         Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
         Intent i=new Intent(Home.this, SellerList_SingleWorkGroup.class);

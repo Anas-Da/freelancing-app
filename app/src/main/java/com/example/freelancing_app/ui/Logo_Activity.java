@@ -22,7 +22,7 @@ public class Logo_Activity extends AppCompatActivity {
             @Override
             public void run() {
                 // Start the SignInActivity
-                Intent intent = new Intent(Logo_Activity.this, Home.class);
+                Intent intent = new Intent(Logo_Activity.this, SignInActivity.class);
                 startActivity(intent);
                 finish(); // Close the splash activity
             }

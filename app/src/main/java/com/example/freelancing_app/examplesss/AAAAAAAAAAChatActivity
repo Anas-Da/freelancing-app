@@ -1,4 +1,4 @@
-//TODO : edit this java code for opened chat activity.xml
+//TODO : edit this java code for opened chatJson activity.xml
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;

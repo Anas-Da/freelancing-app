@@ -21,10 +21,15 @@
     <item name="account_ib" type="id" />
     <item name="chat_ib" type="id" />
     <item name="search_et" type="id" />
-    <item name="seller_name" type="id" />
+    <item name="seller_name_tv" type="id" />
     <item name="type" type="id" />
     <item name="next_b" type="id"/>
     <item name="save_changes_b" type="id"/>
+    <item name="message_lv" type="id"/>
+    <item name="send_message_et" type="id"/>
+    <item name="chats_li" type="id"/>
+    <item name="photo_rl" type="id"/>
+    <item name="photo_iv" type="id"/>
 
     <!--    <item name="doc_rl" type="id" />    -->
     <!--    <item name="trans_rl" type="id" />  -->

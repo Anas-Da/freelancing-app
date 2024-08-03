@@ -1,4 +1,5 @@
-// TODO: This is the list adapter for all messages
+package com.example.freelancing_app.adapters;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +7,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.freelancing_app.R;
+import com.example.freelancing_app.models.Message;
+
 import java.util.ArrayList;
 
 public class MessageAdapter extends BaseAdapter {
@@ -32,6 +37,8 @@ public class MessageAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return position;
     }
+
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

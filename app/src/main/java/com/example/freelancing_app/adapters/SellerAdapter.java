@@ -64,7 +64,7 @@ public class SellerAdapter extends RecyclerView.Adapter<SellerAdapter.SellerView
         public SellerViewHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image);
-            name = itemView.findViewById(R.id.seller_name);
+            name = itemView.findViewById(R.id.seller_name_tv);
             type = itemView.findViewById(R.id.type);
         }
     }
@@ -72,11 +72,5 @@ public class SellerAdapter extends RecyclerView.Adapter<SellerAdapter.SellerView
         void onSellerClick(int position);
     }
 
-    private Bitmap decodeBase64ToBitmap(String base64Image) {
-        if (base64Image.contains(",")) {
-            base64Image = base64Image.split(",")[1];
-        }
-        byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
-        return BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-    }
+
 }

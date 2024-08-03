@@ -12,11 +12,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-
-import com.example.freelancing_app.R;
-import com.example.freelancing_app.adapters.ProfessionAdapter;
-import com.example.freelancing_app.models.Profession;
 import com.example.freelancing_app.utils.GlobalVariables;
+import com.example.freelancing_app.adapters.ProfessionAdapter;
+import com.example.freelancing_app.R;
+import com.example.freelancing_app.models.Profession;
 
 import java.util.ArrayList;
 import java.util.List;

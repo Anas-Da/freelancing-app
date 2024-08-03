@@ -6,4 +6,7 @@ import retrofit2.http.GET;
 public interface ApiService {
     @GET("homepage")
     Call<ProfilesResponse> getProfiles();
+
+    @GET("chats")
+    Call<ChatsResponse> getChats();
 }

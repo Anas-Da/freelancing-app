@@ -1,12 +1,15 @@
 package com.example.freelancing_app.ui;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.freelancing_app.utils.GlobalVariables;
 import com.example.freelancing_app.utils.ImageUtils;
 import com.example.freelancing_app.R;
 import com.example.freelancing_app.adapters.SellerAdapter;
@@ -25,6 +28,9 @@ import retrofit2.Response;
 
 public class SellerList_SingleWorkGroup extends AppCompatActivity implements SellerAdapter.OnItemClickListener{
 
+
+    GlobalVariables globalVariables;
+
     private RecyclerView sellers_list;
     private SellerAdapter sellerAdapter;
     private List<Seller> sellerList;
@@ -36,24 +42,29 @@ public class SellerList_SingleWorkGroup extends AppCompatActivity implements Sel
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_workgroup_service_provider1);
 
-
+        globalVariables = (GlobalVariables) getApplicationContext();
         apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
         fetchProfiles();
 
         sellers_list = findViewById(R.id.sellers_li);
+
+
         sellers_list.setLayoutManager(new LinearLayoutManager(this));
 
         sellerList = new ArrayList<>();
-        //todo get them from the backEnd and display them
-        for (int i = 0; i < profiles.size(); i++){
-            Profile x= profiles.get(i);
-            String base64Image = x.getImg();
-            Bitmap bitmap = ImageUtils.decodeBase64ToBitmap(base64Image);
-            sellerList.add(new Seller(x.getFirstName() + " " + x.getSecondName(),bitmap,x.getWorkGroup()));
-        }
-        sellerAdapter = new SellerAdapter(this,sellerList,this);
+
+        profiles=new ArrayList<>();
+
+        //getting from back
+
+        apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
+
+        sellers_list.setLayoutManager(new LinearLayoutManager(this));
+        sellerAdapter = new SellerAdapter(this, sellerList, this);
         sellers_list.setAdapter(sellerAdapter);
 
+        // Call fetchProfiles to populate data
+        fetchProfiles();
     }
 
 
@@ -75,6 +86,13 @@ public class SellerList_SingleWorkGroup extends AppCompatActivity implements Sel
     }
     @Override
     public void onSellerClick(int position) {
+        // todo get from back the id and handle
 
+        globalVariables.setSellerid(1);
+        globalVariables.setSellerhandle("Anas_Da");
+        //todo to profile
+        Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
+        Intent i=new Intent(SellerList_SingleWorkGroup.this,AccountServiceProvider.class);
+        startActivity(i);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.freelancing_app.ui;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.freelancing_app.R;
+import com.example.freelancing_app.utils.GlobalVariables;
 
 
 public class SignInActivity extends AppCompatActivity {
@@ -21,10 +23,12 @@ public class SignInActivity extends AppCompatActivity {
     private EditText password_et;
     private Button SignIn_b;
     private ImageView eye_b;
-    private Button SignUp_b;
+    private TextView SignUp_b;
     private RadioButton ServiceProvider_rb;
     private RadioButton Customer_rb;
     private  boolean isPasswordVisible;
+
+    GlobalVariables globalVariables;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +41,9 @@ public class SignInActivity extends AppCompatActivity {
         Customer_rb = findViewById(R.id.Customer_rb);
         ServiceProvider_rb = findViewById(R.id.ServiceProvider_rb);
         eye_b = findViewById(R.id.eye_b);
-        isPasswordVisible = false;
+
+        globalVariables=(GlobalVariables) getApplicationContext();
+
         eye_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,13 +74,13 @@ public class SignInActivity extends AppCompatActivity {
                     }else{
                         if(Customer_rb.isChecked()){
                          //TODO edit here .. we have only one signin page
-                            // Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
-                           // i.putExtra("isCustomer",true);
-                           // startActivity(i);
+                             Intent i=new Intent(SignInActivity.this, Home.class);
+                            i.putExtra("isCustomer",true);
+                            startActivity(i);
                         }else if(ServiceProvider_rb.isChecked()){
-                           // Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
-                           // i.putExtra("isCustomer",false);
-                           // startActivity(i);
+                            Intent i=new Intent(SignInActivity.this,Home.class);
+                            i.putExtra("isCustomer",false);
+                            startActivity(i);
                         }else{
                             Toast.makeText(SignInActivity.this,
                                     "Select ServiceProvider or customer", Toast.LENGTH_SHORT).show();
@@ -87,8 +93,16 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO go to first signup page
-           //     Intent i=new Intent(SignInActivity.this,SignInActivity_2.class);
-             //   startActivity(i);
+                Intent i=new Intent(SignInActivity.this,SignUpBase1.class);
+                if(Customer_rb.isChecked()){
+                    globalVariables.setCustomer(true);
+                }else if(ServiceProvider_rb.isChecked()){
+                    globalVariables.setCustomer(false);
+                }else{
+                    Toast.makeText(SignInActivity.this, "Select ServiceProvider or customer", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                startActivity(i);
             }
         });
     }

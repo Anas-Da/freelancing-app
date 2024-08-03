@@ -1,7 +1,12 @@
-// TODO: this is for message content
+package com.example.freelancing_app.models;
+
+import com.google.gson.annotations.SerializedName;
+
 public class Message {
 
+    @SerializedName("text")
     private String text;
+    @SerializedName("isSent")
     private boolean isSent;
 
     public Message(String text, boolean isSent) {
