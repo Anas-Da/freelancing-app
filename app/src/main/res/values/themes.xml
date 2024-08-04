@@ -6,4 +6,7 @@
     </style>
 
     <style name="Theme.Freelancing_app" parent="Base.Theme.Freelancing_app" />
+    <!-- res/values/themes.xml -->
+
+
 </resources>

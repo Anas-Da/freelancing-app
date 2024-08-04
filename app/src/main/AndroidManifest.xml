@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <application
         android:name=".MyApplication"
@@ -15,9 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Freelancing_app"
         tools:targetApi="31">
-        <service android:name=".TokenRefreshService" />
+        <service android:name=".utils.TokenRefreshService" />
         <activity
-            android:name=".Logo_Activity"
+            android:name=".ui.Logo_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignInActivity"
+            android:name=".ui.SignInActivity"
             android:exported="false">
 
         </activity>

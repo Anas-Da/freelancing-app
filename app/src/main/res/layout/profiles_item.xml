@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/item_list_background">
+        <RelativeLayout
+            android:id="@+id/sahdhsaui"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/ffe530"
+            android:layout_marginStart="20dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/account_img_small"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/r02uy756a9149"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/sahdhsaui"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="@string/zaher_kolko"
+            />
+        <TextView
+            android:id="@+id/r23sb4nerk44"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/sahdhsaui"
+            android:layout_below="@+id/r02uy756a9149"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:text="It engineer"
+            />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="30dp"
+        android:background="@null"
+        android:checked="true"
+        android:clickable="true"
+        android:src="@drawable/profile_on_off_imgs"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </RelativeLayout>
+
