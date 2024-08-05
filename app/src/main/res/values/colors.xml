@@ -9,4 +9,5 @@
     <color name="l_blue">#FF5644a0</color>
     <color name="default_checkbox_color">#b9b9bd</color>
     <color name="checkbox_color">#4CAF50</color>
+    <color name="grey">#96969C</color>
 </resources>

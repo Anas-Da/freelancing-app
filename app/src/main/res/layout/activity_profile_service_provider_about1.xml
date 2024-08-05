@@ -163,11 +163,11 @@
                         <Button
                             android:id="@+id/about_b"
                             style="@style/orangeButton"
-                            android:layout_width="135dp"
+                            android:layout_width="120dp"
                             android:layout_height="50dp"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginStart="1dp"
+                            android:layout_marginStart="5dp"
                             android:background="@drawable/cr76bffff4c14"
                             android:text="@string/about"
                             android:textAllCaps="false"
@@ -177,11 +177,11 @@
                         <Button
                             android:id="@+id/information_b"
                             style="@style/L_orangeButton"
-                            android:layout_width="135dp"
+                            android:layout_width="120dp"
                             android:layout_height="50dp"
                             android:layout_centerVertical="true"
                             android:layout_toEndOf="@+id/about_b"
-                            android:layout_marginStart="2dp"
+                            android:layout_marginStart="20dp"
                             android:background="@drawable/cr76bfff8b29c"
                             android:text="@string/information"
                             android:maxLines="1"
@@ -192,41 +192,313 @@
                         <Button
                             android:id="@+id/Rating_b"
                             style="@style/L_orangeButton"
-                            android:layout_width="135dp"
+                            android:layout_width="120dp"
                             android:layout_height="50dp"
                             android:layout_centerVertical="true"
                             android:layout_toEndOf="@+id/information_b"
-                            android:layout_marginStart="2dp"
-                            android:layout_marginEnd="1dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
                             android:background="@drawable/cr76bfff8b29c"
                             android:text="@string/rating"
                             android:textAllCaps="false"
                             android:textColor="#000000"
                             android:textSize="14sp"
                             />
-
-                    </RelativeLayout>
                     </RelativeLayout>
 
+                    <ImageView
+                        android:id="@+id/profile_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/r2r61f10oe76"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/profile_location"/>
+                    <TextView
+                        android:id="@+id/from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/profile_location"
+                        android:layout_below="@+id/r2r61f10oe76"
+                        android:text="From"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:id="@+id/location_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/profile_location"
+                        android:layout_below="@+id/from"
+                        android:text="Syria, Homs"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/profile_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_location"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/profile_language"/>
+                    <TextView
+                        android:id="@+id/language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/profile_language"
+                        android:layout_below="@+id/profile_location"
+                        android:text="Language"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:id="@+id/language_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/profile_language"
+                        android:layout_below="@+id/language"
+                        android:text="Arabic, English"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/profile_payment_methods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_language"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/profile_payment_methods"/>
+                    <TextView
+                        android:id="@+id/payment_methods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/profile_payment_methods"
+                        android:layout_below="@+id/profile_language"
+                        android:text="Payment methods"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:id="@+id/payment_methods_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/profile_payment_methods"
+                        android:layout_below="@+id/payment_methods"
+                        android:text="Al_haram"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
 
 
+                    <ImageView
+                        android:id="@+id/profile_workgroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_payment_methods"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/profile_workgroup"/>
+                    <TextView
+                        android:id="@+id/in_a_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/profile_workgroup"
+                        android:layout_below="@+id/profile_payment_methods"
+                        android:text="In a group"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:id="@+id/group_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/profile_workgroup"
+                        android:layout_below="@+id/in_a_group"
+                        android:text="IT engineering"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/profile_member_since"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/r2r61f10oe76"
+                        android:layout_toEndOf="@+id/profile_location"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/profile_member_since"/>
+                    <TextView
+                        android:id="@+id/member_since"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/profile_member_since"
+                        android:layout_below="@+id/r2r61f10oe76"
+                        android:text="Member since"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:id="@+id/member_since_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/profile_member_since"
+                        android:layout_below="@+id/member_since"
+                        android:text="Jul 2020"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/profile_date_of_birth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_member_since"
+                        android:layout_toEndOf="@+id/profile_language"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/profile_date_of_birth"/>
+                    <TextView
+                        android:id="@+id/date_of_birth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/profile_date_of_birth"
+                        android:layout_below="@+id/profile_member_since"
+                        android:text="Date of birth"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:id="@+id/date_of_birth_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/profile_date_of_birth"
+                        android:layout_below="@+id/date_of_birth"
+                        android:text="21 Sep 1997"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:id="@+id/profile_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_date_of_birth"
+                        android:layout_toEndOf="@+id/profile_payment_methods"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/profile_phone"/>
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/profile_phone"
+                        android:layout_below="@+id/profile_date_of_birth"
+                        android:text="Phone"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:id="@+id/phone_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/profile_phone"
+                        android:layout_below="@+id/phone"
+                        android:text="+963*********"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
 
 
+                    <ImageView
+                        android:id="@+id/profile_services_provided"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_phone"
+                        android:layout_toEndOf="@+id/profile_workgroup"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/profile_services_provided"/>
+                    <TextView
+                        android:id="@+id/services_provided"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/profile_services_provided"
+                        android:layout_below="@+id/profile_phone"
+                        android:text="Services provided"
+                        android:textSize="10sp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:id="@+id/sevices_provided_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/profile_services_provided"
+                        android:layout_below="@+id/services_provided"
+                        android:text="5"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
 
 
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/ahjbfhad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bar">
+                    <ImageButton
+                        android:id="@+id/account_ib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="50dp"
+                        android:background="@null"
+                        android:src="@drawable/account_page_icon"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
+                    <ImageButton
+                        android:id="@+id/home_ib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/home_page_icon"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    <ImageButton
+                        android:id="@+id/chat_ib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="55dp"
+                        android:background="@null"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/chats_page_icon"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
+                </RelativeLayout>
 
             </RelativeLayout>
         </ScrollView>
