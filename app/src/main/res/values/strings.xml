@@ -22,4 +22,6 @@
     <string name="back">Back</string>
     <string name="create_service_provider_account">Create Service Provider Account</string>
     <string name="create_customer_account">Create Customer Account</string>
+    <string name="information">Information</string>
+    <string name="rating">Rating</string>
 </resources>

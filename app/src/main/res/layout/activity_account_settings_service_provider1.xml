@@ -72,7 +72,7 @@
                         android:textColor="#000000"
                         android:textSize="22sp"
                         android:textStyle="bold"
-                        android:text="@string/seller_name"
+                        android:text="seller_name"
 
                         />
                     <TextView
