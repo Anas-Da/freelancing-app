@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:clickable="true"
+    android:background="@drawable/item_list_background"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/account_img_rel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/list_item_img_background"
+        android:layout_marginStart="10dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@drawable/account_img_small" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/account_img_rel"
+        android:layout_marginStart="10dp"
+        android:text="user_name"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/comment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/account_img_rel"
+        android:text="Engineer Zaher designed a time management application\nfor me.\nThe application was wonderful and the price was reasonable."
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/comment_tv"
+        >
+        <ImageView
+            android:id="@+id/star1_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/grey_star"
+            />
+        <ImageView
+            android:id="@+id/star2_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/star1_iv"
+            android:src="@drawable/grey_star"
+            />
+        <ImageView
+            android:id="@+id/star3_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/star2_iv"
+            android:src="@drawable/grey_star"
+            />
+        <ImageView
+            android:id="@+id/star4_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/star3_iv"
+            android:src="@drawable/grey_star"
+            />
+        <ImageView
+            android:id="@+id/star5_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/star4_iv"
+            android:src="@drawable/grey_star"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

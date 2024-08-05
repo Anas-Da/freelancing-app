@@ -214,7 +214,7 @@
 						android:layout_below="@+id/r2r61f10oe76"
 						android:padding="16dp"
 						android:clipToPadding="true"
-						tools:listitem="@layout/item_comments"/>
+						tools:listitem="@layout/item_comments_view_only"/>
 
 				</RelativeLayout>
 				<RelativeLayout
