@@ -14,7 +14,6 @@
 			android:id="@+id/r0h5yg2kjsuak"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:layout_weight="1"
 			android:background="@color/d_blue"
 			android:fillViewport="true"
 			android:paddingTop="17dp"
@@ -22,7 +21,7 @@
 			tools:ignore="SpeakableTextPresentCheck">
 			<RelativeLayout
 				android:layout_width="match_parent"
-				android:layout_height="match_parent"
+				android:layout_height="wrap_content"
 				android:orientation="vertical">
 
 				<ImageView
@@ -79,7 +78,7 @@
 					android:paddingVertical="30dp">
 
 					<RelativeLayout
-						android:id="@+id/photo_iv"
+						android:id="@+id/photo_rl"
 						android:layout_width="87dp"
 						android:layout_height="89dp"
 						android:layout_alignParentTop="true"
@@ -87,12 +86,10 @@
 						android:layout_marginStart="50dp">
 
 						<ImageView
+							android:id="@+id/photo_iv"
 							android:layout_width="match_parent"
 							android:layout_height="match_parent"
-							android:layout_alignParentStart="true"
-							android:layout_alignParentBottom="true"
-							android:layout_marginStart="-٤٠dp"
-							android:layout_marginBottom="٠dp"
+							android:layout_centerInParent="true"
 							android:src="@drawable/account_img" />
 
 					</RelativeLayout>
@@ -101,9 +98,9 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:layout_alignParentTop="true"
-						android:layout_toEndOf="@+id/photo_iv"
-						android:layout_marginLeft="40dp"
-						android:layout_marginTop="25dp"
+						android:layout_toEndOf="@+id/photo_rl"
+						android:layout_marginStart="40dp"
+						android:layout_marginTop="5dp"
 						android:textColor="@color/black"
 						android:textSize="22sp"
 						android:textStyle="bold"
@@ -114,8 +111,8 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:layout_below="@+id/fullname_tv"
-						android:layout_toEndOf="@+id/photo_iv"
-						android:layout_marginLeft="40dp"
+						android:layout_toEndOf="@+id/photo_rl"
+						android:layout_marginStart="40dp"
 						android:layout_marginTop="5dp"
 						android:textColor="@color/black"
 						android:textSize="14sp"
@@ -126,8 +123,8 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:layout_below="@+id/username_tv"
-						android:layout_toEndOf="@+id/photo_iv"
-						android:layout_marginLeft="40dp"
+						android:layout_toEndOf="@+id/photo_rl"
+						android:layout_marginStart="40dp"
 						android:layout_marginTop="10dp"
 						android:src="@drawable/small_star"/>
 
@@ -137,7 +134,7 @@
 						android:layout_height="wrap_content"
 						android:layout_below="@+id/username_tv"
 						android:layout_toEndOf="@+id/rating_star"
-						android:layout_marginLeft="5dp"
+						android:layout_marginStart="5dp"
 						android:layout_marginTop="5dp"
 						android:text="rating 4.5"
 						android:textSize="12sp"
@@ -147,7 +144,7 @@
 						android:id="@+id/r2r61f10oe76"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:layout_below="@+id/rating_tv"
+						android:layout_below="@+id/photo_rl"
 						android:layout_marginTop="30dp"
 						>
 
