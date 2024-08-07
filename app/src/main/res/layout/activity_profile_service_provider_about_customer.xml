@@ -71,7 +71,7 @@
 					android:layout_height="wrap_content"
 					android:layout_alignParentTop="true"
 					android:layout_alignParentBottom="true"
-					android:layout_marginTop="5dp"
+					android:layout_marginTop="25dp"
 					android:layout_marginBottom="0dp"
 					android:background="@drawable/tl90tr90bffffffff"
 					android:clipChildren="false"
