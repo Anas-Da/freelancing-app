@@ -158,14 +158,14 @@
                         android:translationX="-12dp"
                         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                     <Button
-                        android:id="@+id/next_b"
+                        android:id="@+id/save_b"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
                         android:layout_alignParentBottom="true"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
-                        android:text="@string/next"
+                        android:text="Save"
                         android:textSize="16sp"
                         android:background="@drawable/cr76bffff4c14"
                         style="@style/orangeButton"
