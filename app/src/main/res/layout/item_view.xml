@@ -23,7 +23,7 @@
         android:layout_centerInParent="true"/>
     </RelativeLayout>
     <TextView
-        android:id="@+id/seller_name"
+        android:id="@+id/seller_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/profile_img_rel"
@@ -38,7 +38,7 @@
         android:id="@+id/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/seller_name"
+        android:layout_below="@+id/seller_name_tv"
         android:layout_marginStart="13dp"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/profile_img_rel"
