@@ -32,7 +32,7 @@
                     android:src="@drawable/arrow_back"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                 <TextView
-                    android:id="@+id/rlzqje35ev5"
+                    android:id="@+id/seller_name_tv"
                     android:textColor="#ffffff"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -40,10 +40,10 @@
                     android:layout_width="wrap_content"
                     android:layout_toEndOf="@+id/back_b"
                     android:layout_marginTop="-5dp"
-                    android:text="Samer Saka"
+                    android:text="Seller name"
                     />
                 <ImageButton
-                    android:id="@+id/r9vqib29tvru"
+                    android:id="@+id/more_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -128,7 +128,8 @@
                             android:background="@null"
                             android:src="@drawable/message"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                            android:visibility="gone"/>
+                            android:visibility="invisible"
+                            />
                         <EditText
                             android:id="@+id/send_message_et"
                             android:layout_width="270dp"
