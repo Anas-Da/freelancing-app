@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="#FFFFFFFF"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/r0h5yg2kjsuak"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF18104a"
+            android:fillViewport="true"
+            android:paddingTop="17dp"
+            android:paddingBottom="-3dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/back_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="21dp"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/arrow_back"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rdyndsji2gv7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/tl90tr90bffffffff"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingVertical="30dp">
+
+                    <TextView
+                        android:id="@+id/rcx85nqz4fxm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="11dp"
+                        android:text="My profile"
+                        android:textColor="#2d2d3a"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <ImageButton
+                        android:id="@+id/bio_b"
+                        android:layout_width="30dp"
+                        android:layout_height="29dp"
+                        android:layout_below="@+id/rcx85nqz4fxm"
+                        android:layout_alignParentEnd="true"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/arrow_go_to"
+                        android:translationX="-12dp"
+                        android:translationY="5dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <RelativeLayout
+                        android:id="@+id/r65g1xf0lgyj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rrrtawyz1yma"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginBottom="11dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/rcrwwhgl8m6i"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/language"
+                            android:scaleType="fitXY"
+                            />
+                        <TextView
+                            android:id="@+id/rps9h5anc9g"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@+id/rcrwwhgl8m6i"
+                            android:layout_marginTop="7dp"
+                            android:text="Language"
+                            />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rnexu70wy4q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rcx85nqz4fxm"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginBottom="11dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rjdou6xq45x"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/edit" />
+
+                        <TextView
+                            android:id="@+id/rwxeqi46wei"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_toEndOf="@+id/rjdou6xq45x"
+                            android:text="Bio"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/rrrtawyz1yma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/rnexu70wy4q"
+                        android:text="@string/account_preferences"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <ImageButton
+                        android:id="@+id/language_b"
+                        android:layout_width="30dp"
+                        android:layout_height="29dp"
+                        android:layout_below="@+id/rrrtawyz1yma"
+                        android:layout_alignParentEnd="true"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/arrow_go_to"
+                        android:translationX="-12dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    <Button
+                        android:id="@+id/next_b"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:text="@string/next"
+                        android:textSize="16sp"
+                        android:background="@drawable/cr76bffff4c14"
+                        style="@style/orangeButton"
+                        android:textAllCaps="false"
+                        />
+
+
+
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
