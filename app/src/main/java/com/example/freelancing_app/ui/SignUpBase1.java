@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.freelancing_app.models.SignUpRequest;
 import com.example.freelancing_app.utils.GlobalVariables;
 import com.example.freelancing_app.R;
 
@@ -16,7 +17,8 @@ public class SignUpBase1 extends AppCompatActivity {
 
     TextView create_tv;
 
-    EditText fullname_et;
+    EditText firstname_et;
+    EditText secondname_et;
     EditText username_et;
     EditText email_et;
     EditText password_et;
@@ -36,6 +38,7 @@ public class SignUpBase1 extends AppCompatActivity {
         globalVariables = (GlobalVariables) getApplicationContext();
 
         create_tv = findViewById(R.id.create_account_tv);
+
         isCustomer = globalVariables.isCustomer();
         if(isCustomer){
             create_tv.setText(R.string.create_customer_account);
@@ -43,7 +46,8 @@ public class SignUpBase1 extends AppCompatActivity {
             create_tv.setText(R.string.create_service_provider_account);
         }
 
-        fullname_et         = findViewById(R.id.fullname_et);
+        firstname_et = findViewById(R.id.firstname_et);
+        secondname_et = findViewById(R.id.lastname_et);
         username_et         = findViewById(R.id.username_et);
         email_et            = findViewById(R.id.email_et);
         password_et         = findViewById(R.id.password_et);
@@ -58,13 +62,13 @@ public class SignUpBase1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(check()){
+                    Intent i;
                     if(isCustomer){
-                        Intent i = new Intent(SignUpBase1.this,SignUpBase3.class);
-                        startActivity(i);
+                        i = new Intent(SignUpBase1.this, SignUpBase3.class);
                     }else{
-                        Intent i = new Intent(SignUpBase1.this,SignUpServiceProvider2.class);
-                        startActivity(i);
+                        i = new Intent(SignUpBase1.this, SignUpServiceProvider2.class);
                     }
+                    startActivity(i);
                 }
             }
         });
@@ -76,15 +80,23 @@ public class SignUpBase1 extends AppCompatActivity {
         });
     }
     boolean check(){
-        if(fullname_et        .getText().toString().isEmpty())return false;
+        if(firstname_et        .getText().toString().isEmpty())return false;
+        if(secondname_et        .getText().toString().isEmpty())return false;
         if(username_et        .getText().toString().isEmpty())return false;
         if(email_et           .getText().toString().isEmpty())return false;
         if(password_et        .getText().toString().isEmpty())return false;
         if(confirm_password_et.getText().toString().isEmpty())return false;
+        if(!password_et.getText().toString().equals(confirm_password_et.getText().toString()))return false;
         if(date_of_birth_et   .getText().toString().isEmpty())return false;
         if(country_et         .getText().toString().isEmpty())return false;
         if(phone_number_et    .getText().toString().isEmpty())return false;
-
+        globalVariables.setSignUpRequest(
+                new SignUpRequest(username_et.getText().toString(),
+                        firstname_et.getText().toString(),secondname_et.getText().toString(),
+                        country_et.getText().toString(),date_of_birth_et.getText().toString(),
+                        email_et.getText().toString(),phone_number_et.getText().toString(),
+                        password_et.getText().toString(),confirm_password_et.getText().toString()
+                ));
         return true;
     }
 }

@@ -39,7 +39,18 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
         Chat chat = chatList.get(position);
         holder.messageTextView.setText(chat.getLast_message());
         holder.senderTextView.setText(chat.getName());
-        holder.image.setImageBitmap(chat.getImage());
+        if (chat.getImage() != null) {
+            holder.image.setImageBitmap(chat.getImage());
+        } else {
+            holder.image.setImageResource(R.drawable.person); // Replace with a default image resource
+        }
+        holder.time.setText(chat.getTime());
+        if(chat.getUnread_cnt()==0){
+            holder.unread_cnt.setVisibility(View.INVISIBLE);
+        }else{
+            holder.unread_cnt.setVisibility(View.VISIBLE);
+            holder.unread_cnt.setText(String.valueOf(chat.getUnread_cnt()));
+        }
         holder.itemView.setOnClickListener(v -> {
             if (onItemClickListener != null) {
                 onItemClickListener.onChatClick(position);
@@ -51,25 +62,32 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
 
     @Override
     public int getItemCount() {
-        return chatList.size();
+        return (chatList != null) ? chatList.size() : 0;
     }
 
-    public void updateChats(List<Chat> newChat) {
-        chatList.clear();
-        chatList.addAll(newChat);
-        notifyDataSetChanged();
+    public void updateChats(List<Chat> newChatList) {
+        if (newChatList != null) {
+            chatList.clear();
+            chatList.addAll(newChatList);
+            notifyDataSetChanged();
+        }
     }
 
     public static class ChatViewHolder extends RecyclerView.ViewHolder {
         TextView messageTextView;
         TextView senderTextView;
         ImageView image;
+        TextView time;
+
+        TextView unread_cnt;
 
         public ChatViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image);
             messageTextView = itemView.findViewById(R.id.last_message_tv);
             senderTextView = itemView.findViewById(R.id.seller_name_tv);
+            time = itemView.findViewById(R.id.message_time);
+            unread_cnt = itemView.findViewById(R.id.unread_count);
         }
     }
     public interface OnItemClickListener {

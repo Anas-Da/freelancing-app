@@ -56,8 +56,8 @@ public class SellerList_SingleWorkGroup extends AppCompatActivity implements Sel
         profiles=new ArrayList<>();
 
         //getting from back
-
-        apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
+        // todo return it
+       //apiService = RetrofitInstance.getRetrofitInstance(globalVariables.getToken()).create(ApiService.class);
 
         sellers_list.setLayoutManager(new LinearLayoutManager(this));
         sellerAdapter = new SellerAdapter(this, sellerList, this);

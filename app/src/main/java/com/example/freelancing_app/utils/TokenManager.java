@@ -4,7 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class TokenManager {
-    private static final String PREF_FILE_NAME = "com.example.yourapp.PREF_FILE_KEY";
+    // TODO change when change app name
+    private static final String PREF_FILE_NAME = "com.example.test_fla.PREF_FILE_KEY";
     private static final String PREF_ACCESS_TOKEN = "access_token";
 
     public static String getAccessToken(Context context) {
