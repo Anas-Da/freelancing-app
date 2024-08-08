@@ -63,6 +63,7 @@
 
                     </RelativeLayout>
                     <TextView
+                        android:id="@+id/seller_name_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
@@ -73,8 +74,16 @@
                         android:textSize="22sp"
                         android:textStyle="bold"
                         android:text="seller_name"
-
                         />
+                    <ImageView
+                        android:id="@+id/name_b"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_toEndOf="@+id/seller_name_tv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
                     <TextView
                         android:id="@+id/ryn1yg7lgdpk"
                         android:layout_width="wrap_content"

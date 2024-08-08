@@ -24,4 +24,5 @@
     <string name="create_customer_account">Create Customer Account</string>
     <string name="information">Information</string>
     <string name="rating">Rating</string>
+    <string name="edit_your_name_please">Edit your name please</string>
 </resources>
