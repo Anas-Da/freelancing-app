@@ -30,9 +30,11 @@ public class AccountSettingsServiceProvider extends AppCompatActivity implements
     private static final int PICK_IMAGE = 1;
     private RelativeLayout photo_rl;
     private ImageView photo_iv;
-    /*private TextView name_tv;
-   private EditText editname_et;
-   private ImageButton pencil_im ;*/
+    /*
+    private TextView name_tv;
+    private EditText editname_et;
+    private ImageButton name_b ;
+    */
     private CheckBox checkBox1;
     private CheckBox checkBox2;
     private CheckBox checkBox3;
@@ -52,9 +54,9 @@ public class AccountSettingsServiceProvider extends AppCompatActivity implements
         photo_rl = findViewById(R.id.photo_rl);
         photo_iv = findViewById(R.id.photo_iv);
 
-        /* name_tv = findViewById(R.id.name_tv);
+        /* name_tv = findViewById(R.id.seller_name_tv);
         editname_et = findViewById(R.id.editname_et);
-        pencil_im = findViewById(R.id.pencil_im);*/
+        name_b = findViewById(R.id.name_b);*/
 
         photo_rl.setOnClickListener(this);
         // editname_et.setVisibility(View.GONE);
@@ -138,7 +140,7 @@ public class AccountSettingsServiceProvider extends AppCompatActivity implements
             openGallery();
         else if(v.getId()==R.id.back_b)
             destroyInterface();
-        /* else if(v.getId()==R.id.pencil_im) {
+        /* else if(v.getId()==R.id.name_b) {
              String text = name_tv.getText().toString();
              name_tv.setVisibility(View.GONE);
              editname_et.setVisibility(View.VISIBLE);

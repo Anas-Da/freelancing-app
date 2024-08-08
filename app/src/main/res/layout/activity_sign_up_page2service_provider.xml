@@ -260,6 +260,7 @@
             android:paddingHorizontal="17dp"
             android:paddingVertical="21dp">
             <TextView
+                android:id="@+id/frontface_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Choose a file"
@@ -292,6 +293,7 @@
             android:paddingHorizontal="17dp"
             android:paddingVertical="21dp">
             <TextView
+                android:id="@+id/backface_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Choose a file"

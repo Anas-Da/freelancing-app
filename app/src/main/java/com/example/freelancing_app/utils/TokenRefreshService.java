@@ -66,7 +66,7 @@ public class TokenRefreshService extends Service {
             }
 
             // Schedule the next execution in 30 minutes (1800000 milliseconds)
-            handler.postDelayed(this, 1800000);
+            handler.postDelayed(this, 18000000);
         }
     };
 
@@ -75,7 +75,7 @@ public class TokenRefreshService extends Service {
 
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("refresh_token", refreshToken);
+            jsonObject.put("Authorization", refreshToken);
         } catch (JSONException e) {
             e.printStackTrace();
         }

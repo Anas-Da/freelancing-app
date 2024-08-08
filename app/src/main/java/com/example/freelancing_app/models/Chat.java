@@ -8,11 +8,16 @@ public class Chat {
     private String last_message;
     private Bitmap image;
     private int unread_cnt;
-    public Chat(String name, String last_message, Bitmap photo, int unread_cnt/*, */) {
+    private String time;
+
+
+
+    public Chat(String name, String last_message, Bitmap photo, int unread_cnt, String time) {
         this.name = name;
         this.last_message = last_message;
         this.image = photo;
         this.unread_cnt = unread_cnt;
+        this.time = time;
     }
 
     public String getName() {
@@ -45,5 +50,13 @@ public class Chat {
 
     public void setUnread_cnt(int unread_cnt) {
         this.unread_cnt = unread_cnt;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

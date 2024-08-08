@@ -47,6 +47,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
     private RecyclerView sellers_list;
     private List<Seller> sellerList;
     private List<Profile> profiles;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +60,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
         account_ib.setOnClickListener(this);
         chat_ib.setOnClickListener(this);
 
-        globalVariables= (GlobalVariables) getApplicationContext();
+        globalVariables = (GlobalVariables) getApplicationContext();
 
         profession_list = findViewById(R.id.workgroup_list);
         profession_list.setLayoutManager(new GridLayoutManager(this, 4));
@@ -85,35 +86,26 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
                 R.drawable.translator_img,
                 R.drawable.law_img
         };
-        //todo get them from the backEnd and display them
-        for(int i=0;i<8;i++){
-            professionList.add(new Profession( professionNames[i], professionImages[i]));
+
+        for (int i = 0; i < 8; i++) {
+            professionList.add(new Profession(professionNames[i], professionImages[i]));
         }
-        professionAdapter = new ProfessionAdapter(this, professionList,this);
+
+        professionAdapter = new ProfessionAdapter(this, professionList, this);
         profession_list.setAdapter(professionAdapter);
 
-
-
         sellers_list = findViewById(R.id.sellers_li);
-
-
         sellers_list.setLayoutManager(new LinearLayoutManager(this));
 
         sellerList = new ArrayList<>();
-
-        profiles=new ArrayList<>();
-
-        //getting from back
+        profiles = new ArrayList<>();
 
         apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
 
-        sellers_list.setLayoutManager(new LinearLayoutManager(this));
         sellerAdapter = new SellerAdapter(this, sellerList, this);
         sellers_list.setAdapter(sellerAdapter);
 
-        // Call fetchProfiles to populate data
         fetchProfiles();
-
     }
 
     private void fetchProfiles() {
@@ -123,74 +115,59 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
             public void onResponse(Call<ProfilesResponse> call, Response<ProfilesResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     profiles = response.body().getProfiles();
-
-                    // Update the sellerList and notify the adapter
-                    updateSellerList();
+                    updateSellerList(); // Method to update list and notify adapter
                 } else {
-                    // Handle the case when the response is not successful
                     Toast.makeText(Home.this, "Failed to fetch profiles", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ProfilesResponse> call, Throwable t) {
-                // Handle the error
                 Toast.makeText(Home.this, t.toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void updateSellerList() {
-        sellerList.clear(); // Clear the current list
+        sellerList.clear();
         for (Profile profile : profiles) {
             String base64Image = profile.getImg();
             Bitmap bitmap = ImageUtils.decodeBase64ToBitmap(base64Image);
             sellerList.add(new Seller(profile.getFirstName() + " " + profile.getSecondName(), bitmap, profile.getWorkGroup()));
         }
         Toast.makeText(Home.this, "Updated", Toast.LENGTH_SHORT).show();
-        sellerAdapter.notifyDataSetChanged(); // Notify the adapter of data changes
+        sellerAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onClick(View v) {
-        //TODO go to the right places
-        if(v.getId()==R.id.account_ib){
-            Intent i=new Intent(Home.this, AccountServiceProvider.class);
+        if (v.getId() == R.id.account_ib) {
+            Intent i = new Intent(Home.this, AccountServiceProvider.class);
             startActivity(i);
-        }else if (v.getId()==R.id.chat_ib){
-
-            Intent i=new Intent(Home.this,ChatList.class);
+        } else if (v.getId() == R.id.chat_ib) {
+            Intent i = new Intent(Home.this, ChatList.class);
             startActivity(i);
-
-        }else if(v.getId()==R.id.search_et){
-            /*
-            Intent i=new Intent(Home.this,AccountServiceProvider.class);
-            startActivity(i);
-             */
-        }else{
+        } else if (v.getId() == R.id.search_et) {
+            // Handle search click
+        } else {
             globalVariables.setJob(v.getId());
         }
-
     }
+
     @Override
     public void onSellerClick(int position) {
-        // todo get from back the id and handle
-
         globalVariables.setSellerid(1);
         globalVariables.setSellerhandle("Anas_Da");
-        //todo to profile
-        Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
-        Intent i=new Intent(Home.this,AccountServiceProvider.class);
+        Toast.makeText(this, "Item " + position, Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(Home.this, AccountServiceProvider.class);
         startActivity(i);
     }
+
     @Override
     public void onProfessionClick(int position) {
-        // todo get from back the id and handle bla bla bla
-
         globalVariables.setWorkGroup(position);
-        //todo to profile
-        Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
-        Intent i=new Intent(Home.this, SellerList_SingleWorkGroup.class);
+        Toast.makeText(this, "Item " + position, Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(Home.this, SellerList_SingleWorkGroup.class);
         startActivity(i);
     }
 }

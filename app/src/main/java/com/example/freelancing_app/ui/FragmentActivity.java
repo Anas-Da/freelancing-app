@@ -93,6 +93,7 @@ public class FragmentActivity extends AppCompatActivity {
             if (text.isEmpty()) {
                 Toast.makeText(this, "Editable text is empty and must be filled", Toast.LENGTH_SHORT).show();
             } else {
+                // TODO send data to Back
                 // Return to MainActivity
                 Intent intent = new Intent(FragmentActivity.this, AccountSettingsServiceProvider.class);
                 startActivity(intent);
