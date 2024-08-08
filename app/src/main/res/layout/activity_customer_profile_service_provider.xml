@@ -37,7 +37,7 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 <ImageButton
-                    android:id="@+id/edit_profile_b"
+                    android:id="@+id/notification_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -268,6 +268,7 @@
                         android:background="@drawable/bar_circle">
 
                         <ImageButton
+                            android:id="@+id/account_ib"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"

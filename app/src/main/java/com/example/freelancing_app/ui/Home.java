@@ -148,7 +148,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
             Intent i = new Intent(Home.this, ChatList.class);
             startActivity(i);
         } else if (v.getId() == R.id.search_et) {
-            // Handle search click
+            //todo: java for activity search
+           // Intent i = new Intent(Home.this, Search.class);
         } else {
             globalVariables.setJob(v.getId());
         }

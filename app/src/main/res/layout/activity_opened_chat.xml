@@ -118,7 +118,7 @@
                             android:layout_marginEnd="35dp"
                             android:background="@null"
                             android:src="@drawable/attachment"
-                            />
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
                         <ImageButton
                             android:id="@+id/send_b"
                             android:layout_width="wrap_content"
