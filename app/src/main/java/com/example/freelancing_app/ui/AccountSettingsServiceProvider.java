@@ -18,31 +18,31 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.freelancing_app.R;
 
 
 public class AccountSettingsServiceProvider extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener , View.OnClickListener{
 
-    //TODO add change name
+    //TODO
     // add Support stuff
     private ImageButton back_b;
     private static final int PICK_IMAGE = 1;
     private RelativeLayout photo_rl;
     private ImageView photo_iv;
-    /*
     private TextView name_tv;
-    private EditText editname_et;
-    private ImageButton name_b ;
-    */
     private CheckBox checkBox1;
     private CheckBox checkBox2;
     private CheckBox checkBox3;
+    private ImageButton buttonFragmentName_b ;
     private ImageButton buttonFragmentPassword_b;
     private ImageButton buttonFragmentEmail_b;
     private ImageButton buttonFragmentPhone_b;
     private ImageButton buttonFragmentCountry_b;
     private ImageButton buttonFragmentbirthdate_b;
+
+
     private  ImageButton logout_b;
 
     @Override
@@ -54,13 +54,11 @@ public class AccountSettingsServiceProvider extends AppCompatActivity implements
         photo_rl = findViewById(R.id.photo_rl);
         photo_iv = findViewById(R.id.photo_iv);
 
-        /* name_tv = findViewById(R.id.seller_name_tv);
-        editname_et = findViewById(R.id.editname_et);
-        name_b = findViewById(R.id.name_b);*/
+         name_tv = findViewById(R.id.seller_name_tv);
+         buttonFragmentName_b = findViewById(R.id.name_b);
 
         photo_rl.setOnClickListener(this);
-        // editname_et.setVisibility(View.GONE);
-        //pencil_im .setOnClickListener(this);
+
         checkBox1 = findViewById(R.id.checkBox1);
         checkBox2 = findViewById(R.id.checkBox2);
         checkBox3 = findViewById(R.id.checkBox3);
@@ -78,6 +76,7 @@ public class AccountSettingsServiceProvider extends AppCompatActivity implements
         checkBox2.setOnCheckedChangeListener(this);
         checkBox3.setOnCheckedChangeListener(this);
 
+        buttonFragmentName_b.setOnClickListener(this);
         buttonFragmentPassword_b.setOnClickListener(this);
         buttonFragmentEmail_b.setOnClickListener(this);
         buttonFragmentPhone_b.setOnClickListener(this);
@@ -85,22 +84,6 @@ public class AccountSettingsServiceProvider extends AppCompatActivity implements
         buttonFragmentbirthdate_b.setOnClickListener(this);
 
         logout_b.setOnClickListener(this);
-
-        /*
-        editname_et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus) {
-                    String newName = editname_et.getText().toString();
-                    //TODO Send newName to the backend
-                    name_tv.setText(newName);
-                    editname_et.setVisibility(View.GONE);
-                    nme_tv.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-         */
-
 
     }
 
@@ -134,21 +117,18 @@ public class AccountSettingsServiceProvider extends AppCompatActivity implements
             openFragmentActivity("FRAGMENT_4");
         else if(v.getId()==R.id.birthdate_b)
             openFragmentActivity("FRAGMENT_5");
+        else if(v.getId()==R.id.name_b)
+            openFragmentActivity("FRAGMENT_6");
+
         else if(v.getId()==R.id.logout_b)
             showLogoutDialog();
         if(v.getId()==R.id.photo_rl)
             openGallery();
         else if(v.getId()==R.id.back_b)
             destroyInterface();
-        /* else if(v.getId()==R.id.name_b) {
-             String text = name_tv.getText().toString();
-             name_tv.setVisibility(View.GONE);
-             editname_et.setVisibility(View.VISIBLE);
-             name_tv.setText(text);
-         }*/
+         }
 
 
-    }
     private void openFragmentActivity(String fragmentTag) {
         Intent intent = new Intent(AccountSettingsServiceProvider.this, FragmentActivity.class);
         intent.putExtra("FRAGMENT_TAG", fragmentTag);

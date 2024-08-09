@@ -1,17 +1,16 @@
 package com.example.freelancing_app.ui;
 
-import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.freelancing_app.R;
+
 
 public class CustomerProfile extends AppCompatActivity implements View.OnClickListener {
 
