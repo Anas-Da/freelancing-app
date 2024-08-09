@@ -206,14 +206,17 @@
 						android:background="@drawable/item_list_background"
 						>
 
-						<EditText
+						<TextView
+							android:id="@+id/add_rating_dialog_b"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:layout_centerVertical="true"
 							android:layout_marginStart="15dp"
 							android:background="@android:color/transparent"
-							android:hint="Add a work rating..."
-							android:textColorHint="@color/orange"
+							android:clickable="true"
+							android:text="Add a work rating..."
+							android:textColor="@color/orange"
+							android:textSize="16sp"
 							android:textStyle="bold"
 							tools:ignore="TouchTargetSizeCheck" />
 
@@ -226,7 +229,7 @@
 						android:layout_below="@+id/add_comment_rel"
 						android:padding="16dp"
 						android:clipToPadding="true"
-						tools:listitem="@layout/item_add_comment"/>
+						tools:listitem="@layout/item_comments_view_only"/>
 
 				</RelativeLayout>
 				<RelativeLayout

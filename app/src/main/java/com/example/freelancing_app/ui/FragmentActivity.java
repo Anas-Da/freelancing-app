@@ -62,8 +62,10 @@ public class FragmentActivity extends AppCompatActivity {
             fragment = new Fragment5();
         } else if (fragmentTag.equals("FRAGMENT_6")) {
             fragment = new Fragment6();
-
-        }
+        } //todo in profile settings from information button
+        /* else if (fragmentTag.equals("FRAGMENT_7"))  {
+            fragment = new Fragment7();
+        }*/
         //Toast.makeText(this, "0", Toast.LENGTH_SHORT).show();
 
         if (fragment != null) {
