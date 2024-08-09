@@ -119,7 +119,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_toEndOf="@id/profile_location"
                         android:layout_below="@+id/from"
-                        android:text="Syria, Homs"
+                        android:text="Syria"
                         android:textSize="10sp"
                         android:textColor="@color/black"/>
 

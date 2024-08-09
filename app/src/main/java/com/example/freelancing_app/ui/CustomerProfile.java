@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +20,13 @@ public class CustomerProfile extends AppCompatActivity implements View.OnClickLi
     ImageButton account_ib;
     ImageButton home_ib;
     ImageButton chat_ib;
+    //TODO get these information from back
+    private ImageView photo_iv;
+    private TextView name_tv;
+    private TextView location_tv;
+    private TextView member_since_tv;
+    private TextView language_tv;
+    private TextView date_of_birth_tv;
  @Override
     protected void onCreate(Bundle savedInstanceState) {
      super.onCreate(savedInstanceState);
@@ -26,6 +36,12 @@ public class CustomerProfile extends AppCompatActivity implements View.OnClickLi
      account_ib = findViewById(R.id.account_ib);
      home_ib = findViewById(R.id.home_ib);
      chat_ib = findViewById(R.id.chat_ib);
+     photo_iv = findViewById(R.id.photo_iv);
+     name_tv = findViewById(R.id.fullname_tv);
+     location_tv = findViewById(R.id.location_tv);
+     member_since_tv = findViewById(R.id.member_since_tv);
+     language_tv = findViewById(R.id.language_tv);
+     date_of_birth_tv = findViewById(R.id.date_of_birth_tv);
 
      settings_b.setOnClickListener(this);
      notification_b.setOnClickListener(this);
@@ -52,6 +68,8 @@ public class CustomerProfile extends AppCompatActivity implements View.OnClickLi
             Intent intent=new Intent(CustomerProfile.this,ChatList.class);
             startActivity(intent);
         }
+
+
     }
 }
 
