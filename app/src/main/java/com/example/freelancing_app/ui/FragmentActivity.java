@@ -21,14 +21,15 @@ import com.example.freelancing_app.fragments.Fragment2;
 import com.example.freelancing_app.fragments.Fragment3;
 import com.example.freelancing_app.fragments.Fragment4;
 import com.example.freelancing_app.fragments.Fragment5;
+import com.example.freelancing_app.fragments.Fragment6;
 
 import java.util.Objects;
 
 
 public class FragmentActivity extends AppCompatActivity {
 
-    private ImageButton back_b;
-    private Button save_changes_b;
+     ImageButton back_b;
+     Button save_changes_b;
     private  Fragment fragment;
 
     @Override
@@ -59,6 +60,9 @@ public class FragmentActivity extends AppCompatActivity {
         } else if (fragmentTag.equals("FRAGMENT_5")) {
             //Toast.makeText(this, "5", Toast.LENGTH_SHORT).show();
             fragment = new Fragment5();
+        } else if (fragmentTag.equals("FRAGMENT_6")) {
+            fragment = new Fragment6();
+
         }
         //Toast.makeText(this, "0", Toast.LENGTH_SHORT).show();
 

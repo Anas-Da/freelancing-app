@@ -133,7 +133,7 @@
                             android:src="@drawable/person" />
 
                         <EditText
-                            android:id="@+id/second_name_et"
+                            android:id="@+id/lastname_et"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -270,14 +270,14 @@
                             android:src="@drawable/group_search_img" />
 
                         <EditText
-                            android:id="@+id/group_et"
+                            android:id="@+id/workgroup_et"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:layout_toEndOf="@+id/rn6rkwtg051u"
                             android:background="@android:color/transparent"
                             android:ems="18"
-                            android:hint="Group"
+                            android:hint="Work group"
                             android:minHeight="48dp"
                             android:textColor="#060000"
                             android:textSize="12sp" />
@@ -295,6 +295,7 @@
                         android:textSize="14sp" />
 
                     <CheckBox
+                        android:id="@+id/is_active"
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_below="@+id/rx35kcd18k1dg"

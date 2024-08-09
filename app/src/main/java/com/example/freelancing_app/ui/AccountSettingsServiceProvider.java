@@ -9,11 +9,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
-//import androidx.annotation.Nullable;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.widget.ImageView;
@@ -27,23 +26,23 @@ public class AccountSettingsServiceProvider extends AppCompatActivity implements
 
     //TODO
     // add Support stuff
-    private ImageButton back_b;
+    ImageButton back_b;
     private static final int PICK_IMAGE = 1;
-    private RelativeLayout photo_rl;
+    RelativeLayout photo_rl;
     private ImageView photo_iv;
-    private TextView name_tv;
+    TextView name_tv;
     private CheckBox checkBox1;
     private CheckBox checkBox2;
     private CheckBox checkBox3;
-    private ImageButton buttonFragmentName_b ;
-    private ImageButton buttonFragmentPassword_b;
-    private ImageButton buttonFragmentEmail_b;
-    private ImageButton buttonFragmentPhone_b;
-    private ImageButton buttonFragmentCountry_b;
-    private ImageButton buttonFragmentbirthdate_b;
+    ImageButton buttonFragmentName_b ;
+    ImageButton buttonFragmentPassword_b;
+    ImageButton buttonFragmentEmail_b;
+    ImageButton buttonFragmentPhone_b;
+    ImageButton buttonFragmentCountry_b;
+    ImageButton buttonFragmentbirthdate_b;
 
 
-    private  ImageButton logout_b;
+    ImageButton logout_b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

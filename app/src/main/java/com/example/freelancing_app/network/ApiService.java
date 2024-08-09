@@ -16,6 +16,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiService {
     @GET("homepage")
@@ -33,4 +34,12 @@ public interface ApiService {
 
     @GET("chat/{chatId}")
     Call<MessageResponse> getMessages(@Path("chatId") String chatId, @Header("Authorization") String authToken);
+   /* //TODO check these from our back please
+   @GET("search")
+    Call<Search_Results> searchUsers(@Query("firstName" String firstname, @Query("secondName" String secondname,@Query("username") String username,
+            @Query("rating") String rating,
+            @Query("workgroup") String workgroup,
+            @Query("isActive") boolean isActive
+    );*/
+
 }
