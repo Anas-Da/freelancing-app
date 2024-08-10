@@ -56,13 +56,13 @@
 					android:paddingVertical="30dp">
 
 					<androidx.recyclerview.widget.RecyclerView
-						android:id="@+id/chats_li"
+						android:id="@+id/notifications_li"
 						android:layout_width="match_parent"
 						android:layout_height="550dp"
 						android:layout_marginTop="20dp"
 						android:padding="16dp"
 						android:clipToPadding="true"
-						tools:listitem="@layout/item_notification"/>
+						tools:listitem="@layout/item_notification_service_provider"/>
 
 
 				</RelativeLayout>

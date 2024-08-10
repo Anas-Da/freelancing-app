@@ -56,7 +56,7 @@ public class CustomerProfile extends AppCompatActivity implements View.OnClickLi
             startActivity(intent);
         }
         else if(v.getId()==R.id.notification_b){
-            Intent intent=new Intent(CustomerProfile.this, Notifications.class);
+            Intent intent=new Intent(CustomerProfile.this, NotificationsServiceProvider.class);
             startActivity(intent);
         }
         else if (v.getId()==R.id.home_ib){

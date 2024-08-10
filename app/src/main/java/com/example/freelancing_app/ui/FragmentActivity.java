@@ -22,6 +22,7 @@ import com.example.freelancing_app.fragments.Fragment3;
 import com.example.freelancing_app.fragments.Fragment4;
 import com.example.freelancing_app.fragments.Fragment5;
 import com.example.freelancing_app.fragments.Fragment6;
+import com.example.freelancing_app.fragments.Fragment7;
 
 import java.util.Objects;
 
@@ -63,9 +64,9 @@ public class FragmentActivity extends AppCompatActivity {
         } else if (fragmentTag.equals("FRAGMENT_6")) {
             fragment = new Fragment6();
         } //todo in profile settings from information button
-        /* else if (fragmentTag.equals("FRAGMENT_7"))  {
+         else if (fragmentTag.equals("FRAGMENT_7"))  {
             fragment = new Fragment7();
-        }*/
+        }
         //Toast.makeText(this, "0", Toast.LENGTH_SHORT).show();
 
         if (fragment != null) {

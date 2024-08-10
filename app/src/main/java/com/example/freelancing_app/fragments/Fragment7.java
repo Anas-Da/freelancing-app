@@ -1,5 +1,6 @@
 package com.example.freelancing_app.fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -18,6 +19,7 @@ public class Fragment7 extends Fragment implements EditableFragment {
     EditText bio_et;
     TextView bio_tv;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_edit_profile_information, container, false);
