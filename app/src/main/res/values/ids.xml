@@ -30,6 +30,7 @@
     <item name="chats_li" type="id"/>
     <item name="photo_rl" type="id"/>
     <item name="photo_iv" type="id"/>
+    <item name="settings_b" type="id"/>
 
     <!--    <item name="doc_rl" type="id" />    -->
     <!--    <item name="trans_rl" type="id" />  -->

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.freelancing_app.R;
 
 
-public class CustomerProfile extends AppCompatActivity implements View.OnClickListener {
+public class AccountCustomer extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton settings_b;
     ImageButton notification_b;
@@ -52,19 +52,19 @@ public class CustomerProfile extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if (v.getId()==R.id.settings_b){
-            Intent intent=new Intent(CustomerProfile.this, AccountSettingsCustomer.class);
+            Intent intent=new Intent(AccountCustomer.this, AccountSettingsCustomer.class);
             startActivity(intent);
         }
         else if(v.getId()==R.id.notification_b){
-            Intent intent=new Intent(CustomerProfile.this, NotificationsServiceProvider.class);
+            Intent intent=new Intent(AccountCustomer.this, NotificationsServiceProvider.class);
             startActivity(intent);
         }
         else if (v.getId()==R.id.home_ib){
-            Intent intent=new Intent(CustomerProfile.this,Home.class);
+            Intent intent=new Intent(AccountCustomer.this,Home.class);
             startActivity(intent);
         }
         else if (v.getId()==R.id.chat_ib){
-            Intent intent=new Intent(CustomerProfile.this,ChatList.class);
+            Intent intent=new Intent(AccountCustomer.this,ChatList.class);
             startActivity(intent);
         }
 
