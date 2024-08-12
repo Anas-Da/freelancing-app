@@ -3,9 +3,13 @@ package com.example.freelancing_app.utils;
 import android.app.Application;
 import android.content.Intent;
 
+import com.example.freelancing_app.models.AccountSellerResponse;
 import com.example.freelancing_app.models.Customer_json;
+import com.example.freelancing_app.models.ProfileSellerResponse;
 import com.example.freelancing_app.models.Provider_json;
 import com.example.freelancing_app.models.SignUpRequest;
+import com.example.freelancing_app.models.UserProfile;
+import com.example.freelancing_app.service.TokenRefreshService;
 
 import java.util.Date;
 
@@ -14,10 +18,24 @@ public class GlobalVariables extends Application {
 
 
 
+    private int profileid;
+
+
+
+
+
+    private ProfileSellerResponse profileSellerResponse;
 
     private SignUpRequest signUpRequest;
     private Provider_json providerJson;
     private Customer_json customerJson;
+    private AccountSellerResponse Seller;
+
+
+    private  String whereAmI;
+    private String  bio;
+    private String bio_tv;
+
     private String token;
     private boolean IsCustomer;
     private int Job;
@@ -34,6 +52,15 @@ public class GlobalVariables extends Application {
     private String phone;
     private Date dateofbirth;
 
+    private UserProfile Profile;
+
+    public UserProfile getProfile() {
+        return Profile;
+    }
+
+    public void setProfile(UserProfile profile) {
+        Profile = profile;
+    }
 
 
     @Override
@@ -45,6 +72,9 @@ public class GlobalVariables extends Application {
         signUpRequest = new SignUpRequest();
         providerJson = new Provider_json();
         customerJson = new Customer_json();
+        Profile = new UserProfile();
+        Seller = new AccountSellerResponse();
+        profileSellerResponse = new ProfileSellerResponse();
     }
 
     @Override
@@ -185,6 +215,50 @@ public class GlobalVariables extends Application {
     public void setCustomerJson(Customer_json customerJson) {
         this.customerJson = customerJson;
     }
+    public int getProfileid() {
+        return profileid;
+    }
+
+    public void setProfileid(int profileid) {
+        this.profileid = profileid;
+    }
+    public AccountSellerResponse getSeller() {
+        return Seller;
+    }
+
+    public void setSeller(AccountSellerResponse seller) {
+        Seller = seller;
+    }
+
+    public String getWhereAmI() {
+        return whereAmI;
+    }
+
+    public void setWhereAmI(String whereAmI) {
+        this.whereAmI = whereAmI;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getBio_tv() {
+        return bio_tv;
+    }
+
+    public void setBio_tv(String bio_tv) {
+        this.bio_tv = bio_tv;
+    }
 
 
+    public ProfileSellerResponse getProfileSellerResponse() {
+        return profileSellerResponse;
+    }
+    public void setProfileSellerResponse(ProfileSellerResponse profileSellerResponse) {
+        this.profileSellerResponse = profileSellerResponse;
+    }
 }

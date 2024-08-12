@@ -154,25 +154,5 @@ public class SignUpRequest {
         this.usdt = usdt;
     }
 
-    @Override
-    public String toString() {
-        return "SignUpRequest{" +
-                "al_haram=" + al_haram +
-                ", syriatel_cash=" + syriatel_cash +
-                ", usdt=" + usdt +
-                ", username='" + username + '\n' +
-                ", first_name='" + first_name + '\n' +
-                ", second_name='" + second_name + '\n' +
-                ", country='" + country + '\n' +
-                ", bdate='" + bdate + '\n' +
-                ", email='" + email + '\n' +
-                ", phone_number='" + phone_number + '\n' +
-                ", img='" + img + '\n' +
-                ", password='" + password + '\n' +
-                ", password2='" + password2 + '\n' +
-                ", id_picture='" + id_picture.substring(0,10) + '\n' +
-                ", id_picture2='" + id_picture2.substring(0,10) + '\n' +
-                '}';
-    }
 
 }

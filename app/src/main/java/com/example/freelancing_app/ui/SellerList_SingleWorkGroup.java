@@ -2,6 +2,7 @@ package com.example.freelancing_app.ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -63,8 +64,17 @@ public class SellerList_SingleWorkGroup extends AppCompatActivity implements Sel
         sellerAdapter = new SellerAdapter(this, sellerList, this);
         sellers_list.setAdapter(sellerAdapter);
 
-        // Call fetchProfiles to populate data
-        fetchProfiles();
+        Bitmap RR = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_2);
+        Bitmap MM = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_4);
+        sellerList.add(new Seller("Mais" + " " + "Safadly", MM, "IT"));
+        sellerList.add(new Seller("Rani" + " " + "Ali", RR, "IT"));
+
+
+        // TODO
+        // fetchProfiles to populate data
+        // fetchProfiles();
     }
 
 

@@ -103,7 +103,16 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-        fetchMessages();
+
+        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+        String currentTime = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
+        Message message = new Message("Hi lina", null, date, currentTime, globalVariables.getUsername(), globalVariables.getChatWith());
+        messageList.add(message);
+        message = new Message("i wanna ask you about a case that i have a problem with a Spanish article, i can't understand it, can you help me plz?", null, date, currentTime, globalVariables.getUsername(), globalVariables.getChatWith());
+        messageList.add(message);
+
+        // TODO
+        //fetchMessages();
 
         editTextMessage.addTextChangedListener(new TextWatcher() {
             @Override
@@ -160,34 +169,5 @@ public class ChatActivity extends AppCompatActivity {
         // TODO: Implement the logic to send the message to the server
         Log.d(TAG, "Sending message to server: " + messageText);
     }
-   /* private void fetchMessages() {
-        String chatId = globalVariables.getChatWith();
-        String authToken = "Bearer " + globalVariables.getToken();
-        Call<MessageResponse> call = apiService.getMessages(chatId, authToken);
-        call.enqueue(new Callback<MessageResponse>() {
-            @Override
-            public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    Log.d(TAG, "Messages count: " + messageList.size());
-                    for (Message message : messageList) {
-                        Log.d(TAG, "Message: " + message.getMessage());
-                    }
-                    messageList.clear();
-                    messageList.addAll(response.body().getMessages());
-                    messageAdapter.notifyDataSetChanged();
-                }else{
-                    Toast.makeText(ChatActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-                }
-            }
 
-            @Override
-            public void onFailure(Call<MessageResponse> call, Throwable t) {
-                Toast.makeText(ChatActivity.this, "Failed to fetch messages", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void sendMessageToServer(String messageText) {
-        // TODO: Implement the logic to send the message to the server
-    }*/
 }

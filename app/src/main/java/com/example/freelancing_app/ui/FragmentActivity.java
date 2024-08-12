@@ -23,12 +23,14 @@ import com.example.freelancing_app.fragments.Fragment4;
 import com.example.freelancing_app.fragments.Fragment5;
 import com.example.freelancing_app.fragments.Fragment6;
 import com.example.freelancing_app.fragments.Fragment7;
+import com.example.freelancing_app.utils.GlobalVariables;
 
 import java.util.Objects;
 
 
 public class FragmentActivity extends AppCompatActivity {
 
+    GlobalVariables globalVariables;
      ImageButton back_b;
      Button save_changes_b;
     private  Fragment fragment;
@@ -82,6 +84,9 @@ public class FragmentActivity extends AppCompatActivity {
         save_changes_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (globalVariables.getWhereAmI()=="bio"){
+                    globalVariables.setBio(globalVariables.getBio_tv());
+                }
                 saveData();
             }
         });

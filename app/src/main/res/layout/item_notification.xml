@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:clickable="true"
+    android:background="@drawable/item_list_background"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:id="@+id/photo_rl"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/list_item_img_background"
+        android:layout_marginStart="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/photo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@drawable/account_img_small" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/person_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/photo_rl"
+        android:layout_marginStart="10dp"
+        android:text="@string/person_name_c"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginTop="2dp"
+        />
+
+    <ImageButton
+        android:id="@+id/accept_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="280dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/request_accept_img"
+        android:visibility="visible"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/deny_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="320dp"
+        android:background="@drawable/item_list_background"
+        android:src="@drawable/request_denied_img"
+        android:visibility="visible"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</RelativeLayout>

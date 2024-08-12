@@ -1,4 +1,4 @@
-package com.example.freelancing_app.models;
+package com.example.freelancing_app.service;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -7,6 +7,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
+
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 

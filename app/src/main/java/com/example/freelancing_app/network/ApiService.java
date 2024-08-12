@@ -1,14 +1,22 @@
 package com.example.freelancing_app.network;
 
+import com.example.freelancing_app.models.AccountSellerResponse;
+import com.example.freelancing_app.models.CustomerResponse;
 import com.example.freelancing_app.models.Customer_json;
 import com.example.freelancing_app.models.LoginRequest;
 import com.example.freelancing_app.models.Message;
 import com.example.freelancing_app.models.MessageResponse;
+import com.example.freelancing_app.models.ProfileSellerResponse;
 import com.example.freelancing_app.models.Provider_json;
+import com.example.freelancing_app.models.ReviewsResponse;
+import com.example.freelancing_app.models.SearchResults;
 import com.example.freelancing_app.models.SignUpRequest;
+import com.example.freelancing_app.models.WorkGroupsResponse;
 import com.example.freelancing_app.utils.GlobalVariables;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -34,12 +42,33 @@ public interface ApiService {
 
     @GET("chat/{chatId}")
     Call<MessageResponse> getMessages(@Path("chatId") String chatId, @Header("Authorization") String authToken);
-   /* //TODO check these from our back please
+
+    @GET("account/seller")
+    Call<AccountSellerResponse>getSellerAccount(@Header("Authorization") String authToken);
+
+    @GET ("profiles/available")
+    Call <WorkGroupsResponse> getWorkGroups(@Header("Authorization") String authToken);
+    @GET("account/customer")
+    Call<CustomerResponse>getCustomerResponse(@Header("Authorization") String authToken);
+
+    @GET ("review/explore/{seller_account_username}/{profileId}")
+    Call<ReviewsResponse> getReviews(@Path("seller_account_username") String seller_account_username, @Path("profileId") String profileId);
+
+    @GET("account/seller/profile/{username}/{profile_id}")
+    Call<ProfileSellerResponse>getProfileSellerResponse(@Header("Authorization") String authToken,@Path("username") String username,@Path("profile_id")int profile_id);
+
+    @POST("update/seller/profile/{profileId}")
+    Call <Provider_json> updateprofile(@Query("bio")String bio  , @Header("Authorization") String authToken, @Path("profileId") int profileId) ;
+
+    @POST("search")
+    Call<SearchResults> searchUsers(@Body Map<String, Object> filters);
+
+
+    /* //TODO check these from our back please
    @GET("search")
     Call<Search_Results> searchUsers(@Query("firstName" String firstname, @Query("secondName" String secondname,@Query("username") String username,
             @Query("rating") String rating,
             @Query("workgroup") String workgroup,
             @Query("isActive") boolean isActive
     );*/
-
 }

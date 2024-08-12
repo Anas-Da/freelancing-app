@@ -2,6 +2,7 @@ package com.example.freelancing_app.ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -61,21 +62,26 @@ public class ChatList extends AppCompatActivity implements ChatAdapter.OnItemCli
         chatJsonList = new ArrayList<>();
 
 
-        // TODO make sure it's getting from back
-
-
-
 
         chat = new ArrayList<>();
         chatAdapter = new ChatAdapter(this,chat,this);
         chats_list.setAdapter(chatAdapter);
 
-        // TODO that's the back stuff / just uncomment them
-        // Call fetchProfiles to populate data
-         fetchChats();
-         startChatRefreshTimer();
 
+        // TODO  Call fetchProfiles to populate data
+        //fetchChats();
+        //startChatRefreshTimer();
 
+        String s="Hello i wana ask you about a case that i have a prob...";
+        Bitmap AA = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_6);
+        chat.add(new Chat("Ahmad_Shamma", s,AA,2,
+                "02:14"));
+        String s2="Great,Thank you very much for your Help.";
+        Bitmap DD = BitmapFactory.decodeResource(this.getResources(),
+        R.drawable.michael_1);
+        chat.add(new Chat("Anas_Da", s2,DD,0,
+        "12:31"));
 
         home_ib = findViewById(R.id.home_ib);
         home_ib.setOnClickListener(new View.OnClickListener() {
@@ -107,8 +113,8 @@ public class ChatList extends AppCompatActivity implements ChatAdapter.OnItemCli
                 if (response.isSuccessful() && response.body() != null) {
                     List<Chat_json> chatJsonList = response.body().getChats();
                     updateChatList(chatJsonList);
-                } else {
-                    Toast.makeText(ChatList.this, "Failed to fetch chats", Toast.LENGTH_SHORT).show();
+                }else if(!response.isSuccessful()){
+                    Toast.makeText(ChatList.this, "Failed", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -164,8 +170,8 @@ public class ChatList extends AppCompatActivity implements ChatAdapter.OnItemCli
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         stopChatRefreshTimer(); // Stop the timer when the activity is destroyed
+        super.onDestroy();
     }
 
     private void stopChatRefreshTimer() {

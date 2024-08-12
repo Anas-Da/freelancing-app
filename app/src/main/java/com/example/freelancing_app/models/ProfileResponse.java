@@ -23,6 +23,9 @@ public class ProfileResponse {
     @SerializedName("rate")
     private int rate;
 
+    @SerializedName("is_active")
+    private boolean Checked;
+
     public int getProfile_id() {
         return profile_id;
     }
@@ -77,5 +80,9 @@ public class ProfileResponse {
 
     public void setRate(int rate) {
         this.rate = rate;
+    }
+
+    public boolean getChecked() {
+        return Checked;
     }
 }

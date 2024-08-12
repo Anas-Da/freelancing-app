@@ -115,7 +115,6 @@ public class SignUpBase3 extends AppCompatActivity {
 
     private void completeSignUp() {
         // Call this method when the signup process is complete
-        // todo call the back
         globalVariables.getSignUpRequest().setImg(to641);
 
         if(customer){
@@ -158,7 +157,6 @@ public class SignUpBase3 extends AppCompatActivity {
         call.enqueue(new Callback<Provider_json>() {
             @Override
             public void onResponse(Call<Provider_json> call, Response<Provider_json> response) {
-                Toast.makeText(SignUpBase3.this,String.valueOf(response.body()!=null), Toast.LENGTH_SHORT).show();
                 if (response.body() != null) {
                     handleprovider(response);
                     String newAccessToken = response.body().getAccessToken();
@@ -166,8 +164,6 @@ public class SignUpBase3 extends AppCompatActivity {
                     //saveTokens(newAccessToken, refreshToken);
                     // Proceed with the next activity
                 } else {
-                    Toast.makeText(SignUpBase3.this, "hi2", Toast.LENGTH_SHORT).show();
-
                     Toast.makeText(SignUpBase3.this, "Signup failed! Invalid credentials.", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -177,12 +173,11 @@ public class SignUpBase3 extends AppCompatActivity {
                 Toast.makeText(SignUpBase3.this, "Signup failed! " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-        Log.d("SignUpBase3", globalVariables.getSignUpRequest().toString());
+        //Log.d("SignUpBase3", globalVariables.getSignUpRequest().toString());
     }
 
 
     private void handleprovider(Response<Provider_json> response) {
-        Toast.makeText(SignUpBase3.this,String.valueOf(response.body()!=null), Toast.LENGTH_SHORT).show();
         if (response.body() != null) {
             Provider_json providerJson = response.body();
             globalVariables.setProvider(providerJson);
@@ -196,7 +191,6 @@ public class SignUpBase3 extends AppCompatActivity {
                 Toast.makeText(SignUpBase3.this, "Signup failed! " + providerJson.getError(), Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(this, "hi", Toast.LENGTH_SHORT).show();
             Toast.makeText(SignUpBase3.this, "Signup failed! Invalid credentials.", Toast.LENGTH_SHORT).show();
         }
     }

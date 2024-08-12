@@ -1,6 +1,5 @@
 package com.example.freelancing_app.ui;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,11 +7,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import com.example.freelancing_app.R;
-import com.example.freelancing_app.utils.TokenRefreshService;
+
 import android.content.pm.PackageManager;
 
 

@@ -30,7 +30,19 @@
     <item name="chats_li" type="id"/>
     <item name="photo_rl" type="id"/>
     <item name="photo_iv" type="id"/>
+    <item name="frontface_tv" type="id"/>
+    <item name="backface_tv" type="id"/>
+    <item name="more_b" type="id"/>
+    <item name="profilePicture" type="id"/>
+    <item name="nameTextView" type="id"/>
+    <item name="professionTextView" type="id"/>
+    <item name="checkBox" type="id"/>
+    <item name="submit_button" type="id"/>
+    <item name="about" type="id"/>
+    <item name="setting_b" type="id"/>
+    <item name="add_profile_b" type="id"/>
     <item name="settings_b" type="id"/>
+    <item name="workgroup_tv" type="id"/>
 
     <!--    <item name="doc_rl" type="id" />    -->
     <!--    <item name="trans_rl" type="id" />  -->

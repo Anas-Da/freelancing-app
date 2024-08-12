@@ -103,7 +103,7 @@
             android:layout_centerInParent="true"
             android:background="@drawable/cr20bfffdf3f1">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/photo_iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

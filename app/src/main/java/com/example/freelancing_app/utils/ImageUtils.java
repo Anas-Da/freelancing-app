@@ -16,6 +16,7 @@ public class ImageUtils {
         return res;
     }
     public static Bitmap decodeBase64ToBitmap(String base64Image) {
+        if(base64Image == null)return null;
         // Remove the prefix if there's one (e.g., "data:image/png;base64,")
         if (base64Image.contains(",")) {
             base64Image = base64Image.split(",")[1];

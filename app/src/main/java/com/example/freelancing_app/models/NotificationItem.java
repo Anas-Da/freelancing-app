@@ -1,9 +1,12 @@
 package com.example.freelancing_app.models;
+
+import android.graphics.Bitmap;
+
 public class NotificationItem {
     private final String personName;
-    private final int photoResId;
+    private final Bitmap photoResId;
 
-    public NotificationItem(String personName, int photoResId) {
+    public NotificationItem(String personName, Bitmap photoResId) {
         this.personName = personName;
         this.photoResId = photoResId;
     }
@@ -12,7 +15,7 @@ public class NotificationItem {
         return personName;
     }
 
-    public int getPhotoResId() {
+    public Bitmap getPhotoResId() {
         return photoResId;
     }
 }

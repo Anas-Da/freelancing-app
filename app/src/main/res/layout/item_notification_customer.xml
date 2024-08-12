@@ -15,7 +15,7 @@
         android:background="@drawable/list_item_img_background"
         android:layout_marginStart="10dp">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/photo_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,17 +23,20 @@
             android:background="@null"
             android:src="@drawable/account_img_small" />
     </RelativeLayout>
+
     <TextView
         android:id="@+id/person_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/photo_rl"
         android:layout_marginStart="10dp"
-        android:text="@string/person_name"
+        android:text="@string/person_name_p"
         android:textStyle="bold"
         android:textSize="16dp"
         android:layout_marginTop="2dp"
         />
+
+
 
 
 </RelativeLayout>

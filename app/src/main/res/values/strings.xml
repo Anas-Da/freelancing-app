@@ -4,7 +4,6 @@
     <string name="about">About</string>
     <string name="my_account">My account</string>
     <string name="next">Next</string>
-    <string name="person_name">person_name</string>
     <string name="account_preferences">Account preferences</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
@@ -25,4 +24,10 @@
     <string name="information">Information</string>
     <string name="rating">Rating</string>
     <string name="edit_your_name_please">Edit your name please</string>
+    <string name="user_name_p">Lina</string>
+    <string name="user_name_c">Anas_da</string>
+    <string name="person_name_p">Lina Al_Rashid</string>
+    <string name="person_name_c">Anas Daghestani</string>
+
+
 </resources>

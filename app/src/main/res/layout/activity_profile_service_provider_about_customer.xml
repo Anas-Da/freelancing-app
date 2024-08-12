@@ -17,7 +17,7 @@
 			android:background="@color/d_blue"
 			android:fillViewport="true"
 			android:paddingTop="17dp"
-			android:paddingBottom="-3dp"
+			android:paddingBottom="3dp"
 			tools:ignore="SpeakableTextPresentCheck">
 			<RelativeLayout
 				android:layout_width="match_parent"
@@ -25,6 +25,7 @@
 				android:orientation="vertical">
 
 				<ImageView
+					android:clickable="true"
 					android:id="@+id/back_b"
 					android:layout_width="wrap_content"
 					android:layout_height="33dp"
@@ -33,13 +34,14 @@
 					android:src="@drawable/arrow_back" />
 
 				<RelativeLayout
+					android:clickable="true"
 					android:id="@+id/chat_b"
 					style="@style/orangeButton"
 					android:layout_width="80dp"
 					android:layout_height="25dp"
-					android:layout_marginStart="330dp"
+					android:layout_marginStart="310dp"
 					android:background="@drawable/cr76bffff4c14"
-					tools:ignore="TouchTargetSizeCheck">
+					>
 
 					<RelativeLayout
 						android:layout_width="80dp"
@@ -72,7 +74,7 @@
 					android:layout_alignParentTop="true"
 					android:layout_alignParentBottom="true"
 					android:layout_marginTop="25dp"
-					android:layout_marginBottom="0dp"
+					android:layout_marginBottom="1dp"
 					android:background="@drawable/tl90tr90bffffffff"
 					android:clipChildren="false"
 					android:clipToPadding="false"
@@ -87,12 +89,12 @@
 						android:background="@drawable/cr20bfffdf3f1"
 						android:layout_marginStart="50dp">
 
-						<ImageView
+						<de.hdodenhof.circleimageview.CircleImageView
 							android:id="@+id/photo_iv"
 							android:layout_width="match_parent"
 							android:layout_height="match_parent"
 							android:layout_centerInParent="true"
-							android:src="@drawable/account_img" />
+							android:src="@drawable/michael_2" />
 
 					</RelativeLayout>
 					<TextView
@@ -106,7 +108,7 @@
 						android:textColor="@color/black"
 						android:textSize="22sp"
 						android:textStyle="bold"
-						android:text="@string/person_name"
+						android:text="@string/person_name_p"
 						/>
 					<TextView
 						android:id="@+id/username_tv"
@@ -118,7 +120,7 @@
 						android:layout_marginTop="5dp"
 						android:textColor="@color/black"
 						android:textSize="14sp"
-						android:text="user_name"/>
+						android:text="@string/user_name_p"/>
 
 					<ImageView
 						android:id="@+id/rating_star"
@@ -138,7 +140,7 @@
 						android:layout_toEndOf="@+id/rating_star"
 						android:layout_marginStart="5dp"
 						android:layout_marginTop="5dp"
-						android:text="rating 4.5"
+						android:text="rating 4"
 						android:textSize="12sp"
 						android:textColor="@color/black"/>
 
@@ -413,7 +415,7 @@
 						android:layout_marginTop="5dp"
 						android:layout_toEndOf="@id/profile_phone"
 						android:layout_below="@+id/phone"
-						android:text="+963*********"
+						android:text="0987654321"
 						android:textSize="10sp"
 						android:textColor="@color/black"/>
 
@@ -499,6 +501,7 @@
 						android:background="@drawable/bar_circle">
 
 						<ImageButton
+							android:id="@+id/home_ib"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:layout_centerInParent="true"

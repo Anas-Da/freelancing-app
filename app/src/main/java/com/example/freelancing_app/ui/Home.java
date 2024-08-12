@@ -2,7 +2,9 @@ package com.example.freelancing_app.ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -13,17 +15,17 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.freelancing_app.network.ApiService;
-import com.example.freelancing_app.utils.GlobalVariables;
-import com.example.freelancing_app.utils.ImageUtils;
-import com.example.freelancing_app.adapters.ProfessionAdapter;
-import com.example.freelancing_app.network.ProfilesResponse;
 import com.example.freelancing_app.R;
-import com.example.freelancing_app.network.RetrofitInstance;
-import com.example.freelancing_app.models.Seller;
+import com.example.freelancing_app.adapters.ProfessionAdapter;
 import com.example.freelancing_app.adapters.SellerAdapter;
 import com.example.freelancing_app.models.Profession;
 import com.example.freelancing_app.models.Profile;
+import com.example.freelancing_app.models.Seller;
+import com.example.freelancing_app.network.ApiService;
+import com.example.freelancing_app.network.ProfilesResponse;
+import com.example.freelancing_app.network.RetrofitInstance;
+import com.example.freelancing_app.utils.GlobalVariables;
+import com.example.freelancing_app.utils.ImageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,7 +107,22 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
         sellerAdapter = new SellerAdapter(this, sellerList, this);
         sellers_list.setAdapter(sellerAdapter);
 
-        fetchProfiles();
+        Bitmap SS = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_3);
+        Bitmap MM = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_4);
+        Bitmap LL = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_5);
+        Bitmap RR = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_2);
+        sellerList.add(new Seller("Sdra" + " " + "Al_Kusaier", SS, "Intereor_Designer"));
+        sellerList.add(new Seller("Mais" + " " + "Safadly", MM, "IT"));
+        sellerList.add(new Seller("Lina" + " " + "Al_Rashid", LL, "Translator"));
+        sellerList.add(new Seller("Mais" + " " + "Safadly", MM, "Lawyer"));
+        sellerList.add(new Seller("Rani" + " " + "Ali", RR, "IT"));
+
+        // TODO
+        // fetchProfiles();
     }
 
     private void fetchProfiles() {
@@ -142,8 +159,13 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.account_ib) {
-            Intent i = new Intent(Home.this, AccountServiceProvider.class);
-            startActivity(i);
+            if(globalVariables.isCustomer()){
+                Intent i = new Intent(Home.this, AccountCustomer.class);
+                startActivity(i);
+            }else {
+                Intent i = new Intent(Home.this, AccountServiceProvider.class);
+                startActivity(i);
+            }
         } else if (v.getId() == R.id.chat_ib) {
             Intent i = new Intent(Home.this, ChatList.class);
             startActivity(i);
@@ -158,15 +180,15 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
     public void onSellerClick(int position) {
         globalVariables.setSellerid(1);
         globalVariables.setSellerhandle("Anas_Da");
-        Toast.makeText(this, "Item " + position, Toast.LENGTH_SHORT).show();
-        Intent i = new Intent(Home.this, AccountServiceProvider.class);
+        //Toast.makeText(this, "Item " + position, Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(Home.this, ProfileServiceProviderAboutCustomer.class);
         startActivity(i);
     }
 
     @Override
     public void onProfessionClick(int position) {
         globalVariables.setWorkGroup(position);
-        Toast.makeText(this, "Item " + position, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Item " + position, Toast.LENGTH_SHORT).show();
         Intent i = new Intent(Home.this, SellerList_SingleWorkGroup.class);
         startActivity(i);
     }

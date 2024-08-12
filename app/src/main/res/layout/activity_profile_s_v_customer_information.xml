@@ -54,12 +54,12 @@
 						android:background="@drawable/cr20bfffdf3f1"
 						android:layout_marginStart="50dp">
 
-						<ImageView
+						<de.hdodenhof.circleimageview.CircleImageView
 							android:id="@+id/photo_iv"
 							android:layout_width="match_parent"
 							android:layout_height="match_parent"
 							android:layout_centerInParent="true"
-							android:src="@drawable/account_img" />
+							android:src="@drawable/michael_2" />
 
 					</RelativeLayout>
 					<TextView
@@ -73,7 +73,7 @@
 						android:textColor="@color/black"
 						android:textSize="22sp"
 						android:textStyle="bold"
-						android:text="@string/person_name"
+						android:text="@string/person_name_p"
 						/>
 					<TextView
 						android:id="@+id/username_tv"
@@ -85,7 +85,7 @@
 						android:layout_marginTop="5dp"
 						android:textColor="@color/black"
 						android:textSize="14sp"
-						android:text="user_name"/>
+						android:text="@string/user_name_p"/>
 
 					<ImageView
 						android:id="@+id/rating_star"
@@ -105,7 +105,7 @@
 						android:layout_toEndOf="@+id/rating_star"
 						android:layout_marginStart="5dp"
 						android:layout_marginTop="5dp"
-						android:text="rating 4.5"
+						android:text="rating 4"
 						android:textSize="12sp"
 						android:textColor="@color/black"/>
 
@@ -242,12 +242,13 @@
 						android:background="@drawable/bar_circle">
 
 						<ImageButton
+							android:id="@+id/home_ib"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:layout_centerInParent="true"
 							android:background="@null"
 							android:src="@drawable/home_page_icon"
-							tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"/>
+							/>
 					</RelativeLayout>
 				</RelativeLayout>
 			</RelativeLayout>

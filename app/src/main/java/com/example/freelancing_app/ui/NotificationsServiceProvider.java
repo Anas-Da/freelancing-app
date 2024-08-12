@@ -1,6 +1,8 @@
 package com.example.freelancing_app.ui;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.freelancing_app.R;
-import com.example.freelancing_app.models.CustomerNotificationsService;
+import com.example.freelancing_app.service.CustomerNotificationsService;
 import com.example.freelancing_app.models.NotificationItem;
 
 import java.util.ArrayList;
@@ -52,7 +54,13 @@ public class NotificationsServiceProvider extends AppCompatActivity implements V
          recyclerView= findViewById(R.id.notifications_li);
          recyclerView.setLayoutManager(new LinearLayoutManager(this));
         notificationList = new ArrayList<>();
-        notificationList.add(new NotificationItem("Person Name", R.drawable.account_img_small));
+
+        Bitmap AA = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_6);
+        Bitmap DD = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_1);
+        notificationList.add(new NotificationItem("Ahmad Shamma", AA));
+        notificationList.add(new NotificationItem("Anas Da", DD));
 
         adapter = new NotificationAdapter(notificationList);
         recyclerView.setAdapter(adapter);
@@ -94,7 +102,7 @@ public class NotificationsServiceProvider extends AppCompatActivity implements V
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             NotificationItem item = notificationList.get(position);
             holder.personName.setText(item.getPersonName());
-            holder.photo.setImageResource(item.getPhotoResId());
+            holder.photo.setImageBitmap(item.getPhotoResId());
 
             holder.acceptButton.setOnClickListener(v -> {
                 Toast.makeText(NotificationsServiceProvider.this, "Accepted", Toast.LENGTH_SHORT).show();

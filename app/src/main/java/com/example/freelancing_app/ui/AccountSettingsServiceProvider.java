@@ -1,23 +1,22 @@
 package com.example.freelancing_app.ui;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.example.freelancing_app.R;
 

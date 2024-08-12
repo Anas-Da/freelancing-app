@@ -2,6 +2,7 @@ package com.example.freelancing_app.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AccountSellerResponse {
@@ -30,9 +31,13 @@ public class AccountSellerResponse {
     @SerializedName("id_picture2")
     private String id_picture2;
     @SerializedName("img")
-    private String img;
+    private String img=null;
     @SerializedName("profiles")
     List<ProfileResponse>profiles;
+
+    public AccountSellerResponse() {
+        profiles = new ArrayList<>();
+    }
 
     public String getSeller_username() {
         return seller_username;

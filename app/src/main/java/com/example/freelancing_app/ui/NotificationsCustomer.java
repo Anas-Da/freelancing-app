@@ -1,5 +1,7 @@
 package com.example.freelancing_app.ui;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,10 +36,18 @@ public class NotificationsCustomer extends AppCompatActivity {
 
         notificationList = new ArrayList<>();
         // Add some dummy data
-        notificationList.add(new NotificationItem("Service Approved", R.drawable.account_img_small));
+        //notificationList.add(new NotificationItem("Service Approved", R.drawable.account_img_small));
 
         adapter = new NotificationAdapter(notificationList);
         recyclerView.setAdapter(adapter);
+
+        Bitmap LL = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_5);
+        Bitmap SS = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.michael_3);
+        notificationList.add(new NotificationItem("Lina Al_Rashid", LL));
+
+        notificationList.add(new NotificationItem("Sdra Al_Kusaier", SS));
     }
 
     public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.ViewHolder> {
@@ -59,7 +69,7 @@ public class NotificationsCustomer extends AppCompatActivity {
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             NotificationItem item = notificationList.get(position);
             holder.personName.setText(item.getPersonName());
-            holder.photo.setImageResource(item.getPhotoResId());
+            holder.photo.setImageBitmap(item.getPhotoResId());
         }
 
         @Override

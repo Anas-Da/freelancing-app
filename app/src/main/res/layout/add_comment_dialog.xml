@@ -45,7 +45,7 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="5dp"
-        android:hint="Engineer Zaher designed a time management application\nfor me.\nThe application was wonderful and the price was reasonable."
+        android:hint="Write you review  here"
         android:background="@android:color/transparent"/>
 
     <RelativeLayout
@@ -108,17 +108,19 @@
             android:clickable="true"
             />
     </RelativeLayout>
-<Button
-    android:layout_width="100dp"
-    android:layout_height="50dp"
-    android:layout_below="@+id/sndjasdjk"
-    android:layout_alignParentEnd="true"
-    android:layout_marginEnd="30dp"
-    android:layout_marginTop="10dp"
-    android:textStyle="bold"
-    android:text="Submit"
-    android:textSize="16sp"
-    android:background="@drawable/cr76bffff4c14"
-    style="@style/orangeButton"
-    android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/sndjasdjk"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Submit"
+        android:textSize="16sp"
+        android:background="@drawable/cr76bffff4c14"
+        style="@style/orangeButton"
+        android:textAllCaps="false"
+        />
 </RelativeLayout>

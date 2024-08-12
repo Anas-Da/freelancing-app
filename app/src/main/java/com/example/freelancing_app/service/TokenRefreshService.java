@@ -1,4 +1,4 @@
-package com.example.freelancing_app.utils;
+package com.example.freelancing_app.service;
 import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,7 +24,7 @@ import okhttp3.Response;
 public class TokenRefreshService extends Service {
 
     private static final String TAG = "TokenRefreshService";
-    private static final String SERVER_URL = "https://yourserver.com/refresh_token";
+    private static final String SERVER_URL = "https://192.168.1.4/refresh_token";
     private static final String PREF_FILE_NAME = "com.example.yourapp.PREF_FILE_KEY";
     private static final String PREF_REFRESH_TOKEN = "refresh_token";
     private static final String PREF_ACCESS_TOKEN = "access_token";
@@ -72,7 +72,6 @@ public class TokenRefreshService extends Service {
 
     private void sendRefreshToken(String refreshToken) {
         OkHttpClient client = new OkHttpClient();
-
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("Authorization", refreshToken);
