@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -105,6 +106,7 @@ public class ProfileServiceProviderRatingCustomer extends AppCompatActivity impl
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.add_comment_dialog);
 
+
         EditText commentEditText = dialog.findViewById(R.id.comment_et);
         CheckBox star1 = dialog.findViewById(R.id.star1);
         CheckBox star2 = dialog.findViewById(R.id.star2);
@@ -112,6 +114,9 @@ public class ProfileServiceProviderRatingCustomer extends AppCompatActivity impl
         CheckBox star4 = dialog.findViewById(R.id.star4);
         CheckBox star5 = dialog.findViewById(R.id.star5);
         Button submitButton = dialog.findViewById(R.id.submit_button);
+        dialog.setOnShowListener(dialogInterface -> {
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        });
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
