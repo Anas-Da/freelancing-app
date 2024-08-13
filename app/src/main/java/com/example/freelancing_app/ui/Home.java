@@ -8,6 +8,7 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,7 +39,6 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
         SellerAdapter.OnItemClickListener, ProfessionAdapter.OnItemClickListener {
 
     private ApiService apiService;
-    private EditText search_et;
     private ImageButton account_ib;
     private ImageButton chat_ib;
     GlobalVariables globalVariables;
@@ -49,18 +49,19 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
     private RecyclerView sellers_list;
     private List<Seller> sellerList;
     private List<Profile> profiles;
+    RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        search_et = findViewById(R.id.search_et);
         account_ib = findViewById(R.id.account_ib);
         chat_ib = findViewById(R.id.chat_ib);
-        search_et.setOnClickListener(this);
+        relativeLayout = findViewById(R.id.relativeLayout);
         account_ib.setOnClickListener(this);
         chat_ib.setOnClickListener(this);
+        relativeLayout.setOnClickListener(this);
 
         globalVariables = (GlobalVariables) getApplicationContext();
 
@@ -169,8 +170,9 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
         } else if (v.getId() == R.id.chat_ib) {
             Intent i = new Intent(Home.this, ChatList.class);
             startActivity(i);
-        } else if (v.getId() == R.id.search_et) {
+        } else if (v.getId() == R.id.relativeLayout) {
             Intent i = new Intent(Home.this, Search.class);
+            startActivity(i);
         } else {
             globalVariables.setJob(v.getId());
         }

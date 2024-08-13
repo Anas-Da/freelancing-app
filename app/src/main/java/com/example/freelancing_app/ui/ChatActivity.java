@@ -1,14 +1,18 @@
 package com.example.freelancing_app.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +27,8 @@ import com.example.freelancing_app.models.Message;
 import com.example.freelancing_app.models.MessageResponse;
 import com.example.freelancing_app.network.ApiService;
 import com.example.freelancing_app.network.RetrofitInstance;
+import com.example.freelancing_app.service.CustomerNotificationsService;
+import com.example.freelancing_app.service.ServiceProviderNotificationService;
 import com.example.freelancing_app.utils.GlobalVariables;
 
 import java.text.SimpleDateFormat;
@@ -47,6 +53,7 @@ public class ChatActivity extends AppCompatActivity {
     private MessageAdapter messageAdapter;
     private RecyclerView recyclerViewMessages;
     private ArrayList<Message> messageList;
+    boolean isCustomer;
 
 
     @Override
@@ -85,6 +92,7 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
+
         back_b = findViewById(R.id.back_b);
         more_b = findViewById(R.id.more_b);
         attachment_b = findViewById(R.id.attachment_b);
@@ -102,7 +110,35 @@ public class ChatActivity extends AppCompatActivity {
                 //todo that notification thing
             }
         });
+        more_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create and show the popup menu
+                PopupMenu popupMenu = new PopupMenu(ChatActivity.this, more_b);
+                MenuInflater inflater = popupMenu.getMenuInflater();
+                inflater.inflate(R.menu.popup_menu, popupMenu.getMenu());
 
+                // Handle menu item clicks
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        int itemId = item.getItemId();
+                        if (itemId == R.id.action_mute) {
+                            // Toggle mute/unmute logic here
+                            toggleMute();
+                            return true;
+                        } else if (itemId == R.id.action_send_notification) {
+                            // Start the service to send a notification
+                            startNotificationService();
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+                });
+
+                popupMenu.show();
+            }
+        });
 
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         String currentTime = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
@@ -142,6 +178,32 @@ public class ChatActivity extends AppCompatActivity {
 
 
     }
+    private boolean isMuted = false;
+
+    private void toggleMute() {
+        isMuted = !isMuted;
+        if (isMuted) {
+            Toast.makeText(this, "Chat muted", Toast.LENGTH_SHORT).show();
+            // Implement actual mute logic here (e.g., disable sound notifications)
+        } else {
+            Toast.makeText(this, "Chat unmuted", Toast.LENGTH_SHORT).show();
+            // Implement actual unmute logic here (e.g., enable sound notifications)
+        }
+    }
+    //todo
+    private void startNotificationService() {
+       /*isCustomer = globalVariables.isCustomer();
+        if (isCustomer) {
+            Intent serviceIntent = new Intent(this, CustomerNotificationsService.class);
+            startService(serviceIntent);
+        }
+        else {
+            Intent serviceIntent = new Intent(this, ServiceProviderNotificationService.class);
+            startActivity(serviceIntent);
+        }*/
+    }
+
+
     private void fetchMessages() {
         String chatId = globalVariables.getChatWith();
         String authToken = "Bearer " + globalVariables.getToken();

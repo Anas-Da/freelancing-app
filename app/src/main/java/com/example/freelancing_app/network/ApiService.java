@@ -64,11 +64,5 @@ public interface ApiService {
     Call<SearchResults> searchUsers(@Body Map<String, Object> filters);
 
 
-    /* //TODO check these from our back please
-   @GET("search")
-    Call<Search_Results> searchUsers(@Query("firstName" String firstname, @Query("secondName" String secondname,@Query("username") String username,
-            @Query("rating") String rating,
-            @Query("workgroup") String workgroup,
-            @Query("isActive") boolean isActive
-    );*/
+   
 }
