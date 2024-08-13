@@ -34,8 +34,6 @@ public class GlobalVariables extends Application {
 
     private  String whereAmI;
     private String  bio;
-    private String bio_tv;
-
     private String token;
     private boolean IsCustomer;
     private int Job;
@@ -51,6 +49,7 @@ public class GlobalVariables extends Application {
     private String country;
     private String phone;
     private Date dateofbirth;
+    private String bio_et;
 
     private UserProfile Profile;
 
@@ -246,12 +245,12 @@ public class GlobalVariables extends Application {
         this.bio = bio;
     }
 
-    public String getBio_tv() {
-        return bio_tv;
+    public String getBio_et() {
+        return bio_et;
     }
 
-    public void setBio_tv(String bio_tv) {
-        this.bio_tv = bio_tv;
+    public void setBio_et(String bio_et) {
+        this.bio_et = bio_et;
     }
 
 

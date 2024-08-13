@@ -85,7 +85,7 @@ public class FragmentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (globalVariables.getWhereAmI()=="bio"){
-                    globalVariables.setBio(globalVariables.getBio_tv());
+                    globalVariables.setBio(globalVariables.getBio_et());
                 }
                 saveData();
             }

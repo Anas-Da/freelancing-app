@@ -432,7 +432,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:scaleType="fitXY"
-                            android:src="@drawable/date" />
+                            android:src="@drawable/profile_date_of_birth" />
 
                         <EditText
                             android:id="@+id/date_of_birth_et"
@@ -526,7 +526,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:scaleType="fitXY"
-                            android:src="@drawable/phone" />
+                            android:src="@drawable/phone_img" />
 
                         <EditText
                             android:id="@+id/phone_number_et"
