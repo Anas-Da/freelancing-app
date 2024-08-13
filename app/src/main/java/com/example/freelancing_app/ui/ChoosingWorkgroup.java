@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 
 import android.view.View;
@@ -13,15 +13,14 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.freelancing_app.adapters.ItemAdapter;
+import com.example.freelancing_app.models.Item;
 import com.example.freelancing_app.models.WorkGroupsResponse;
 import com.example.freelancing_app.network.ApiService;
 import com.example.freelancing_app.network.RetrofitInstance;
 import com.example.freelancing_app.utils.GlobalVariables;
-import com.example.freelancing_app.adapters.ProfessionAdapter;
 
 import com.example.freelancing_app.R;
-import com.example.freelancing_app.models.Profession;
-import com.example.freelancing_app.utils.ImageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,24 +29,20 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClickListener,
-        ProfessionAdapter.OnItemClickListener {
+public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClickListener{
     private ApiService apiService;
     private Button next_b;
     private ImageButton back_b;
     GlobalVariables globalVariables;
     private RecyclerView workgroup_list;
-    private RecyclerView sellers_list;
-    private ProfessionAdapter professionAdapter;
-    private List<Profession> professionList;
+    private ItemAdapter itemAdapter;
+    private List<Item> itemList;
     WorkGroupsResponse res;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choosing_workgroup_service_provider1);
-
         next_b = findViewById(R.id.next_b);
         back_b = findViewById(R.id.back_b);
 
@@ -61,17 +56,19 @@ public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClick
         workgroup_list = findViewById(R.id.workgroup_list);
         workgroup_list.setLayoutManager(new GridLayoutManager(this, 2));
 
+        itemList = new ArrayList<>();
+     /*   itemList.add(new Item("Item 1", R.drawable.on));
+        itemList.add(new Item("Item 2", R.drawable.off));
+        itemList.add(new Item("Item 3", R.drawable.on));
+        itemList.add(new Item("Item 4", R.drawable.off));
+        itemList.add(new Item("Item 5", R.drawable.on));*/
 
+        itemAdapter = new ItemAdapter(itemList, this);
+        workgroup_list.setAdapter(itemAdapter);
 
-        professionList = new ArrayList<>();
-
-        professionAdapter = new ProfessionAdapter(this, professionList,this);
-        workgroup_list.setAdapter(professionAdapter);
-
-        fetchWorkGroup();
+       fetchWorkGroup();
 
     }
-
     private void fetchWorkGroup() {
         String authToken = "Bearer " + globalVariables.getToken();
         Call<WorkGroupsResponse> call = apiService.getWorkGroups(authToken);
@@ -94,29 +91,30 @@ public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClick
 
         });
     }
-
+    @SuppressLint("NotifyDataSetChanged")
     void updateLayout(){
         if(res.getResult().contains("Doctor"))
-            professionList.add(new Profession("Doctor",R.drawable.design_img)) ;
+            itemList.add(new Item("Doctor",R.drawable.doctor_img)) ;
         if (res.getResult().contains("Interior Designer"))
-            professionList.add(new Profession("Interior Designer", R.drawable.interior_img));
+            itemList.add(new Item("Interior Designer", R.drawable.interior_img));
         if (res.getResult().contains("Translator"))
-            professionList.add(new Profession("Translator", R.drawable.translator_img));
+            itemList.add(new Item("Translator", R.drawable.translator_img));
         if (res.getResult().contains("Architecture Engineer"))
-            professionList.add(new Profession("Architecture Engineer", R.drawable.arc_img));
+            itemList.add(new Item("Architecture Engineer", R.drawable.arc_img));
         if (res.getResult().contains("Teacher"))
-            professionList.add(new Profession("Teacher", R.drawable.teach_img));
+            itemList.add(new Item("Teacher", R.drawable.teach_img));
         if (res.getResult().contains("IT Engineer"))
-            professionList.add(new Profession("IT Engineer", R.drawable.it_engineer_img));
+            itemList.add(new Item("IT Engineer", R.drawable.it_engineer_img));
         if (res.getResult().contains("Lawyer"))
-            professionList.add(new Profession("Lawyer", R.drawable.law_img));
+            itemList.add(new Item("Lawyer", R.drawable.law_img));
         if (res.getResult().contains("Designer"))
-            professionList.add(new Profession("Designer", R.drawable.design_img));
-        professionAdapter.notifyDataSetChanged();
-
+            itemList.add(new Item("Designer", R.drawable.design_img));
+        itemAdapter.notifyDataSetChanged();
     }
+
     @Override
     public void onClick(View view) {
+
         if(view.getId()==R.id.next_b){
             //TODO change destination
             Intent i=new Intent(ChoosingWorkgroup.this, Home.class);
@@ -134,8 +132,7 @@ public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClick
             super.onBackPressed();
         }
     }
-    @Override
-    public void onProfessionClick(int position) {
+    public void onItemClick(int position) {
         // todo get from back the id and handle
 
         globalVariables.setWorkGroup(0);

@@ -97,7 +97,7 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/workgroup_list"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="202dp"
                         android:padding="1dp"
                         android:clipToPadding="true"
                         android:layout_below="@+id/sdhauihduiah"

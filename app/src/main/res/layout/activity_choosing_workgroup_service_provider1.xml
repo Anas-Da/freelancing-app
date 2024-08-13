@@ -78,8 +78,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/workgroup_list"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="467dp"
+            android:clipToPadding="true"
+            android:padding="15dp"
             android:layout_below="@+id/rcx85nqz4fxm"
             tools:listitem="@layout/groups_view_big"
             />

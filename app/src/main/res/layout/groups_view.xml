@@ -25,6 +25,6 @@
     android:layout_marginStart="7dp"
     android:layout_below="@id/workgroup_circ"
     android:text="service_name"
-    android:textColor="@android:color/black"
+    android:textColor="@color/black"
     android:textSize="12sp"/>
 </RelativeLayout>

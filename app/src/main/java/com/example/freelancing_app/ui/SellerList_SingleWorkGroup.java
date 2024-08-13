@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +37,7 @@ public class SellerList_SingleWorkGroup extends AppCompatActivity implements Sel
     private RecyclerView sellers_list;
     private SellerAdapter sellerAdapter;
     private List<Seller> sellerList;
-
+    ImageButton back_b;
     private ApiService apiService;
     private List<Profile> profiles;
     @Override
@@ -45,6 +47,13 @@ public class SellerList_SingleWorkGroup extends AppCompatActivity implements Sel
 
         globalVariables = (GlobalVariables) getApplicationContext();
         apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
+        back_b = findViewById(R.id.back_b);
+        back_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         fetchProfiles();
 
         sellers_list = findViewById(R.id.sellers_li);
@@ -104,5 +113,13 @@ public class SellerList_SingleWorkGroup extends AppCompatActivity implements Sel
         Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
         Intent i=new Intent(SellerList_SingleWorkGroup.this,AccountServiceProvider.class);
         startActivity(i);
+    }
+    public void SearchResults(){
+        if (globalVariables.getWhereAmI()=="Search")
+        {
+            sellers_list.setLayoutManager(new LinearLayoutManager(this));
+           
+
+        }
     }
 }

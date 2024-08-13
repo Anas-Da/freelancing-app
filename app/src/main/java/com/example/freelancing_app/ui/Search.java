@@ -1,6 +1,8 @@
 package com.example.freelancing_app.ui;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.media.MediaCodec;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +40,7 @@ public class Search extends AppCompatActivity {
     EditText username_et;
     EditText rating_et;
     EditText workgroup_et;
+    Context c;
 
     CheckBox is_active;
 
@@ -61,6 +64,7 @@ public class Search extends AppCompatActivity {
         is_active = findViewById(R.id.is_active);
         show_results_b = findViewById(R.id.show_results_b);
         back_b = findViewById(R.id.back_b);
+        globalVariables.setWhereAmI("Search");
 
         back_b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,8 +76,11 @@ public class Search extends AppCompatActivity {
         show_results_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(true)
+                        performSearch();
+                Intent intent = new Intent(Search.this,SellerList_SingleWorkGroup.class);
+                startActivity(intent);
 
-               // performSearch();
             }
         });
     }
