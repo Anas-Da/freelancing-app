@@ -59,7 +59,7 @@
             android:ems="18"
             android:hint="Country name, City name"
             android:minHeight="48dp"
-            android:textColor="#b9b9bd"
+            android:textColor="@color/d_blue"
             android:textSize="12sp"
             android:background="@android:color/transparent"/>
     </RelativeLayout>

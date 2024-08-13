@@ -16,7 +16,7 @@ import com.example.freelancing_app.R;
 public class Fragment7 extends Fragment implements EditableFragment {
 //todo check this fragment please
     EditText bio_et;
-    TextView bio_tv;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -24,10 +24,8 @@ public class Fragment7 extends Fragment implements EditableFragment {
 
         // Initialize views
         bio_et = view.findViewById(R.id.bio_et);
-        bio_tv = view.findViewById(R.id.bio_tv);
         RelativeLayout parentLayout = view.findViewById(R.id.parent_layout); // Assuming RelativeLayout has this id in XML
 
-        // Set onTouchListener to detect touches outside the EditText
         parentLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -35,9 +33,7 @@ public class Fragment7 extends Fragment implements EditableFragment {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     if (!isTouchInsideView(bio_et, event)) {
                         // Hide EditText and show TextView with entered text
-                        bio_tv.setText(bio_et.getText().toString().trim());
-                        bio_et.setVisibility(View.GONE);
-                        bio_tv.setVisibility(View.VISIBLE);
+                        bio_et.setText(bio_et.getText().toString().trim());
                     }
                 }
                 return true;
