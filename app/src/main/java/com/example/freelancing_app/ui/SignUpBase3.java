@@ -87,7 +87,7 @@ public class SignUpBase3 extends AppCompatActivity {
         startActivityForResult(intent, PICK_IMAGE);
     }
 
-    @Override
+   @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -122,7 +122,7 @@ public class SignUpBase3 extends AppCompatActivity {
         }else{
             signupprovider(globalVariables.getSignUpRequest());
         }
-        //Log.d("SignUpServiceProvider2", globalVariables.getSignUpRequest().toString());
+        Log.d("SignUpServiceProvider2", globalVariables.getSignUpRequest().toString());
 
     }
 
@@ -173,7 +173,7 @@ public class SignUpBase3 extends AppCompatActivity {
                 Toast.makeText(SignUpBase3.this, "Signup failed! " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-        //Log.d("SignUpBase3", globalVariables.getSignUpRequest().toString());
+        Log.d("SignUpBase3", globalVariables.getSignUpRequest().toString());
     }
 
 

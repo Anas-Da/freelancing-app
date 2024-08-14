@@ -73,7 +73,7 @@ public class ProfileServiceProviderAboutCustomer extends AppCompatActivity  impl
         }
         else if(v.getId()==R.id.account_ib)
         {
-            Intent i=new Intent(ProfileServiceProviderAboutCustomer.this,AccountServiceProvider.class);
+            Intent i=new Intent(ProfileServiceProviderAboutCustomer.this,AccountCustomer.class);
             startActivity(i);
         }
         else if(v.getId()==R.id.home_ib)

@@ -98,7 +98,7 @@ public class ProfileServiceProviderRatingCustomer extends AppCompatActivity impl
                 showCommentDialog();
             }
         });
-        fetchReview();
+       fetchReview();
     }
 
 
@@ -187,14 +187,14 @@ public class ProfileServiceProviderRatingCustomer extends AppCompatActivity impl
             Intent i=new Intent(ProfileServiceProviderRatingCustomer.this, ProfileServiceProviderInformationCustomer.class);
             startActivity(i);
         }
-        else if(v.getId()==R.id.about)
+        else if(v.getId()==R.id.about_b)
         {
             Intent i=new Intent(ProfileServiceProviderRatingCustomer.this, ProfileServiceProviderAboutCustomer.class);
             startActivity(i);
         }
         else if(v.getId()==R.id.account_ib)
         {
-            Intent i=new Intent(ProfileServiceProviderRatingCustomer.this,AccountServiceProvider.class);
+            Intent i=new Intent(ProfileServiceProviderRatingCustomer.this,AccountCustomer.class);
             startActivity(i);
         }
         else if(v.getId()==R.id.home_ib)

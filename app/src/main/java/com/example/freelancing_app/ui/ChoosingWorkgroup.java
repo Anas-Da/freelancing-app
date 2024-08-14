@@ -66,7 +66,7 @@ public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClick
         itemAdapter = new ItemAdapter(itemList, this);
         workgroup_list.setAdapter(itemAdapter);
 
-       fetchWorkGroup();
+        fetchWorkGroup();
 
     }
     private void fetchWorkGroup() {
@@ -117,7 +117,7 @@ public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClick
 
         if(view.getId()==R.id.next_b){
             //TODO change destination
-            Intent i=new Intent(ChoosingWorkgroup.this, Home.class);
+            Intent i=new Intent(ChoosingWorkgroup.this, AccountServiceProvider.class);
             startActivity(i);
         } else if (view.getId()==R.id.back_b) {
             onBackPressed();

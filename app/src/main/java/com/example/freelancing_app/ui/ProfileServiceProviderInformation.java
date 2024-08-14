@@ -102,8 +102,8 @@ public class ProfileServiceProviderInformation extends AppCompatActivity impleme
         }
         else if (v.getId()==R.id.edit_profile_b){
             // TODO make the class
-           // Intent intent=new Intent(ProfileServiceProviderInformation.this,Activity_edit_profile.class);
-           // startActivity(intent);
+            Intent intent=new Intent(ProfileServiceProviderInformation.this,ProfileSettings.class);
+           startActivity(intent);
         }
 
         else if (v.getId()==R.id.notification_b){

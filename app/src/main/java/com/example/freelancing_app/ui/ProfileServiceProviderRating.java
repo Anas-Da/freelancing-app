@@ -142,8 +142,8 @@ public class ProfileServiceProviderRating extends AppCompatActivity implements V
             Intent intent=new Intent(ProfileServiceProviderRating.this, ProfileServiceProviderAbout.class);
             startActivity(intent);
         }
-        else if (v.getId()==R.id.Rating_b){
-            Intent intent=new Intent(ProfileServiceProviderRating.this, ProfileServiceProviderRating.class);
+        else if (v.getId()==R.id.information_b){
+            Intent intent=new Intent(ProfileServiceProviderRating.this, ProfileServiceProviderInformation.class);
             startActivity(intent);
         }
         else if (v.getId()==R.id.account_ib){

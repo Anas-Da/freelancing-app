@@ -111,7 +111,7 @@ public class SellerList_SingleWorkGroup extends AppCompatActivity implements Sel
         globalVariables.setSellerhandle("Anas_Da");
         //todo to profile
         Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
-        Intent i=new Intent(SellerList_SingleWorkGroup.this,AccountServiceProvider.class);
+        Intent i=new Intent(SellerList_SingleWorkGroup.this, ProfileServiceProviderAboutCustomer .class);
         startActivity(i);
     }
     public void SearchResults(){

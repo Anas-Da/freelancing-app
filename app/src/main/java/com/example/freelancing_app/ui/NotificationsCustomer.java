@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationsCustomer extends AppCompatActivity {
-
+    private ImageButton back_b;
     private RecyclerView recyclerView;
     private NotificationAdapter adapter;
     private List<NotificationItem> notificationList;
@@ -30,7 +31,7 @@ public class NotificationsCustomer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications_customer);
-
+        back_b=findViewById(R.id.back_b);
         recyclerView = findViewById(R.id.notifications_li);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -48,6 +49,13 @@ public class NotificationsCustomer extends AppCompatActivity {
         notificationList.add(new NotificationItem("Lina Al_Rashid", LL));
 
         notificationList.add(new NotificationItem("Sdra Al_Kusaier", SS));
+
+        back_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.ViewHolder> {

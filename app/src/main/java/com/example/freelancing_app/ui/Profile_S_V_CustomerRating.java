@@ -126,9 +126,9 @@ public class Profile_S_V_CustomerRating extends AppCompatActivity   implements V
             Intent i=new Intent(Profile_S_V_CustomerRating.this,Profile_S_V_CustomerAbout.class);
             startActivity(i);
         }
-        else if(v.getId()==R.id.Rating_b)
+        else if(v.getId()==R.id.information_b)
         {
-            Intent i=new Intent(Profile_S_V_CustomerRating.this, Profile_S_V_CustomerRating.class);
+            Intent i=new Intent(Profile_S_V_CustomerRating.this, Profile_S_V_CustomerInformation.class);
             startActivity(i);
         }
         else if(v.getId()==R.id.account_ib)

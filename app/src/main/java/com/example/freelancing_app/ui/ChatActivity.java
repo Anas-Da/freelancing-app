@@ -148,7 +148,7 @@ public class ChatActivity extends AppCompatActivity {
         messageList.add(message);
 
         // TODO
-        //fetchMessages();
+        fetchMessages();
 
         editTextMessage.addTextChangedListener(new TextWatcher() {
             @Override
@@ -192,7 +192,7 @@ public class ChatActivity extends AppCompatActivity {
     }
     //todo
     private void startNotificationService() {
-       /*isCustomer = globalVariables.isCustomer();
+       isCustomer = globalVariables.isCustomer();
         if (isCustomer) {
             Intent serviceIntent = new Intent(this, CustomerNotificationsService.class);
             startService(serviceIntent);
@@ -200,7 +200,7 @@ public class ChatActivity extends AppCompatActivity {
         else {
             Intent serviceIntent = new Intent(this, ServiceProviderNotificationService.class);
             startActivity(serviceIntent);
-        }*/
+        }
     }
 
 

@@ -29,6 +29,7 @@
         android:layout_toEndOf="@+id/profile_img_rel"
         android:layout_marginStart="10dp"
         android:text="name"
+        android:textColor="@color/d_blue"
         android:textStyle="bold"
         android:textSize="16dp"
         android:layout_marginTop="2dp"
@@ -44,6 +45,7 @@
         android:layout_toEndOf="@+id/profile_img_rel"
         android:text="last_message"
         android:textSize="12dp"
+        android:textColor="@color/d_blue"
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
     <TextView

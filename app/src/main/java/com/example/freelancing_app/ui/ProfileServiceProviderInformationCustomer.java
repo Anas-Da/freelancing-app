@@ -68,14 +68,14 @@ public class ProfileServiceProviderInformationCustomer extends AppCompatActivity
         else if(v.getId()==R.id.Rating_b)
         {
             // todo
-            //Intent i=new Intent(ProfileServiceProviderInformationCustomer.this,Activity_profile_service_provider_rating_customer.class);
-            //startActivity(i);
+            Intent i=new Intent(ProfileServiceProviderInformationCustomer.this,ProfileServiceProviderRatingCustomer.class);
+            startActivity(i);
         }
         else if(v.getId()==R.id.account_ib)
         {
             // todo
-            //Intent i=new Intent(ProfileServiceProviderInformationCustomer.this,Activity_account_service_provider1.class);
-            //startActivity(i);
+            Intent i=new Intent(ProfileServiceProviderInformationCustomer.this,AccountCustomer.class);
+            startActivity(i);
         }
         else if(v.getId()==R.id.home_ib)
         {

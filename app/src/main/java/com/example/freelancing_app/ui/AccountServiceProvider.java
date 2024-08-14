@@ -98,7 +98,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
         adapter = new UserProfileAdapter(this,profileList,this);
         profiles_li.setAdapter(adapter);
         // TODO
-         // fetchAccount();
+         fetchAccount();
 
     }
 
@@ -180,7 +180,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
             if (position != RecyclerView.NO_POSITION) {
                 UserProfile profile = profileList.get(position);
                 Intent intent = new Intent(AccountServiceProvider.this, ProfileServiceProviderAbout.class);
-                //intent.putExtra("profile", profile);
+                intent.putExtra("profile", profile);
                 globalVariables.setProfile(profile);
                 globalVariables.setProfileid(profile.getProfile_id());
                 startActivity(intent);

@@ -30,6 +30,7 @@
         android:layout_toEndOf="@+id/photo_rl"
         android:layout_marginStart="10dp"
         android:text="@string/person_name_p"
+        android:textColor="@color/d_blue"
         android:textStyle="bold"
         android:textSize="16dp"
         android:layout_marginTop="2dp"
