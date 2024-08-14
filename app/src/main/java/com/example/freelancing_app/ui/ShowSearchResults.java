@@ -26,7 +26,7 @@ public class ShowSearchResults extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Receiving the user list from the intent
-        userList = getIntent().getParcelableArrayListExtra("userList");
+      //  userList =
 
         // Setting up the adapter
         userAdapter = new UserAdapter(userList);

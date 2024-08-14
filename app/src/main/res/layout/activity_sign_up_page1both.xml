@@ -526,7 +526,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:scaleType="fitXY"
-                            android:src="@drawable/phone_img" />
+                            android:src="@drawable/profile_phone" />
 
                         <EditText
                             android:id="@+id/phone_number_et"

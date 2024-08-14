@@ -138,7 +138,7 @@
 							android:layout_height="50dp"
 							android:layout_centerVertical="true"
 							android:layout_toEndOf="@+id/about_b"
-							android:layout_marginStart="20dp"
+							android:layout_marginStart="10dp"
 							android:background="@drawable/cr76bffff4c14"
 							android:text="@string/information"
 							android:maxLines="1"
@@ -153,7 +153,7 @@
 							android:layout_height="50dp"
 							android:layout_centerVertical="true"
 							android:layout_toEndOf="@+id/information_b"
-							android:layout_marginStart="20dp"
+							android:layout_marginStart="10dp"
 							android:layout_marginEnd="5dp"
 							android:background="@drawable/cr76bfff8b29c"
 							android:text="@string/rating"
@@ -164,9 +164,10 @@
 					</RelativeLayout>
 
 					<RelativeLayout
-						android:layout_width="wrap_content"
+						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:layout_marginTop="40dp"
+						android:layout_marginEnd="40dp"
 						android:layout_marginStart="30dp"
 						android:layout_below="@+id/r2r61f10oe76"
 						android:background="@drawable/item_list_background">
@@ -248,7 +249,7 @@
 							android:layout_centerInParent="true"
 							android:background="@null"
 							android:src="@drawable/home_page_icon"
-							/>
+							tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 					</RelativeLayout>
 				</RelativeLayout>
 			</RelativeLayout>

@@ -33,10 +33,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         SearchResults.User user = userList.get(position);
-        holder.fullnameTv.setText(globalVariables.getFullname());
-        holder.usernameTv.setText(globalVariables.getUsername());
-        holder.workGroupTv.setText(globalVariables.getWorkGroup());
-        holder.rateTv.setText(String.valueOf(globalVariables.getRate()));
+        holder.fullname_tv.setText(globalVariables.getFullname());
+        holder.username_tv.setText(globalVariables.getUsername());
+        holder.workGroup_tv.setText(globalVariables.getWorkGroup());
+        holder.rate_tv.setText(String.valueOf(globalVariables.getRate()));
         // If you have an image loader, you can load the image here
         // Example: Glide.with(holder.image.getContext()).load(user.getImageUrl()).into(holder.image);
     }
@@ -47,16 +47,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     }
 
     public static class UserViewHolder extends RecyclerView.ViewHolder {
-        TextView fullnameTv, usernameTv, workGroupTv, rateTv;
+        TextView fullname_tv, username_tv, workGroup_tv, rate_tv;
         // Uncomment and import if you use Glide or similar libraries for image loading
         // CircleImageView image;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
-            fullnameTv = itemView.findViewById(R.id.fullname_tv);
-            usernameTv = itemView.findViewById(R.id.username_tv);
-            workGroupTv = itemView.findViewById(R.id.work_group_tv);
-            rateTv = itemView.findViewById(R.id.rate_tv);
+            fullname_tv = itemView.findViewById(R.id.fullname_tv);
+            username_tv = itemView.findViewById(R.id.username_tv);
+            workGroup_tv = itemView.findViewById(R.id.work_group_tv);
+            rate_tv = itemView.findViewById(R.id.rate_tv);
             // image = itemView.findViewById(R.id.image); // Uncomment if you have images to display
         }
     }

@@ -1,7 +1,7 @@
 package com.example.freelancing_app.ui;
 
+import static com.example.freelancing_app.network.RetrofitInstance.retrofit;
 
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaCodec;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -19,10 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.freelancing_app.R;
 import com.example.freelancing_app.models.SearchResults;
 import com.example.freelancing_app.network.ApiService;
-import com.example.freelancing_app.network.RetrofitInstance;
 import com.example.freelancing_app.utils.GlobalVariables;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,21 +38,16 @@ public class Search extends AppCompatActivity {
     EditText username_et;
     EditText rating_et;
     EditText workgroup_et;
-    Context c;
 
     CheckBox is_active;
 
     Button show_results_b;
     ImageButton back_b;
-    SearchResults results;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
-        globalVariables= (GlobalVariables) getApplicationContext();
-        apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
 
         firstname_et = findViewById(R.id.firstname_et);
         secondname_et = findViewById(R.id.lastname_et);
@@ -66,7 +58,6 @@ public class Search extends AppCompatActivity {
         is_active = findViewById(R.id.is_active);
         show_results_b = findViewById(R.id.show_results_b);
         back_b = findViewById(R.id.back_b);
-        globalVariables.setWhereAmI("Search");
 
         back_b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,8 +69,10 @@ public class Search extends AppCompatActivity {
         show_results_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                        performSearch();
+                Intent intent = new Intent(Search.this, SearchResults.class);
+                startActivity(intent);
 
+             //   performSearch();
             }
         });
     }
@@ -113,18 +106,11 @@ public class Search extends AppCompatActivity {
         call.enqueue(new Callback<SearchResults>() {
             @Override
             public void onResponse(Call<SearchResults> call, Response<SearchResults> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    results = response.body();
+                if (response.isSuccessful()) {
+                    SearchResults results = response.body();
                     if (results != null) {
                         List<SearchResults.User> userList = results.getUsers();
-                        if (!userList.isEmpty()) {
-                            // Pass the search results to the next activity
-                            Intent intent = new Intent(Search.this, ShowSearchResults.class);
-                            intent.putParcelableArrayListExtra("userList", new ArrayList<>(userList));
-                            startActivity(intent);
-                        } else {
-                            Toast.makeText(Search.this, "No results found.", Toast.LENGTH_SHORT).show();
-                        }
+
                     } else {
                         Toast.makeText(Search.this, "No results found.", Toast.LENGTH_SHORT).show();
                     }
@@ -140,9 +126,6 @@ public class Search extends AppCompatActivity {
         });
 
     }
-     void updateLayout(){
 
-
-     }
 
 }

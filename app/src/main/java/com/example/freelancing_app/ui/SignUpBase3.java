@@ -133,9 +133,9 @@ public class SignUpBase3 extends AppCompatActivity {
             @Override
             public void onResponse(Call<Customer_json> call, Response<Customer_json> response) {
                 if (response.isSuccessful() && response.body() != null) {
+                    handlecustomer(response);
                     String newAccessToken = response.body().getAccessToken();
                     String refreshToken = response.body().getRefreshToken();
-                    handlecustomer(response);
                     //saveTokens(newAccessToken, refreshToken);
                     // Proceed with the next activity
 

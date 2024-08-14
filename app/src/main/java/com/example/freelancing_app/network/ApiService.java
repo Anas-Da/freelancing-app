@@ -60,8 +60,7 @@ public interface ApiService {
     @POST("update/seller/profile/{profileId}")
     Call <Provider_json> updateprofile(@Query("bio")String bio  , @Header("Authorization") String authToken, @Path("profileId") int profileId) ;
 
-    @POST("search")
-    Call<SearchResults> searchUsers(@Body Map<String, Object> filters);
+    Call<SearchResults> searchUsers(Map<String, Object> filters);
 
 
    
