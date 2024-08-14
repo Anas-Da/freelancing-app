@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class ShowSearchResults extends AppCompatActivity {
     private RecyclerView recyclerView;
     private UserAdapter userAdapter;
-    private ArrayList<SearchResults.User> userList;
+    private ArrayList<SearchResults> userList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class ShowSearchResults extends AppCompatActivity {
       //  userList =
 
         // Setting up the adapter
-        userAdapter = new UserAdapter(userList);
+      //  userAdapter = new UserAdapter();
         recyclerView.setAdapter(userAdapter);
     }
 }
