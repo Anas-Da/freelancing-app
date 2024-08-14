@@ -45,16 +45,16 @@ public class ProfileServiceProviderAbout extends AppCompatActivity implements Vi
     private TextView sevices_provided_tv;
     private TextView date_of_birth_tv;
     private ImageView photo_iv;
-    private ImageButton settings_b;
+     ImageButton settings_b;
 
-    private ImageButton edit_profile_b;
-    private ImageButton notification_b;
-    private Button information_b;
-    private Button Rating_b;
+     ImageButton edit_profile_b;
+     ImageButton notification_b;
+     Button information_b;
+     Button Rating_b;
     
-    private ImageButton account_ib;
-    private ImageButton home_ib;
-    private ImageButton chat_ib;
+     ImageButton account_ib;
+     ImageButton home_ib;
+     ImageButton chat_ib;
 
 
     @Override

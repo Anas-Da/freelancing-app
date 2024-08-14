@@ -76,6 +76,7 @@
                         android:text="@string/person_name_c"
 
                         />
+
                     <ImageButton
                         android:id="@+id/name_b"
                         android:layout_width="25dp"
@@ -86,7 +87,7 @@
                         android:background="@android:color/transparent"
                         android:scaleType="fitXY"
                         android:src="@drawable/edit"
-                        />
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
                     <TextView

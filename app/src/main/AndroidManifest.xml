@@ -43,6 +43,7 @@
         <activity android:name=".ui.Home" />
         <activity android:name=".ui.Search"/>
         <activity android:name=".ui.ChoosingWorkgroup" />
+        <activity android:name=".ui.ShowSearchResults"/>
         <activity android:name=".ui.ChatActivity" />
         <activity android:name=".ui.SellerList_SingleWorkGroup" />
         <activity android:name=".ui.ChatList" />

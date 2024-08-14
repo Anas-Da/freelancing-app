@@ -46,7 +46,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
     private UserProfileAdapter adapter;
     private List<UserProfile> profileList;
 
-    private ImageButton setting_ib;
+    private ImageButton settings_b;
     private ImageButton add_profile_ib;
 
     private ImageButton home_ib;
@@ -60,7 +60,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_service_provider1);
-        setting_ib = findViewById(R.id.settings_b);
+        settings_b = findViewById(R.id.settings_b);
         add_profile_ib = findViewById(R.id.add_profile_b);
 
         home_ib = findViewById(R.id.home_ib);
@@ -74,7 +74,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
         res = new AccountSellerResponse();
 
 
-        setting_ib.setOnClickListener(this);
+        settings_b.setOnClickListener(this);
         add_profile_ib.setOnClickListener(this);
         home_ib.setOnClickListener(this);
         chat_ib.setOnClickListener(this);
@@ -148,7 +148,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.setting_b){
+        if(v.getId()==R.id.settings_b){
             Intent intent=new Intent(AccountServiceProvider.this,AccountSettingsServiceProvider.class);
             startActivity(intent);
         }

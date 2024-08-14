@@ -24,29 +24,32 @@
 				android:layout_height="wrap_content"
 				android:orientation="vertical">
 
-				<ImageView
-					android:clickable="true"
+				<ImageButton
 					android:id="@+id/back_b"
-					android:layout_width="wrap_content"
+					android:layout_width="37dp"
 					android:layout_height="33dp"
 					android:layout_marginHorizontal="21dp"
+					android:layout_marginBottom="5dp"
+					android:background="@null"
 					android:scaleType="fitXY"
-					android:src="@drawable/arrow_back" />
+					android:src="@drawable/arrow_back"
+					tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 				<RelativeLayout
-					android:clickable="true"
 					android:id="@+id/chat_b"
 					style="@style/orangeButton"
 					android:layout_width="80dp"
 					android:layout_height="25dp"
 					android:layout_marginStart="310dp"
 					android:background="@drawable/cr76bffff4c14"
-					>
+					android:clickable="true"
+					tools:ignore="TouchTargetSizeCheck">
 
 					<RelativeLayout
 						android:layout_width="80dp"
 						android:layout_height="25dp"
 						android:layout_centerInParent="true">
+
 						<ImageView
 							android:id="@+id/chat_img"
 							android:layout_width="wrap_content"

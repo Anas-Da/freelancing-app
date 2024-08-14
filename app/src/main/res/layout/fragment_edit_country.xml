@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:scaleType="fitXY"
-            android:src="@drawable/location"
+            android:src="@drawable/profile_location"
             />
 
         <EditText

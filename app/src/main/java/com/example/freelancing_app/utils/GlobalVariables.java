@@ -50,6 +50,7 @@ public class GlobalVariables extends Application {
     private String phone;
     private Date dateofbirth;
     private String bio_et;
+    private String rate;
 
     private UserProfile Profile;
 
@@ -259,5 +260,14 @@ public class GlobalVariables extends Application {
     }
     public void setProfileSellerResponse(ProfileSellerResponse profileSellerResponse) {
         this.profileSellerResponse = profileSellerResponse;
+    }
+
+
+    public String getRate() {
+        return rate;
+    }
+
+    public void setRate(String rate) {
+        this.rate = rate;
     }
 }

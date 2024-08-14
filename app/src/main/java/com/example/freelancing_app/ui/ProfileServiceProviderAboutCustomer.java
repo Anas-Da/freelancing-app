@@ -14,13 +14,13 @@ import com.example.freelancing_app.R;
 
 //ToDO Backkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 public class ProfileServiceProviderAboutCustomer extends AppCompatActivity  implements View.OnClickListener {
-    private ImageView back_b;
-    private RelativeLayout chat_b;
-    private Button  information_b;
-    private Button  Rating_b;
-    private  ImageButton account_ib;
-    private  ImageButton home_ib;
-    private  ImageButton chat_ib;
+     ImageButton back_b;
+     RelativeLayout chat_b;
+     Button  information_b;
+     Button  Rating_b;
+      ImageButton account_ib;
+      ImageButton home_ib;
+      ImageButton chat_ib;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

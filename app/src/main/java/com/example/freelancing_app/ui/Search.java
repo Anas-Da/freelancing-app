@@ -22,6 +22,7 @@ import com.example.freelancing_app.network.ApiService;
 import com.example.freelancing_app.network.RetrofitInstance;
 import com.example.freelancing_app.utils.GlobalVariables;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,6 +47,7 @@ public class Search extends AppCompatActivity {
 
     Button show_results_b;
     ImageButton back_b;
+    SearchResults results;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,10 +78,7 @@ public class Search extends AppCompatActivity {
         show_results_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(true)
                         performSearch();
-                Intent intent = new Intent(Search.this,SellerList_SingleWorkGroup.class);
-                startActivity(intent);
 
             }
         });
@@ -114,11 +113,18 @@ public class Search extends AppCompatActivity {
         call.enqueue(new Callback<SearchResults>() {
             @Override
             public void onResponse(Call<SearchResults> call, Response<SearchResults> response) {
-                if (response.isSuccessful()) {
-                    SearchResults results = response.body();
+                if (response.isSuccessful() && response.body() != null) {
+                    results = response.body();
                     if (results != null) {
                         List<SearchResults.User> userList = results.getUsers();
-
+                        if (!userList.isEmpty()) {
+                            // Pass the search results to the next activity
+                            Intent intent = new Intent(Search.this, ShowSearchResults.class);
+                            intent.putParcelableArrayListExtra("userList", new ArrayList<>(userList));
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(Search.this, "No results found.", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
                         Toast.makeText(Search.this, "No results found.", Toast.LENGTH_SHORT).show();
                     }
@@ -134,6 +140,9 @@ public class Search extends AppCompatActivity {
         });
 
     }
+     void updateLayout(){
 
+
+     }
 
 }

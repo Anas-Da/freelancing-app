@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:scaleType="fitXY"
-            android:src="@drawable/date"
+            android:src="@drawable/profile_date_of_birth"
             />
 
         <EditText
