@@ -81,8 +81,8 @@ public class ProfileServiceProviderRating extends AppCompatActivity implements V
         comments_iv.setLayoutManager(new LinearLayoutManager(this));
 
         commentList = new ArrayList<>();
-        // commentList.add(new Comment("John Doe", R.drawable.yellow_star, "Great product!", 5));
-        // commentList.add(new Comment("Jane Smith",R.drawable.yellow_star , "Not bad, but could be better.", 3));
+         commentList.add(new Comment("John Doe", R.drawable.yellow_star, "Great product!", 5));
+         commentList.add(new Comment("Jane Smith",R.drawable.yellow_star , "Not bad, but could be better.", 3));
 
         commentsAdapter = new CommentsAdapter(commentList, this);
         comments_iv .setAdapter(commentsAdapter);

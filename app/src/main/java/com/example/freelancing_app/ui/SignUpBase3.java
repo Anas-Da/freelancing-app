@@ -136,7 +136,7 @@ public class SignUpBase3 extends AppCompatActivity {
                     handlecustomer(response);
                     String newAccessToken = response.body().getAccessToken();
                     String refreshToken = response.body().getRefreshToken();
-                    //saveTokens(newAccessToken, refreshToken);
+                    // saveTokens(newAccessToken, refreshToken);
                     // Proceed with the next activity
 
                 } else {
@@ -161,7 +161,7 @@ public class SignUpBase3 extends AppCompatActivity {
                     handleprovider(response);
                     String newAccessToken = response.body().getAccessToken();
                     String refreshToken = response.body().getRefreshToken();
-                    //saveTokens(newAccessToken, refreshToken);
+                    // saveTokens(newAccessToken, refreshToken);
                     // Proceed with the next activity
                 } else {
                     Toast.makeText(SignUpBase3.this, "Signup failed! Invalid credentials.", Toast.LENGTH_SHORT).show();

@@ -99,7 +99,7 @@
 							android:layout_width="match_parent"
 							android:layout_height="match_parent"
 							android:layout_centerInParent="true"
-							android:src="@drawable/michael_2" />
+							android:src="@drawable/michael_5" />
 
 					</RelativeLayout>
 					<TextView

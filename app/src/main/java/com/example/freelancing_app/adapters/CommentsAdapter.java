@@ -37,7 +37,7 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Commen
         Comment comment = commentList.get(position);
         holder.userName.setText(comment.getUserName());
         holder.commentText.setText(comment.getText());
-        //holder.userPhoto.setImageResource(comment.getUserPhotoResId());
+        holder.userPhoto.setImageResource(comment.getUserPhotoResId());
 
         // Set stars based on rating
         for (int i = 0; i < 5; i++) {

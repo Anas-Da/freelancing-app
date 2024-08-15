@@ -74,13 +74,14 @@ public class Profile_S_V_CustomerRating extends AppCompatActivity   implements V
         comments_iv.setLayoutManager(new LinearLayoutManager(this));
 
         commentList = new ArrayList<>();
-
+         commentList.add(new Comment("John Doe", R.drawable.yellow_star, "Great product!", 5));
+         commentList.add(new Comment("Jane Smith",R.drawable.yellow_star , "Not bad, but could be better.", 3));
         commentsAdapter = new CommentsAdapter(commentList, this);
         comments_iv .setAdapter(commentsAdapter);
 
 
 
-        fetchReview();
+    //    fetchReview();
     }
     private void fetchReview(){
 
@@ -90,7 +91,7 @@ public class Profile_S_V_CustomerRating extends AppCompatActivity   implements V
             public void onResponse(Call<ReviewsResponse> call, Response<ReviewsResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     reviewLists = response.body().getResult();
-                    updateLayout();
+                //    updateLayout();
                 } else {
                     Toast.makeText(Profile_S_V_CustomerRating.this, "Failed to fetch Info", Toast.LENGTH_SHORT).show();
                 }
@@ -107,7 +108,7 @@ public class Profile_S_V_CustomerRating extends AppCompatActivity   implements V
         commentList.clear();
         for (ReviewList reviewList : reviewLists){
             //todo photo Customer
-            commentList.add(new Comment(reviewList.getCustomer_username(),"",reviewList.getRate(),reviewList.getComment()));
+        //    commentList.add(new Comment(reviewList.getCustomer_username(),"",reviewList.getRate(),reviewList.getComment()));
             commentsAdapter.notifyDataSetChanged();
 
         }

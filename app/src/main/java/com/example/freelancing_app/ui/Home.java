@@ -123,7 +123,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
         sellerList.add(new Seller("Rani" + " " + "Ali", RR, "IT"));
 
         // TODO
-         fetchProfiles();
+       //  fetchProfiles();
     }
 
     private void fetchProfiles() {

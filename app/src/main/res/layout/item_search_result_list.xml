@@ -33,16 +33,7 @@
         android:textSize="16sp"
         android:textColor="@color/d_blue"
         android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/username_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:textColor="@color/d_blue"
-        android:layout_toEndOf="@+id/profile_img_rel"
-        android:layout_below="@+id/fullname_tv"
-        android:text="Username"
-        />
+
 
     <TextView
         android:id="@+id/work_group_tv"
@@ -51,7 +42,7 @@
         android:textColor="@color/d_blue"
         android:layout_marginStart="12dp"
         android:layout_toEndOf="@+id/profile_img_rel"
-        android:layout_below="@+id/username_tv"
+        android:layout_below="@+id/fullname_tv"
         android:text="Work Group"/>
 
     <TextView

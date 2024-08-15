@@ -95,11 +95,11 @@
 						android:layout_marginStart="50dp">
 
 						<de.hdodenhof.circleimageview.CircleImageView
-							android:layout_width="match_parent"
 							android:id="@+id/photo_iv"
+							android:layout_width="match_parent"
 							android:layout_height="match_parent"
 							android:layout_centerInParent="true"
-							android:src="@drawable/michael_2" />
+							android:src="@drawable/michael_5" />
 
 					</RelativeLayout>
 					<TextView

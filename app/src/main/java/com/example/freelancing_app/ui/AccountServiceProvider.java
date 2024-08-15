@@ -110,7 +110,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
             public void onResponse(Call<AccountSellerResponse> call, Response<AccountSellerResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     res = response.body();
-                    updateLayout(); // Method to update list and notify adapter
+                   // updateLayout(); // Method to update list and notify adapter
                 } else {
                     Toast.makeText(AccountServiceProvider.this, "Failed to fetch Info", Toast.LENGTH_SHORT).show();
                 }
@@ -180,9 +180,9 @@ public class AccountServiceProvider extends AppCompatActivity implements
             if (position != RecyclerView.NO_POSITION) {
                 UserProfile profile = profileList.get(position);
                 Intent intent = new Intent(AccountServiceProvider.this, ProfileServiceProviderAbout.class);
-                intent.putExtra("profile", profile);
-                globalVariables.setProfile(profile);
-                globalVariables.setProfileid(profile.getProfile_id());
+            //    intent.putExtra("profile", profile);
+             //   globalVariables.setProfile(profile);
+              //  globalVariables.setProfileid(profile.getProfile_id());
                 startActivity(intent);
             }
         }
