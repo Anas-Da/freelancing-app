@@ -99,7 +99,7 @@ public class ProfileServiceProviderAbout extends AppCompatActivity implements Vi
         photo_iv=findViewById(R.id.photo_iv);
 
         // TODO
-        fetchAccount();
+        //fetchAccount();
     }
 
     @Override

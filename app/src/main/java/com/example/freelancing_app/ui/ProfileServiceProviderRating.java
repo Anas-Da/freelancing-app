@@ -89,7 +89,7 @@ public class ProfileServiceProviderRating extends AppCompatActivity implements V
 
 
 
-        fetchReview();
+       // fetchReview();
     }
     private void fetchReview() {
 

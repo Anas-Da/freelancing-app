@@ -98,7 +98,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
         adapter = new UserProfileAdapter(this,profileList,this);
         profiles_li.setAdapter(adapter);
         // TODO
-         fetchAccount();
+      //   fetchAccount();
 
     }
 
