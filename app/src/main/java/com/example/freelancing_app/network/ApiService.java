@@ -64,5 +64,8 @@ public interface ApiService {
     Call<SearchResults> searchUsers(@Body Map<String, Object> filters);
     @GET("pause/seller/profile/{profileId}")
     Call <Provider_json> pauseProfile(@Header("Authorization") String authToken, @Path("profileId") int profileId) ;
+    @GET("resume/seller/profile/{profileId}")
+    Call <Provider_json> resumeProfile(@Header("Authorization") String authToken, @Path("profileId") int profileId) ;
+
 }
 

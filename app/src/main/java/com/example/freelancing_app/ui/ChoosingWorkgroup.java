@@ -57,7 +57,7 @@ public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClick
         workgroup_list.setLayoutManager(new GridLayoutManager(this, 2));
 
         itemList = new ArrayList<>();
-     /*   itemList.add(new Item("Item 1", R.drawable.on));
+      /*  itemList.add(new Item("Item 1", R.drawable.on));
         itemList.add(new Item("Item 2", R.drawable.off));
         itemList.add(new Item("Item 3", R.drawable.on));
         itemList.add(new Item("Item 4", R.drawable.off));
@@ -138,7 +138,7 @@ public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClick
         globalVariables.setWorkGroup(0);
         //todo to profile
         Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
-        Intent i=new Intent(ChoosingWorkgroup.this, SellerList_SingleWorkGroup.class);
+        Intent i=new Intent(ChoosingWorkgroup.this, AccountServiceProvider.class);
         startActivity(i);
     }
 }
