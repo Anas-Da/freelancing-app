@@ -1,5 +1,7 @@
 package com.example.freelancing_app.ui;
 
+import static com.example.freelancing_app.utils.TokenManager.getAccessToken;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +23,8 @@ import com.example.freelancing_app.adapters.UserProfileAdapter;
 import com.example.freelancing_app.models.AccountSellerResponse;
 import com.example.freelancing_app.models.Profile;
 import com.example.freelancing_app.models.ProfileResponse;
+import com.example.freelancing_app.models.ProfileSellerResponse;
+import com.example.freelancing_app.models.Provider_json;
 import com.example.freelancing_app.models.Seller;
 import com.example.freelancing_app.models.UserProfile;
 import com.example.freelancing_app.network.ApiService;
@@ -37,7 +41,7 @@ import retrofit2.Response;
 
 //TODO backkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 public class AccountServiceProvider extends AppCompatActivity implements
-        View.OnClickListener, UserProfileAdapter.OnItemClickListener{
+        View.OnClickListener, UserProfileAdapter.OnItemClickListener {
 
     private ApiService apiService;
     GlobalVariables globalVariables;
@@ -50,12 +54,13 @@ public class AccountServiceProvider extends AppCompatActivity implements
     private ImageButton add_profile_ib;
 
     private ImageButton home_ib;
-    private  ImageButton chat_ib;
+    private ImageButton chat_ib;
 
     ImageView profilePicture;
     TextView fullname_tv;
 
     AccountSellerResponse res;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,19 +91,19 @@ public class AccountServiceProvider extends AppCompatActivity implements
         profileList = new ArrayList<>();
 
 
-        Bitmap LL = BitmapFactory.decodeResource(this.getResources(),
-                R.drawable.michael_5);
-        profileList.add(new UserProfile("Lina Al_Rashid", "Translator", LL, false));
-        profileList.add(new UserProfile("Lina Al_Rashid", "Teacher", LL, false));
-        profileList.add(new UserProfile("Lina Al_Rashid", "Designer", LL, false));
-        profilePicture.setImageBitmap(LL);
-        fullname_tv.setText("Lina" + " " + "Al_Rashid");
+        // Bitmap LL = BitmapFactory.decodeResource(this.getResources(),
+        //       R.drawable.michael_5);
+        //   profileList.add(new UserProfile("Lina Al_Rashid", "Translator", LL, false));
+        //   profileList.add(new UserProfile("Lina Al_Rashid", "Teacher", LL, false));
+        //   profileList.add(new UserProfile("Lina Al_Rashid", "Designer", LL, false));
+        //   profilePicture.setImageBitmap(LL);
+        //    fullname_tv.setText("Lina" + " " + "Al_Rashid");
 
 
-        adapter = new UserProfileAdapter(this,profileList,this);
+        adapter = new UserProfileAdapter(this, profileList, this);
         profiles_li.setAdapter(adapter);
-        // TODO
-      //   fetchAccount();
+
+        fetchAccount();
 
     }
 
@@ -110,7 +115,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
             public void onResponse(Call<AccountSellerResponse> call, Response<AccountSellerResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     res = response.body();
-                   // updateLayout(); // Method to update list and notify adapter
+                    updateLayout(); // Method to update list and notify adapter
                 } else {
                     Toast.makeText(AccountServiceProvider.this, "Failed to fetch Info", Toast.LENGTH_SHORT).show();
                 }
@@ -123,7 +128,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
         });
     }
 
-    void updateLayout(){
+    void updateLayout() {
         String base64Image = res.getImg();
         Bitmap bitmap = ImageUtils.decodeBase64ToBitmap(base64Image);
         profilePicture.setImageBitmap(bitmap);
@@ -132,13 +137,12 @@ public class AccountServiceProvider extends AppCompatActivity implements
     }
 
     private void updateList() {
-        //TODO
 
         profileList.clear();
         String base64Image = res.getImg();
         Bitmap bitmap = ImageUtils.decodeBase64ToBitmap(base64Image);
         for (ProfileResponse profile : res.getProfiles()) {
-            profileList.add(new UserProfile(res.getFirst_name() + " " + res.getSecond_name(), profile.getWork_group(),bitmap, profile.getChecked()));
+            profileList.add(new UserProfile(res.getFirst_name() + " " + res.getSecond_name(), profile.getWork_group(), bitmap, profile.getChecked()));
         }
         globalVariables.setSeller(res);
         Toast.makeText(AccountServiceProvider.this, "Updated", Toast.LENGTH_SHORT).show();
@@ -148,32 +152,52 @@ public class AccountServiceProvider extends AppCompatActivity implements
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.settings_b){
-            Intent intent=new Intent(AccountServiceProvider.this,AccountSettingsServiceProvider.class);
+        if (v.getId() == R.id.settings_b) {
+            Intent intent = new Intent(AccountServiceProvider.this, AccountSettingsServiceProvider.class);
             startActivity(intent);
-        }
-        else if (v.getId()==R.id.add_profile_b){
-            Intent intent=new Intent(AccountServiceProvider.this,ChoosingWorkgroup.class);
+        } else if (v.getId() == R.id.add_profile_b) {
+            Intent intent = new Intent(AccountServiceProvider.this, ChoosingWorkgroup.class);
             startActivity(intent);
-        }
-
-        else if (v.getId()==R.id.home_ib){
-            Intent intent=new Intent(AccountServiceProvider.this,Home.class);
+        } else if (v.getId() == R.id.home_ib) {
+            Intent intent = new Intent(AccountServiceProvider.this, Home.class);
             startActivity(intent);
-        }
-        else if (v.getId()==R.id.chat_ib){
-            Intent intent=new Intent(AccountServiceProvider.this,ChatList.class);
+        } else if (v.getId() == R.id.chat_ib) {
+            Intent intent = new Intent(AccountServiceProvider.this, ChatList.class);
             startActivity(intent);
         }
     }
+
     @Override
-    public void onCheckBoxClick(int position){
+    public void onCheckBoxClick(int position) {
         if (position != RecyclerView.NO_POSITION) {
             UserProfile profile = profileList.get(position);
-            profile.setChecked(!profile.isChecked());
-            adapter.notifyItemChanged(position);
+            int profileId = globalVariables.getProfileid(); // Assuming you have this field in `UserProfile`
+            String authToken = "Bearer " + globalVariables.getToken();
+
+            // Make the pause profile API call
+            Call<Provider_json> call = apiService.pauseProfile(authToken, profileId);
+            call.enqueue(new Callback<Provider_json>() {
+                @Override
+                public void onResponse(Call<Provider_json> call, Response<Provider_json> response) {
+                    if (response.isSuccessful()) {
+                        // Profile paused successfully, handle the response if needed
+                    } else {
+                        // Handle the error
+                        profile.setChecked(false); // Revert the checkbox state if the API call fails
+                        adapter.notifyDataSetChanged();    // Update UI
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Provider_json> call, Throwable t) {
+                    // Handle failure
+                    profile.setChecked(false); // Revert the checkbox state on failure
+                    adapter.notifyDataSetChanged();    // Update UI
+                }
+            });
         }
     }
+
 
     @Override
     public void onItemViewClick(int position) {

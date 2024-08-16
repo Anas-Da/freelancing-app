@@ -6,6 +6,7 @@ import com.example.freelancing_app.models.Customer_json;
 import com.example.freelancing_app.models.LoginRequest;
 import com.example.freelancing_app.models.Message;
 import com.example.freelancing_app.models.MessageResponse;
+import com.example.freelancing_app.models.Profile;
 import com.example.freelancing_app.models.ProfileSellerResponse;
 import com.example.freelancing_app.models.Provider_json;
 import com.example.freelancing_app.models.ReviewsResponse;
@@ -61,5 +62,7 @@ public interface ApiService {
     Call <Provider_json> updateprofile(@Query("bio")String bio  , @Header("Authorization") String authToken, @Path("profileId") int profileId) ;
     @POST("search")
     Call<SearchResults> searchUsers(@Body Map<String, Object> filters);
+    @GET("pause/seller/profile/{profileId}")
+    Call <Provider_json> pauseProfile(@Header("Authorization") String authToken, @Path("profileId") int profileId) ;
 }
 

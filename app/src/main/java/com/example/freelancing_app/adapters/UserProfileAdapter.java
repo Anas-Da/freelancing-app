@@ -49,7 +49,14 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
         // Set up click listener for the checkbox
         holder.checkboxImageView.setOnClickListener(v -> {
             // Handle checkbox click
-            onItemClickListener1.onCheckBoxClick(position);
+            boolean isChecked = profile.isChecked();
+            profile.setChecked(!isChecked);
+            holder.checkboxImageView.setImageResource(!isChecked ? R.drawable.on_img : R.drawable.off_img);
+
+            // Call the onCheckBoxClick method from the listener to trigger the pause profile API call
+            if (!isChecked) {
+                onItemClickListener1.onCheckBoxClick(position);
+            }
         });
         holder.bind(profile);
     }
