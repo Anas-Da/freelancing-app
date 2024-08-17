@@ -4,6 +4,7 @@ import static com.example.freelancing_app.network.RetrofitInstance.retrofit;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -58,6 +59,11 @@ public class Search extends AppCompatActivity {
         show_results_b = findViewById(R.id.show_results_b);
         back_b = findViewById(R.id.back_b);
 
+        globalVariables = (GlobalVariables) getApplicationContext();
+
+        // Initialize the ApiService (ensure you have retrofit and the service properly configured)
+        apiService = retrofit.create(ApiService.class);
+
         // Back button logic
         back_b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,8 +80,7 @@ public class Search extends AppCompatActivity {
             }
         });
 
-        // Initialize the ApiService (ensure you have retrofit and the service properly configured)
-        apiService = retrofit.create(ApiService.class);
+
     }
 
     private void performSearch() {
@@ -94,14 +99,16 @@ public class Search extends AppCompatActivity {
         }
 
         // Create the filter map
-        Map<String, Object> filters = new HashMap<>();
+        Map<String, String> filters = new HashMap<>();
         if (!firstName.isEmpty()) filters.put("first_name", firstName);
-        if (!secondName.isEmpty()) filters.put("second_name", secondName);
+        if (!secondName.isEmpty()) filters.put("lastname", secondName);
         if (!username.isEmpty()) filters.put("username", username);
         if (!rating.isEmpty()) filters.put("rate", rating);
-        if (!workgroup.isEmpty()) filters.put("work_group", workgroup);
-        filters.put("active", isActive); // Add the active status filter
-
+        if (!workgroup.isEmpty()) filters.put("workgroup", workgroup);
+        filters.put("active", isActive?"1":"0"); // Add the active status filter
+        for(Map.Entry<String,String>filter : filters.entrySet()){
+            Log.d("AAA",filter.getValue() + " " + filter.getKey() );
+        }
         // Make the API call
         Call<SearchResults> call = apiService.searchUsers(filters);
         call.enqueue(new Callback<SearchResults>() {
@@ -110,12 +117,17 @@ public class Search extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     SearchResults results = response.body();
                     if (results != null) {
-                        // Handle search results
                         List<SearchResults.User> userList = results.getUsers();
-                        // TODO: Pass the userList to the next activity or display them on the current screen
-                        Intent intent = new Intent(Search.this, ShowSearchResults.class);
-                        intent.putExtra("userList", new ArrayList<>(userList)); // Assuming userList is serializable or Parcelable
-                        startActivity(intent);
+
+                        if (userList != null && !userList.isEmpty()) {
+                            // Process the userList
+                            Intent intent = new Intent(Search.this, ShowSearchResults.class);
+                            intent.putExtra("userList", new ArrayList<>(userList)); // Assuming userList is serializable or Parcelable
+                            startActivity(intent);
+                        } else {
+                            // Handle the case where the user list is null or empty
+                            Toast.makeText(Search.this, "No users found.", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
                         Toast.makeText(Search.this, "No results found.", Toast.LENGTH_SHORT).show();
                     }

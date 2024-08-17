@@ -8,7 +8,8 @@ public class RetrofitInstance {
     public static Retrofit retrofit=null;
 
     // private static final String BASE_URL = "http://192.168.1.4:8000/";
-    private static final String BASE_URL = "http://192.168.1.102:8000/";
+    //private static final String BASE_URL = "http://192.168.1.102:8000/";
+    private static final String BASE_URL = "http://192.168.183.11:8000/";
     //private static final String BASE_URL = "http://192.168.14.161:8000/";
    // private static final String BASE_URL = "http://192.168.1.7:8000";
     public static Retrofit getRetrofitInstance() {

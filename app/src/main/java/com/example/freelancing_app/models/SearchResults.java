@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SearchResults implements Serializable {
 
-    @SerializedName("results")
+    @SerializedName("profiles")
     private List<User> users;
 
     public List<User> getUsers() {

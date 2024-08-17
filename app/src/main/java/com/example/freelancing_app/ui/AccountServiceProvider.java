@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -21,6 +22,7 @@ import com.example.freelancing_app.R;
 import com.example.freelancing_app.adapters.SellerAdapter;
 import com.example.freelancing_app.adapters.UserProfileAdapter;
 import com.example.freelancing_app.models.AccountSellerResponse;
+import com.example.freelancing_app.models.Error_res;
 import com.example.freelancing_app.models.Profile;
 import com.example.freelancing_app.models.ProfileResponse;
 import com.example.freelancing_app.models.ProfileSellerResponse;
@@ -91,14 +93,14 @@ public class AccountServiceProvider extends AppCompatActivity implements
         profileList = new ArrayList<>();
 
 
-         Bitmap LL = BitmapFactory.decodeResource(this.getResources(),
+         /*Bitmap LL = BitmapFactory.decodeResource(this.getResources(),
             R.drawable.michael_5);
            profileList.add(new UserProfile("Lina Al_Rashid", "Translator", LL, false));
            profileList.add(new UserProfile("Lina Al_Rashid", "Teacher", LL, false));
            profileList.add(new UserProfile("Lina Al_Rashid", "Designer", LL, false));
-           profilePicture.setImageBitmap(LL);
-            fullname_tv.setText("Lina" + " " + "Al_Rashid");
-
+            profilePicture.setImageBitmap(LL);
+            fullname_tv.setText("Lina Al_Rashid");
+            */
 
         adapter = new UserProfileAdapter(this, profileList, this);
         profiles_li.setAdapter(adapter);
@@ -169,61 +171,67 @@ public class AccountServiceProvider extends AppCompatActivity implements
 
     @Override
     public void onCheckBoxClick(int position) {
-        if (position != RecyclerView.NO_POSITION) {
-            UserProfile profile = profileList.get(position);
-            int profileId = globalVariables.getProfileid(); // Retrieve the profile ID
-            String authToken = "Bearer " + globalVariables.getToken();
 
-            // Check if the profile is currently paused or active
-            if (profile.isChecked()) {
-                // Profile is active, pause it
-                Call<Provider_json> call = apiService.pauseProfile(authToken, profileId);
-                call.enqueue(new Callback<Provider_json>() {
-                    @Override
-                    public void onResponse(Call<Provider_json> call, Response<Provider_json> response) {
-                        if (response.isSuccessful()) {
-                            // Successfully paused the profile
-                            profile.setChecked(false); // Update UI to show the profile is paused
-                            adapter.notifyDataSetChanged(); // Notify adapter of state change
-                        } else {
-                            // Handle the error, revert checkbox state
-                            Toast.makeText(AccountServiceProvider.this, "Failed to pause profile", Toast.LENGTH_SHORT).show();
-                            adapter.notifyDataSetChanged();
-                        }
-                    }
+        UserProfile profile = profileList.get(position);
+        int profileId = globalVariables.getProfileid(); // Retrieve the profile ID
+        String authToken = "Bearer " + globalVariables.getToken();
 
-                    @Override
-                    public void onFailure(Call<Provider_json> call, Throwable t) {
-                        // Handle failure, revert checkbox state
-                        Toast.makeText(AccountServiceProvider.this, "Failed to pause profile: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+        // Check if the profile is currently paused or active
+        if (!profile.isChecked()) {
+            // Profile is active, pause it
+            Call<Error_res> call = apiService.pauseProfile(authToken, String.valueOf(profileId+1));
+            call.enqueue(new Callback<Error_res>() {
+                @Override
+                public void onResponse(Call<Error_res> call, Response<Error_res> response) {
+                    if (response.isSuccessful()) {
+                        // Successfully paused the profile
+                        Toast.makeText(AccountServiceProvider.this, "FFF", Toast.LENGTH_SHORT).show();
+                        Log.d("AABB",response.body().getError().toString());
+                        profile.setChecked(false); // Update UI to show the profile is paused
+                        adapter.notifyDataSetChanged(); // Notify adapter of state change
+                    } else {
+                        // Handle the error, revert checkbox state
+                        Toast.makeText(AccountServiceProvider.this, "Failed to pause profile", Toast.LENGTH_SHORT).show();
                         adapter.notifyDataSetChanged();
                     }
-                });
-            } else {
-                // Profile is paused, resume it
-                Call<Provider_json> call = apiService.resumeProfile(authToken, profileId);
-                call.enqueue(new Callback<Provider_json>() {
-                    @Override
-                    public void onResponse(Call<Provider_json> call, Response<Provider_json> response) {
-                        if (response.isSuccessful()) {
-                            // Successfully resumed the profile
-                            profile.setChecked(true); // Update UI to show the profile is active
-                            adapter.notifyDataSetChanged(); // Notify adapter of state change
-                        } else {
-                            // Handle the error, revert checkbox state
-                            Toast.makeText(AccountServiceProvider.this, "Failed to resume profile", Toast.LENGTH_SHORT).show();
-                            adapter.notifyDataSetChanged();
-                        }
-                    }
+                }
 
-                    @Override
-                    public void onFailure(Call<Provider_json> call, Throwable t) {
-                        // Handle failure, revert checkbox state
-                        Toast.makeText(AccountServiceProvider.this, "Failed to resume profile: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                @Override
+                public void onFailure(Call<Error_res> call, Throwable t) {
+                    // Handle failure, revert checkbox state
+                    Toast.makeText(AccountServiceProvider.this, "Failed to pause profile: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                    adapter.notifyDataSetChanged();
+                }
+            });
+        }
+        if(profile.isChecked()){
+            // Profile is paused, resume it
+            Call<Error_res> call = apiService.resumeProfile(authToken,String.valueOf(profileId+1));
+            call.enqueue(new Callback<Error_res>() {
+                @Override
+                public void onResponse(Call<Error_res> call, Response<Error_res> response) {
+                    if (response.isSuccessful()) {
+                        // Successfully resumed the profile
+                        Log.d("AABB",response.body().getError().toString());
+                        Toast.makeText(AccountServiceProvider.this, "EEE", Toast.LENGTH_SHORT).show();
+
+                        profile.setChecked(true); // Update UI to show the profile is active
+
+                        adapter.notifyDataSetChanged(); // Notify adapter of state change
+                    } else {
+                        // Handle the error, revert checkbox state
+                        Toast.makeText(AccountServiceProvider.this, "Failed to resume profile", Toast.LENGTH_SHORT).show();
                         adapter.notifyDataSetChanged();
                     }
-                });
-            }
+                }
+
+                @Override
+                public void onFailure(Call<Error_res> call, Throwable t) {
+                    // Handle failure, revert checkbox state
+                    Toast.makeText(AccountServiceProvider.this, "Failed to resume profile: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                    adapter.notifyDataSetChanged();
+                }
+            });
         }
     }
 
@@ -233,9 +241,8 @@ public class AccountServiceProvider extends AppCompatActivity implements
             if (position != RecyclerView.NO_POSITION) {
                 UserProfile profile = profileList.get(position);
                 Intent intent = new Intent(AccountServiceProvider.this, ProfileServiceProviderAbout.class);
-                intent.putExtra("profile", profile);
-               globalVariables.setProfile(profile);
-               globalVariables.setProfileid(profile.getProfile_id());
+                globalVariables.setProfile(profile);
+                globalVariables.setProfileid(profile.getProfile_id());
                 startActivity(intent);
             }
         }

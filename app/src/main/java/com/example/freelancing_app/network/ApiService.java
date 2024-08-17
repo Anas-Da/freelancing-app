@@ -3,6 +3,7 @@ package com.example.freelancing_app.network;
 import com.example.freelancing_app.models.AccountSellerResponse;
 import com.example.freelancing_app.models.CustomerResponse;
 import com.example.freelancing_app.models.Customer_json;
+import com.example.freelancing_app.models.Error_res;
 import com.example.freelancing_app.models.LoginRequest;
 import com.example.freelancing_app.models.Message;
 import com.example.freelancing_app.models.MessageResponse;
@@ -61,11 +62,12 @@ public interface ApiService {
     @POST("update/seller/profile/{profileId}")
     Call <Provider_json> updateprofile(@Query("bio")String bio  , @Header("Authorization") String authToken, @Path("profileId") int profileId) ;
     @POST("search")
-    Call<SearchResults> searchUsers(@Body Map<String, Object> filters);
+    Call<SearchResults> searchUsers(@Body Map<String, String> filters);
+
     @GET("pause/seller/profile/{profileId}")
-    Call <Provider_json> pauseProfile(@Header("Authorization") String authToken, @Path("profileId") int profileId) ;
+    Call <Error_res> pauseProfile(@Header("Authorization") String authToken, @Path("profileId") String profileId) ;
     @GET("resume/seller/profile/{profileId}")
-    Call <Provider_json> resumeProfile(@Header("Authorization") String authToken, @Path("profileId") int profileId) ;
+    Call <Error_res> resumeProfile(@Header("Authorization") String authToken, @Path("profileId") String profileId) ;
 
 }
 
