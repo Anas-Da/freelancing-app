@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.freelancing_app.R;
 
 //TODO backkkkkkkkkkkkkkkkkkk
 public class Profile_S_V_CustomerInformation extends AppCompatActivity implements View.OnClickListener{
 
-    private ImageButton back_b;
+    private ImageView back_b;
 
     private Button about_b;
     private Button  Rating_b;
@@ -70,6 +71,7 @@ public class Profile_S_V_CustomerInformation extends AppCompatActivity implement
             Intent i=new Intent(Profile_S_V_CustomerInformation.this,ChatList.class);
             startActivity(i);
         }
+
 
     }
     private void destroyInterface() {

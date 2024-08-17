@@ -23,9 +23,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.freelancing_app.R;
 import com.example.freelancing_app.adapters.MessageAdapter;
 import com.example.freelancing_app.models.Chat;
+import com.example.freelancing_app.models.Chat_json;
+import com.example.freelancing_app.models.Error_res;
 import com.example.freelancing_app.models.Message;
 import com.example.freelancing_app.models.MessageResponse;
 import com.example.freelancing_app.network.ApiService;
+import com.example.freelancing_app.network.ChatsResponse;
 import com.example.freelancing_app.network.RetrofitInstance;
 import com.example.freelancing_app.service.CustomerNotificationsService;
 import com.example.freelancing_app.service.ServiceProviderNotificationService;
@@ -85,9 +88,9 @@ public class ChatActivity extends AppCompatActivity {
                     String currentTime = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
                     Message message = new Message(messageText, null, date, currentTime, globalVariables.getUsername(), globalVariables.getChatWith());
                     messageList.add(message);
-                    messageAdapter.notifyDataSetChanged();
                     editTextMessage.setText("");
                     sendMessageToServer(messageText); // Assuming you have a method to send the message to the server
+                    messageAdapter.notifyDataSetChanged();
                 }
             }
         });
@@ -230,6 +233,21 @@ public class ChatActivity extends AppCompatActivity {
     private void sendMessageToServer(String messageText) {
         // TODO: Implement the logic to send the message to the server
         Log.d(TAG, "Sending message to server: " + messageText);
+        String authToken = "Bearer " + globalVariables.getToken();
+        String message= messageText;
+        Call<Error_res> call = apiService.sendMessage(authToken,globalVariables.getChatWith(),message);
+
+        call.enqueue(new Callback<Error_res>() {
+            @Override
+            public void onResponse(Call<Error_res> call, Response<Error_res> response) {
+                Toast.makeText(ChatActivity.this, "DONE", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Error_res> call, Throwable t) {
+                Toast.makeText(ChatActivity.this, t.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 }

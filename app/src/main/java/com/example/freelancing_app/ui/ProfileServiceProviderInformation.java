@@ -89,7 +89,7 @@ public class ProfileServiceProviderInformation extends AppCompatActivity impleme
         apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
 
 
-       // updateLayout();
+        updateLayout();
 
 
     }

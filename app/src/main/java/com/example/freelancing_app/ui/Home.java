@@ -107,7 +107,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
 
         sellerAdapter = new SellerAdapter(this, sellerList, this);
         sellers_list.setAdapter(sellerAdapter);
-
+        /*
         Bitmap SS = BitmapFactory.decodeResource(this.getResources(),
                 R.drawable.michael_3);
         Bitmap MM = BitmapFactory.decodeResource(this.getResources(),
@@ -121,9 +121,9 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
         sellerList.add(new Seller("Lina" + " " + "Al_Rashid", LL, "Translator"));
         sellerList.add(new Seller("Mais" + " " + "Safadly", MM, "Lawyer"));
         sellerList.add(new Seller("Rani" + " " + "Ali", RR, "IT"));
-
+        */
         // TODO
-       //  fetchProfiles();
+         fetchProfiles();
     }
 
     private void fetchProfiles() {
@@ -180,11 +180,17 @@ public class Home extends AppCompatActivity implements View.OnClickListener,
 
     @Override
     public void onSellerClick(int position) {
+        // TODO
         globalVariables.setSellerid(1);
         globalVariables.setSellerhandle("Anas_Da");
         //Toast.makeText(this, "Item " + position, Toast.LENGTH_SHORT).show();
-        Intent i = new Intent(Home.this, ProfileServiceProviderAboutCustomer.class);
-        startActivity(i);
+        if(globalVariables.isCustomer()){
+            Intent i = new Intent(Home.this, ProfileServiceProviderAboutCustomer.class);
+            startActivity(i);
+        }else{
+            Intent i = new Intent(Home.this, Profile_S_V_CustomerAbout.class);
+            startActivity(i);
+        }
     }
 
     @Override

@@ -8,6 +8,7 @@ import com.example.freelancing_app.models.LoginRequest;
 import com.example.freelancing_app.models.Message;
 import com.example.freelancing_app.models.MessageResponse;
 import com.example.freelancing_app.models.Profile;
+import com.example.freelancing_app.models.ProfileResponse;
 import com.example.freelancing_app.models.ProfileSellerResponse;
 import com.example.freelancing_app.models.Provider_json;
 import com.example.freelancing_app.models.ReviewsResponse;
@@ -67,6 +68,9 @@ public interface ApiService {
     Call <Error_res> pauseProfile(@Header("Authorization") String authToken, @Path("profileId") String profileId) ;
     @GET("resume/seller/profile/{profileId}")
     Call <Error_res> resumeProfile(@Header("Authorization") String authToken, @Path("profileId") String profileId) ;
-
+    @POST("chat/send/{username}")
+    Call<Error_res> sendMessage(@Header("Authorization") String authToken, @Path("username") String username,@Body String message);
+    @POST("create/seller/profile")
+    Call<ProfileResponse> CreateProfile(@Header("Authorization") String authToken, @Body String work_group);
 }
 

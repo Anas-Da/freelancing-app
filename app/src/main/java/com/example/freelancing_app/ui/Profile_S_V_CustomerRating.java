@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.freelancing_app.R;
@@ -33,7 +34,7 @@ public class Profile_S_V_CustomerRating extends AppCompatActivity   implements V
 
     private ApiService apiService;
     GlobalVariables globalVariables;
-    private ImageButton back_b;
+    private ImageView back_b;
 
     private Button about_b;
     private Button  Rating_b;

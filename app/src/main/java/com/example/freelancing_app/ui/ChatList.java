@@ -68,11 +68,11 @@ public class ChatList extends AppCompatActivity implements ChatAdapter.OnItemCli
         chats_list.setAdapter(chatAdapter);
 
 
-        // TODO  Call fetchProfiles to populate data
-        //fetchChats();
-        //startChatRefreshTimer();
+        fetchChats();
+        startChatRefreshTimer();
 
-        String s="Hello i wana ask you about a case that i have a prob...";
+        /*
+        String s="Hello i wanna ask you about a case that i have a prob...";
         Bitmap AA = BitmapFactory.decodeResource(this.getResources(),
                 R.drawable.michael_6);
         chat.add(new Chat("Ahmad_Shamma", s,AA,2,
@@ -82,7 +82,7 @@ public class ChatList extends AppCompatActivity implements ChatAdapter.OnItemCli
         R.drawable.michael_1);
         chat.add(new Chat("Anas_Da", s2,DD,0,
         "12:31"));
-
+        */
         home_ib = findViewById(R.id.home_ib);
         home_ib.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,8 +96,13 @@ public class ChatList extends AppCompatActivity implements ChatAdapter.OnItemCli
         account_ib.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(ChatList.this, AccountServiceProvider.class);
-                startActivity(i);
+                if(globalVariables.isCustomer()){
+                    Intent i=new Intent(ChatList.this, AccountCustomer.class);
+                    startActivity(i);
+                }else{
+                    Intent i=new Intent(ChatList.this, AccountServiceProvider.class);
+                    startActivity(i);
+                }
             }
         });
 

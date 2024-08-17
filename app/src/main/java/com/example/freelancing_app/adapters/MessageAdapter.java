@@ -44,7 +44,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         params.removeRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         params.removeRule(RelativeLayout.ALIGN_PARENT_LEFT);
 
-        if (!message.getSender().equals(globalVariables.getUsername())) {
+        if (message.getSender().equals(globalVariables.getUsername())) {
             params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
             holder.textViewMessage.setBackgroundResource(R.drawable.sent_message_right); // background for sent messages
         } else {

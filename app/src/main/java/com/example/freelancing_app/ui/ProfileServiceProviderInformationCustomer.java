@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.example.freelancing_app.R;
+import com.example.freelancing_app.utils.GlobalVariables;
 
 //ToDO Backkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 public class ProfileServiceProviderInformationCustomer extends AppCompatActivity  implements View.OnClickListener {
@@ -21,10 +22,14 @@ public class ProfileServiceProviderInformationCustomer extends AppCompatActivity
     private  ImageButton account_ib;
     private  ImageButton home_ib;
     private  ImageButton chat_ib;
+    private GlobalVariables globalVariables;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_service_provider_information_customer);
+
+        globalVariables= (GlobalVariables) getApplicationContext();
+
 
         back_b=findViewById(R.id.back_b);
         chat_b=findViewById(R.id.chat_b);
@@ -50,13 +55,17 @@ public class ProfileServiceProviderInformationCustomer extends AppCompatActivity
 
     @Override
     public void onClick(View v) {
+        globalVariables.setChatWith(globalVariables.getProfileSellerResponse().getSeller_username());
+
+
+
         if(v.getId()==R.id.back_b)
         {
             destroyInterface();
         }
         else if(v.getId()==R.id.chat_b)
         {
-            Intent i=new Intent(ProfileServiceProviderInformationCustomer.this, ProfileServiceProviderInformation.class);
+            Intent i=new Intent(ProfileServiceProviderInformationCustomer.this, ChatActivity.class);
             //TODO chat_service_provider
             startActivity(i);
         }
@@ -87,6 +96,7 @@ public class ProfileServiceProviderInformationCustomer extends AppCompatActivity
             Intent i=new Intent(ProfileServiceProviderInformationCustomer.this,ChatList.class);
             startActivity(i);
         }
+
 
     }
     private void destroyInterface() {

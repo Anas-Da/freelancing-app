@@ -77,8 +77,8 @@ public class SignInActivity extends AppCompatActivity {
                     Toast.makeText(SignInActivity.this,
                             "Enter Both Email and password", Toast.LENGTH_SHORT).show();
                 } else {
-                    //Intent intent=new Intent(SignInActivity.this,Home.class);
-                   //startActivity(intent);
+
+                    globalVariables.setUsername(email);
                     if (Customer_rb.isChecked()) {
                         globalVariables.setCustomer(true);
                         logincustomer(email, password);

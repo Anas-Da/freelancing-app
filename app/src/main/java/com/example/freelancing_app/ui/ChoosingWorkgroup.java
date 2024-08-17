@@ -138,7 +138,6 @@ public class ChoosingWorkgroup extends AppCompatActivity implements View.OnClick
         globalVariables.setWorkGroup(0);
         //todo to profile
         Toast.makeText(this, "Item " + position,Toast.LENGTH_SHORT).show();
-        Intent i=new Intent(ChoosingWorkgroup.this, AccountServiceProvider.class);
-        startActivity(i);
+
     }
 }
