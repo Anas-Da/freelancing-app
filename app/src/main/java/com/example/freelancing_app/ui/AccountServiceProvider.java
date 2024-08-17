@@ -175,19 +175,24 @@ public class AccountServiceProvider extends AppCompatActivity implements
         UserProfile profile = profileList.get(position);
         int profileId = globalVariables.getProfileid(); // Retrieve the profile ID
         String authToken = "Bearer " + globalVariables.getToken();
-
+        Toast.makeText(this, "hi", Toast.LENGTH_SHORT).show();
         // Check if the profile is currently paused or active
+        Log.d("AAABBB",String.valueOf(profile.isChecked()));
         if (!profile.isChecked()) {
             // Profile is active, pause it
             Call<Error_res> call = apiService.pauseProfile(authToken, String.valueOf(profileId+1));
             call.enqueue(new Callback<Error_res>() {
                 @Override
                 public void onResponse(Call<Error_res> call, Response<Error_res> response) {
+                    if(response.body()!=null){
+                        Toast.makeText(AccountServiceProvider.this, response.body().getError(), Toast.LENGTH_SHORT).show();
+                    }
                     if (response.isSuccessful()) {
                         // Successfully paused the profile
                         Toast.makeText(AccountServiceProvider.this, "FFF", Toast.LENGTH_SHORT).show();
                         Log.d("AABB",response.body().getError().toString());
                         profile.setChecked(false); // Update UI to show the profile is paused
+                        profileList.get(position).setChecked(false);
                         adapter.notifyDataSetChanged(); // Notify adapter of state change
                     } else {
                         // Handle the error, revert checkbox state
@@ -203,8 +208,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
                     adapter.notifyDataSetChanged();
                 }
             });
-        }
-        if(profile.isChecked()){
+        }else{
             // Profile is paused, resume it
             Call<Error_res> call = apiService.resumeProfile(authToken,String.valueOf(profileId+1));
             call.enqueue(new Callback<Error_res>() {
@@ -216,6 +220,7 @@ public class AccountServiceProvider extends AppCompatActivity implements
                         Toast.makeText(AccountServiceProvider.this, "EEE", Toast.LENGTH_SHORT).show();
 
                         profile.setChecked(true); // Update UI to show the profile is active
+                        profileList.get(position).setChecked(true);
 
                         adapter.notifyDataSetChanged(); // Notify adapter of state change
                     } else {

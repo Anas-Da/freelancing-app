@@ -22,13 +22,13 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
 
     private List<UserProfile> profileList;
     private Context context;
-    private OnItemClickListener onItemClickListener1;
+    private OnItemClickListener onItemClickListener;
     private int position;
 
-    public UserProfileAdapter(Context context,List<UserProfile> profileList, OnItemClickListener onItemClickListener1) {
+    public UserProfileAdapter(Context context,List<UserProfile> profileList, OnItemClickListener onItemClickListener) {
         this.context=context;
         this.profileList = profileList;
-        this.onItemClickListener1=onItemClickListener1;
+        this.onItemClickListener=onItemClickListener;
     }
 
     @NonNull
@@ -43,7 +43,7 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
         UserProfile profile = profileList.get(position);
         holder.itemView.setOnClickListener(v -> {
             // Handle item view click
-            onItemClickListener1.onItemViewClick(position);
+            onItemClickListener.onItemViewClick(position);
         });
 
         // Set up click listener for the checkbox
@@ -54,9 +54,7 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
             holder.checkboxImageView.setImageResource(!isChecked ? R.drawable.on_img : R.drawable.off_img);
 
             // Call the onCheckBoxClick method from the listener to trigger the pause profile API call
-            if (!isChecked) {
-                onItemClickListener1.onCheckBoxClick(position);
-            }
+            onItemClickListener.onCheckBoxClick(position);
         });
         holder.bind(profile);
     }

@@ -55,15 +55,14 @@ public interface ApiService {
 
     @GET ("review/explore/{seller_account_username}/{profileId}")
     Call<ReviewsResponse> getReviews(@Path("seller_account_username") String seller_account_username, @Path("profileId") String profileId);
-
     @GET("account/seller/profile/{username}/{profile_id}")
     Call<ProfileSellerResponse>getProfileSellerResponse(@Header("Authorization") String authToken,@Path("username") String username,@Path("profile_id")int profile_id);
 
     @POST("update/seller/profile/{profileId}")
     Call <Provider_json> updateprofile(@Query("bio")String bio  , @Header("Authorization") String authToken, @Path("profileId") int profileId) ;
+
     @POST("search")
     Call<SearchResults> searchUsers(@Body Map<String, String> filters);
-
     @GET("pause/seller/profile/{profileId}")
     Call <Error_res> pauseProfile(@Header("Authorization") String authToken, @Path("profileId") String profileId) ;
     @GET("resume/seller/profile/{profileId}")
